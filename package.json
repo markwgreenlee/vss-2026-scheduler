@@ -1,0 +1,34 @@
+{
+  "name": "vss-2026-scheduler",
+  "version": "1.0.0",
+  "description": "VSS 2026 Schedule Organizer - Native iOS & Android App",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "build-android": "eas build --platform android",
+    "build-ios": "eas build --platform ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.0",
+    "expo": "~50.0.0",
+    "expo-calendar": "^13.0.0",
+    "expo-sharing": "^12.0.0",
+    "expo-file-system": "^16.0.0",
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-reanimated": "^3.6.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/bottom-tabs": "^6.5.0",
+    "react-native-screens": "^3.29.0",
+    "react-native-safe-area-context": "^4.8.0",
+    "react-native-vector-icons": "^10.0.0",
+    "ical.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0"
+  }
+}
