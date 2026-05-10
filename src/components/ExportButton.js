@@ -5,6 +5,9 @@ import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
 import * as Calendar from 'expo-calendar';
 
+const toTitleCase = (str) =>
+  str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+
 const ExportButton = ({ sessions }) => {
   const authorsString = (session) =>
     Array.isArray(session.authors)
@@ -88,7 +91,7 @@ const ExportButton = ({ sessions }) => {
         const endDate = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00`);
 
         await Calendar.createEventAsync(defaultCal.id, {
-          title: session.room ? `[${session.room}] ${session.title}` : session.title,
+          title: session.room ? `[${toTitleCase(session.room)}] ${session.title}` : session.title,
           startDate,
           endDate,
           location: session.room || '',
