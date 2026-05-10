@@ -16,7 +16,7 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## Features
 
-- **1,162 presentations** from the official VSS 2026 scheduler
+- **1,190 presentations** from the official VSS 2026 scheduler
 - Full-text search by title, author, abstract, and affiliation
 - Filter by day (Fri–Tue) and type (Talk / Poster)
 - Build a personal schedule — tap to select/deselect
