@@ -1,5 +1,23 @@
 # 📱 VSS 2026 Schedule Organizer - Complete Installation & Usage Guide
 
+## Quickstart for Conference Attendees
+
+**No account or setup needed.** Just install the free Expo Go app and scan this QR code:
+
+![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
+
+**iPhone:**
+1. Download **Expo Go** from the App Store
+2. Open the **Camera app** and point it at the QR code
+3. Tap the notification that appears — it opens the app in Expo Go automatically
+
+**Android:**
+1. Download **Expo Go** from the Google Play Store
+2. Open Expo Go and tap **Scan QR Code**
+3. Point the camera at the QR code — the app loads immediately
+
+---
+
 ## Table of Contents
 1. [System Requirements](#system-requirements)
 2. [Installation Methods](#installation-methods)
@@ -622,3 +640,21 @@ npm start -- --clear
 **Good luck at VSS 2026! 🎓**
 
 Questions? Check the README.md or open an issue on GitHub.
+
+---
+
+## Note for Developers: Building a Standalone App
+
+The app currently runs inside **Expo Go**, which requires users to install that wrapper app. A developer can build a fully self-contained standalone app (no Expo Go needed) using the GitHub source code:
+
+```bash
+git clone https://github.com/markwgreenlee/vss-2026-scheduler.git
+cd vss-2026-scheduler
+npm install
+eas build --platform android   # produces a standalone .apk / .aab
+eas build --platform ios       # produces a standalone .ipa
+```
+
+**Android** standalone build is straightforward — only a free Expo account is needed (at expo.dev). **iOS** standalone distribution requires an Apple Developer account ($99/year) to sign the app.
+
+For a conference tool, Expo Go is the recommended approach: it requires no paid accounts and attendees can be up and running in under two minutes.
