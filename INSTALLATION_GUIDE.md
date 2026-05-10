@@ -216,7 +216,7 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 
 1. **App Opens to Search Tab**
    - You'll see "Search presentations..." text box
-   - Lists 1,162 presentations from VSS 2026
+   - Lists 1,190 presentations from VSS 2026
 
 2. **Search for Presentations**
    - Type keywords: "attention", "motion", "memory", author names, etc.
@@ -446,7 +446,7 @@ When you export presentations, each event includes:
 
 3. **Verify Data Loaded:**
    - Close and reopen app
-   - Check that stats show "1,162 presentations available"
+   - Check that stats show "1,190 presentations available"
 
 ### "Calendar Export Not Working"
 

@@ -4,7 +4,7 @@
 
 Dear colleagues,
 
-I'd like to share a small tool I put together for VSS 2026: a mobile app that lets you search all 1,162 presentations, build a personal schedule, and export selected sessions directly to Apple or Google Calendar.
+I'd like to share a small tool I put together for VSS 2026: a mobile app that lets you search all 1,190 presentations, build a personal schedule, and export selected sessions directly to Apple or Google Calendar.
 
 **To use it — no account or setup required:**
 
