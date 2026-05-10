@@ -284,15 +284,20 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 1. **In App:**
    - Go to **Schedule** tab
    - Make sure sessions are selected
-   - Tap **"📅 Google Calendar"** button
+   - Tap **"Google Calendar"** button
+   - An overlay appears showing "Session 1 of N"
 
 2. **In Safari (Browser Opens):**
-   - Google Calendar opens automatically
-   - Each session opens as a new event
-   - Tap **"Save"** to add to your calendar
-   - Repeat for each session
+   - Google Calendar opens with the first session pre-filled
+   - Tap **"Save"** to add it to your calendar
 
-3. **Check Calendar App:**
+3. **Return to App:**
+   - Go back to the app — the overlay is still showing
+   - Tap **"Next →"** to open the next session in Safari
+   - Repeat until all sessions are saved
+   - Tap **"Done"** on the last session, or **"Stop"** to exit early
+
+4. **Check Calendar App:**
    - Open Calendar app
    - You should see all events
    - Events include: time, location, title, authors, abstract
@@ -302,15 +307,20 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 1. **In App:**
    - Go to **Schedule** tab
    - Make sure sessions are selected
-   - Tap **"📅 Google Calendar"** button
+   - Tap **"Google Calendar"** button
+   - An overlay appears showing "Session 1 of N"
 
 2. **In Chrome (Browser Opens):**
-   - Google Calendar opens automatically
-   - Each session opens as a new event
-   - Tap **"Save"** to add to your calendar
-   - Repeat for each session
+   - Google Calendar opens with the first session pre-filled
+   - Tap **"Save"** to add it to your calendar
 
-3. **Check Calendar App:**
+3. **Return to App:**
+   - Use the back button or task switcher to return to the app
+   - The overlay is still showing — tap **"Next →"** to open the next session
+   - Repeat until all sessions are saved
+   - Tap **"Done"** on the last session, or **"Stop"** to exit early
+
+4. **Check Calendar App:**
    - Open Google Calendar or Calendar app
    - Verify all events are there
    - Events sync across all your devices
