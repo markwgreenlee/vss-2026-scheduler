@@ -76,7 +76,7 @@ const SearchScreen = () => {
               onPress={() => toggleKind(kind)}
             >
               <Text style={[styles.chipText, selectedKind === kind && styles.chipTextActive]}>
-                {kind.charAt(0).toUpperCase() + kind.slice(1)}{kind !== 'symposium' ? 's' : 'a'}
+                {kind === 'symposium' ? 'Symposia' : kind.charAt(0).toUpperCase() + kind.slice(1) + 's'}
               </Text>
             </TouchableOpacity>
           ))}
