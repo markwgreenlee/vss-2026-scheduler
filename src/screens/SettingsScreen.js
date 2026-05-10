@@ -23,7 +23,7 @@ const SettingsScreen = () => {
         <View style={styles.featureList}>
           <View style={styles.featureItem}>
             <Icon name="magnify" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Search 1,156 presentations</Text>
+            <Text style={styles.featureText}>Search 1,162 presentations</Text>
           </View>
           <View style={styles.featureItem}>
             <Icon name="filter" size={20} color="#667eea" />
@@ -49,7 +49,7 @@ const SettingsScreen = () => {
         <View style={styles.card}>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Presentations:</Text>
-            <Text style={styles.dataValue}>1,156</Text>
+            <Text style={styles.dataValue}>1,162</Text>
           </View>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Conference:</Text>
