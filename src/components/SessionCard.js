@@ -11,7 +11,7 @@ const SessionCard = ({ session, isSelected }) => {
     ? session.time
     : session.session_start || '';
 
-  const kindLabel = session.kind === 'poster' ? 'Poster' : 'Talk';
+  const kindLabel = session.kind === 'poster' ? 'Poster' : session.kind === 'symposium' ? 'Symposium' : 'Talk';
 
   return (
     <View style={[styles.card, isSelected && styles.selectedCard]}>
@@ -47,7 +47,11 @@ const SessionCard = ({ session, isSelected }) => {
         {session.day ? (
           <Text style={styles.day}>{session.day.slice(0, 3)}</Text>
         ) : null}
-        <Text style={[styles.kindBadge, session.kind === 'poster' && styles.posterBadge]}>
+        <Text style={[
+          styles.kindBadge,
+          session.kind === 'poster' && styles.posterBadge,
+          session.kind === 'symposium' && styles.symposiumBadge,
+        ]}>
           {kindLabel}
         </Text>
       </View>
@@ -134,6 +138,9 @@ const styles = StyleSheet.create({
   },
   posterBadge: {
     backgroundColor: '#2c7a3e',
+  },
+  symposiumBadge: {
+    backgroundColor: '#8a3a82',
   },
 });
 

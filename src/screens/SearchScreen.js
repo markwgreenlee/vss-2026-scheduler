@@ -13,7 +13,7 @@ import { DataContext } from '../context/DataContext';
 import SessionCard from '../components/SessionCard';
 
 const DAYS = ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday'];
-const KINDS = ['talk', 'poster'];
+const KINDS = ['talk', 'poster', 'symposium'];
 
 const SearchScreen = () => {
   const { allSessions, selectedSessions, isLoading, toggleSession, searchSessions } = useContext(DataContext);
@@ -76,7 +76,7 @@ const SearchScreen = () => {
               onPress={() => toggleKind(kind)}
             >
               <Text style={[styles.chipText, selectedKind === kind && styles.chipTextActive]}>
-                {kind.charAt(0).toUpperCase() + kind.slice(1)}s
+                {kind.charAt(0).toUpperCase() + kind.slice(1)}{kind !== 'symposium' ? 's' : 'a'}
               </Text>
             </TouchableOpacity>
           ))}
