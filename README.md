@@ -1,6 +1,6 @@
 # VSS 2026 Schedule Organizer
 
-A React Native mobile app for iOS and Android to search and organize your Vision Sciences Society conference schedule, May 15–19, 2026, Fort Lauderdale, FL.
+A React Native mobile app for iOS and Android to search and organize your Vision Sciences Society conference schedule, May 15–19, 2026, St. Petersburg Beach, FL.
 
 ## For Conference Attendees
 
@@ -100,4 +100,4 @@ vss-mobile/
 
 ---
 
-VSS 2026 | May 15–19, 2026 | Fort Lauderdale, FL
+VSS 2026 | May 15–19, 2026 | St. Petersburg Beach, FL

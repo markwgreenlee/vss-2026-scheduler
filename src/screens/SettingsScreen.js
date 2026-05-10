@@ -23,7 +23,7 @@ const SettingsScreen = () => {
         <View style={styles.featureList}>
           <View style={styles.featureItem}>
             <Icon name="magnify" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Search 190+ presentations</Text>
+            <Text style={styles.featureText}>Search 1,156 presentations</Text>
           </View>
           <View style={styles.featureItem}>
             <Icon name="filter" size={20} color="#667eea" />
@@ -38,8 +38,8 @@ const SettingsScreen = () => {
             <Text style={styles.featureText}>Export to Apple Calendar</Text>
           </View>
           <View style={styles.featureItem}>
-            <Icon name="cloud-download" size={20} color="#667eea" />
-            <Text style={styles.featureText}>iCal file support</Text>
+            <Icon name="calendar-sync" size={20} color="#667eea" />
+            <Text style={styles.featureText}>Direct Apple & Google Calendar export</Text>
           </View>
         </View>
       </View>
@@ -49,7 +49,7 @@ const SettingsScreen = () => {
         <View style={styles.card}>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Presentations:</Text>
-            <Text style={styles.dataValue}>190</Text>
+            <Text style={styles.dataValue}>1,156</Text>
           </View>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Conference:</Text>
@@ -57,7 +57,7 @@ const SettingsScreen = () => {
           </View>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Location:</Text>
-            <Text style={styles.dataValue}>Fort Lauderdale, FL</Text>
+            <Text style={styles.dataValue}>St. Petersburg Beach, FL</Text>
           </View>
           <Text style={styles.disclaimer}>
             All data is stored locally on your device. No personal information is sent to external servers.
