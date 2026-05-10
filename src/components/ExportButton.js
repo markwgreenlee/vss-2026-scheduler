@@ -34,7 +34,7 @@ const ExportButton = ({ sessions }) => {
       const [startDateTime, endDateTime] = getStartEnd(session);
 
       const eventParams = new URLSearchParams({
-        text: session.title,
+        text: session.room ? `[${toTitleCase(session.room)}] ${session.title}` : session.title,
         dates: `${startDateTime}/${endDateTime}`,
         location: session.room || '',
         details: `Authors: ${authors}\n\nAbstract: ${session.abstract || ''}`,
