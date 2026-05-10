@@ -28,8 +28,13 @@ const ExportButton = ({ sessions }) => {
       return;
     }
 
-    try {
-      const session = sessions[0];
+    const openSession = (index) => {
+      if (index >= sessions.length) {
+        Alert.alert('All Done', `All ${sessions.length} session${sessions.length !== 1 ? 's' : ''} added to Google Calendar.`);
+        return;
+      }
+
+      const session = sessions[index];
       const authors = authorsString(session);
       const [startDateTime, endDateTime] = getStartEnd(session);
 
@@ -45,13 +50,22 @@ const ExportButton = ({ sessions }) => {
         Alert.alert('Error', 'Could not open Google Calendar');
       });
 
+      const isLast = index === sessions.length - 1;
       Alert.alert(
-        'Google Calendar',
-        `Opening Google Calendar in browser.\n\nYou have ${sessions.length} session${sessions.length !== 1 ? 's' : ''} to add. Add them one at a time.`
+        `Session ${index + 1} of ${sessions.length}`,
+        isLast
+          ? 'Last session — save it in Google Calendar and you\'re done!'
+          : 'Save this event in Google Calendar, then come back here and tap Next.',
+        isLast
+          ? [{ text: 'Done' }]
+          : [
+              { text: 'Next', onPress: () => openSession(index + 1) },
+              { text: 'Stop', style: 'cancel' },
+            ]
       );
-    } catch (error) {
-      Alert.alert('Error', 'Failed to export to Google Calendar');
-    }
+    };
+
+    openSession(0);
   };
 
   const exportToApple = async () => {
