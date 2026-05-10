@@ -33,3 +33,6 @@ build
 .gradle
 .m2
 *.lock
+
+# Microsoft Office temp files (created while a document is open)
+~$*
