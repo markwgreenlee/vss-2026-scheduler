@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { DataContext } from '../context/DataContext';
 import SessionCard from '../components/SessionCard';
+import SessionDetailModal from '../components/SessionDetailModal';
 
 const DAYS = ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday'];
 const KINDS = ['talk', 'poster', 'symposium'];
@@ -20,6 +21,7 @@ const SearchScreen = () => {
   const [query, setQuery] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
   const [selectedKind, setSelectedKind] = useState('');
+  const [detailSession, setDetailSession] = useState(null);
 
   const results = useMemo(() => {
     return searchSessions(query, selectedDay, selectedKind);
@@ -100,7 +102,7 @@ const SearchScreen = () => {
           renderItem={({ item }) => {
             const isSelected = selectedSessions.some(s => s.id === item.id);
             return (
-              <TouchableOpacity onPress={() => toggleSession(item)}>
+              <TouchableOpacity onPress={() => setDetailSession(item)}>
                 <SessionCard session={item} isSelected={isSelected} />
               </TouchableOpacity>
             );
@@ -108,6 +110,13 @@ const SearchScreen = () => {
           contentContainerStyle={styles.list}
         />
       )}
+
+      <SessionDetailModal
+        session={detailSession}
+        isSelected={detailSession ? selectedSessions.some(s => s.id === detailSession.id) : false}
+        onToggle={() => detailSession && toggleSession(detailSession)}
+        onClose={() => setDetailSession(null)}
+      />
     </View>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   View,
   FlatList,
@@ -12,9 +12,11 @@ import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 import { DataContext } from '../context/DataContext';
 import SelectedSessionCard from '../components/SelectedSessionCard';
 import ExportButton from '../components/ExportButton';
+import SessionDetailModal from '../components/SessionDetailModal';
 
 const ScheduleScreen = () => {
-  const { selectedSessions, removeSession, clearAll } = useContext(DataContext);
+  const { selectedSessions, removeSession, toggleSession, clearAll } = useContext(DataContext);
+  const [detailSession, setDetailSession] = useState(null);
 
   const handleClearAll = () => {
     Alert.alert(
@@ -54,10 +56,12 @@ const ScheduleScreen = () => {
             data={selectedSessions}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
-              <SelectedSessionCard
-                session={item}
-                onRemove={() => removeSession(item.id)}
-              />
+              <TouchableOpacity onPress={() => setDetailSession(item)}>
+                <SelectedSessionCard
+                  session={item}
+                  onRemove={() => removeSession(item.id)}
+                />
+              </TouchableOpacity>
             )}
             contentContainerStyle={styles.list}
             scrollEnabled={true}
@@ -76,6 +80,12 @@ const ScheduleScreen = () => {
           </View>
         </>
       )}
+      <SessionDetailModal
+        session={detailSession}
+        isSelected={true}
+        onToggle={() => { detailSession && toggleSession(detailSession); setDetailSession(null); }}
+        onClose={() => setDetailSession(null)}
+      />
     </View>
   );
 };
