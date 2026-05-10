@@ -88,7 +88,7 @@ const ExportButton = ({ sessions }) => {
         const endDate = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00`);
 
         await Calendar.createEventAsync(defaultCal.id, {
-          title: session.title,
+          title: session.room ? `[${session.room}] ${session.title}` : session.title,
           startDate,
           endDate,
           location: session.room || '',
