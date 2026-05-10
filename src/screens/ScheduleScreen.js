@@ -8,7 +8,7 @@ import {
   Alert,
   ScrollView,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 import { DataContext } from '../context/DataContext';
 import SelectedSessionCard from '../components/SelectedSessionCard';
 import ExportButton from '../components/ExportButton';

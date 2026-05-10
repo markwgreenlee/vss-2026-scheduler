@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
 const SelectedSessionCard = ({ session, onRemove }) => {
   return (
@@ -19,7 +19,7 @@ const SelectedSessionCard = ({ session, onRemove }) => {
             </Text>
             {session.authors && (
               <Text style={styles.authors} numberOfLines={1}>
-                {session.authors}
+                {Array.isArray(session.authors) ? session.authors.join(', ') : session.authors}
               </Text>
             )}
           </View>

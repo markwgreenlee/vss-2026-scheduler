@@ -55,25 +55,26 @@ export const DataProvider = ({ children }) => {
     setSelectedSessions([]);
   }, []);
 
-  const searchSessions = useCallback((query, day = '', type = '') => {
+  const searchSessions = useCallback((query, day = '', kind = '') => {
     let results = allSessions;
 
     if (query.trim()) {
       const lowerQuery = query.toLowerCase();
-      results = results.filter(session =>
-        session.title.toLowerCase().includes(lowerQuery) ||
-        session.authors.toLowerCase().includes(lowerQuery) ||
-        session.abstract.toLowerCase().includes(lowerQuery) ||
-        session.room.toLowerCase().includes(lowerQuery)
+      results = results.filter(s =>
+        s.title.toLowerCase().includes(lowerQuery) ||
+        s.authors.join(' ').toLowerCase().includes(lowerQuery) ||
+        s.abstract.toLowerCase().includes(lowerQuery) ||
+        s.session_title.toLowerCase().includes(lowerQuery) ||
+        s.affiliations.toLowerCase().includes(lowerQuery)
       );
     }
 
     if (day) {
-      results = results.filter(session => session.day === day);
+      results = results.filter(s => s.day === day);
     }
 
-    if (type) {
-      results = results.filter(session => session.type === type);
+    if (kind) {
+      results = results.filter(s => s.kind === kind);
     }
 
     return results;

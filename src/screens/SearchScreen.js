@@ -4,30 +4,33 @@ import {
   TextInput,
   FlatList,
   StyleSheet,
-  Picker,
   TouchableOpacity,
   Text,
   ActivityIndicator,
+  ScrollView,
 } from 'react-native';
 import { DataContext } from '../context/DataContext';
 import SessionCard from '../components/SessionCard';
 
-const DAYS = ['', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday'];
-const TYPES = ['', 'Talk', 'Talk Session', 'Poster Session', 'Symposium', 'Workshop', 'Satellite'];
+const DAYS = ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday'];
+const KINDS = ['talk', 'poster'];
 
 const SearchScreen = () => {
   const { allSessions, selectedSessions, isLoading, toggleSession, searchSessions } = useContext(DataContext);
   const [query, setQuery] = useState('');
   const [selectedDay, setSelectedDay] = useState('');
-  const [selectedType, setSelectedType] = useState('');
+  const [selectedKind, setSelectedKind] = useState('');
 
   const results = useMemo(() => {
-    return searchSessions(query, selectedDay, selectedType);
-  }, [query, selectedDay, selectedType, searchSessions]);
+    return searchSessions(query, selectedDay, selectedKind);
+  }, [query, selectedDay, selectedKind, searchSessions]);
+
+  const toggleDay = (day) => setSelectedDay(prev => prev === day ? '' : day);
+  const toggleKind = (kind) => setSelectedKind(prev => prev === kind ? '' : kind);
 
   if (isLoading) {
     return (
-      <View style={styles.container}>
+      <View style={styles.centered}>
         <ActivityIndicator size="large" color="#667eea" />
       </View>
     );
@@ -38,49 +41,56 @@ const SearchScreen = () => {
       <View style={styles.searchBox}>
         <TextInput
           style={styles.input}
-          placeholder="Search by topic, author, or title..."
+          placeholder="Search title, authors, abstract…"
           placeholderTextColor="#999"
           value={query}
           onChangeText={setQuery}
+          clearButtonMode="while-editing"
         />
       </View>
 
-      <View style={styles.filters}>
-        <View style={styles.filterGroup}>
-          <Text style={styles.filterLabel}>Day:</Text>
-          <Picker
-            selectedValue={selectedDay}
-            onValueChange={setSelectedDay}
-            style={styles.picker}
-          >
-            {DAYS.map(day => (
-              <Picker.Item key={day || 'all'} label={day || 'All Days'} value={day} />
-            ))}
-          </Picker>
-        </View>
+      <View style={styles.filtersRow}>
+        <Text style={styles.filterLabel}>Day:</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.chipScroll}>
+          {DAYS.map(day => (
+            <TouchableOpacity
+              key={day}
+              style={[styles.chip, selectedDay === day && styles.chipActive]}
+              onPress={() => toggleDay(day)}
+            >
+              <Text style={[styles.chipText, selectedDay === day && styles.chipTextActive]}>
+                {day.slice(0, 3)}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </View>
 
-        <View style={styles.filterGroup}>
-          <Text style={styles.filterLabel}>Type:</Text>
-          <Picker
-            selectedValue={selectedType}
-            onValueChange={setSelectedType}
-            style={styles.picker}
-          >
-            {TYPES.map(type => (
-              <Picker.Item key={type || 'all'} label={type || 'All Types'} value={type} />
-            ))}
-          </Picker>
+      <View style={styles.filtersRow}>
+        <Text style={styles.filterLabel}>Type:</Text>
+        <View style={styles.chipRow}>
+          {KINDS.map(kind => (
+            <TouchableOpacity
+              key={kind}
+              style={[styles.chip, selectedKind === kind && styles.chipActive]}
+              onPress={() => toggleKind(kind)}
+            >
+              <Text style={[styles.chipText, selectedKind === kind && styles.chipTextActive]}>
+                {kind.charAt(0).toUpperCase() + kind.slice(1)}s
+              </Text>
+            </TouchableOpacity>
+          ))}
         </View>
       </View>
 
       <View style={styles.statsBox}>
         <Text style={styles.statsText}>
-          {results.length} result{results.length !== 1 ? 's' : ''} found
+          {results.length} result{results.length !== 1 ? 's' : ''}
         </Text>
       </View>
 
       {results.length === 0 ? (
-        <View style={styles.emptyState}>
+        <View style={styles.centered}>
           <Text style={styles.emptyText}>No presentations found</Text>
         </View>
       ) : (
@@ -108,44 +118,70 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     padding: 12,
   },
+  centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   searchBox: {
-    marginBottom: 12,
+    marginBottom: 8,
   },
   input: {
     backgroundColor: '#fff',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: '#e0e0e0',
     fontSize: 14,
+    color: '#333',
   },
-  filters: {
+  filtersRow: {
     flexDirection: 'row',
-    gap: 10,
-    marginBottom: 12,
-  },
-  filterGroup: {
-    flex: 1,
+    alignItems: 'center',
+    marginBottom: 6,
   },
   filterLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#333',
-    marginBottom: 4,
+    color: '#555',
+    marginRight: 8,
+    width: 38,
   },
-  picker: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    borderWidth: 2,
-    borderColor: '#e0e0e0',
+  chipScroll: {
+    flexDirection: 'row',
+  },
+  chipRow: {
+    flexDirection: 'row',
+    gap: 6,
+  },
+  chip: {
+    backgroundColor: '#eee',
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    marginRight: 6,
+    borderWidth: 1,
+    borderColor: '#ddd',
+  },
+  chipActive: {
+    backgroundColor: '#1c1c1a',
+    borderColor: '#1c1c1a',
+  },
+  chipText: {
+    fontSize: 12,
+    color: '#444',
+    fontWeight: '500',
+  },
+  chipTextActive: {
+    color: '#fff',
   },
   statsBox: {
     backgroundColor: '#f0f4ff',
     borderRadius: 8,
-    paddingVertical: 10,
+    paddingVertical: 6,
     paddingHorizontal: 12,
-    marginBottom: 12,
+    marginBottom: 8,
     alignItems: 'center',
   },
   statsText: {
@@ -154,12 +190,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   list: {
-    gap: 10,
-  },
-  emptyState: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    gap: 8,
+    paddingBottom: 20,
   },
   emptyText: {
     color: '#999',

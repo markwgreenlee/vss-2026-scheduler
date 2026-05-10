@@ -1,37 +1,55 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
 const SessionCard = ({ session, isSelected }) => {
+  const authors = Array.isArray(session.authors)
+    ? session.authors.join(', ')
+    : session.authors;
+
+  const timeLabel = session.time
+    ? session.time
+    : session.session_start || '';
+
+  const kindLabel = session.kind === 'poster' ? 'Poster' : 'Talk';
+
   return (
     <View style={[styles.card, isSelected && styles.selectedCard]}>
       <View style={styles.header}>
         <View style={styles.timeRoom}>
-          <Text style={styles.time}>{session.time}</Text>
-          <Text style={styles.room}>📍 {session.room}</Text>
+          {timeLabel ? <Text style={styles.time}>{timeLabel}</Text> : null}
+          {session.room ? (
+            <Text style={styles.room}>📍 {session.room}</Text>
+          ) : null}
         </View>
         {isSelected && (
-          <Icon name="check-circle" size={24} color="#667eea" />
+          <Icon name="check-circle" size={20} color="#667eea" />
         )}
       </View>
 
-      <Text style={styles.title} numberOfLines={2}>{session.title}</Text>
+      {session.session_title ? (
+        <Text style={styles.sessionTitle}>{session.session_title}</Text>
+      ) : null}
 
-      {session.authors && (
-        <Text style={styles.authors} numberOfLines={1}>
-          {session.authors}
-        </Text>
-      )}
+      <Text style={styles.title} numberOfLines={3}>{session.title}</Text>
 
-      {session.abstract && (
+      {authors ? (
+        <Text style={styles.authors} numberOfLines={2}>{authors}</Text>
+      ) : null}
+
+      {session.abstract ? (
         <Text style={styles.abstract} numberOfLines={2}>
           {session.abstract}
         </Text>
-      )}
+      ) : null}
 
       <View style={styles.footer}>
-        <Text style={styles.day}>{session.day}</Text>
-        <Text style={styles.type}>{session.type}</Text>
+        {session.day ? (
+          <Text style={styles.day}>{session.day.slice(0, 3)}</Text>
+        ) : null}
+        <Text style={[styles.kindBadge, session.kind === 'poster' && styles.posterBadge]}>
+          {kindLabel}
+        </Text>
       </View>
     </View>
   );
@@ -44,7 +62,6 @@ const styles = StyleSheet.create({
     padding: 12,
     borderWidth: 1,
     borderColor: '#e0e0e0',
-    marginBottom: 0,
   },
   selectedCard: {
     borderColor: '#667eea',
@@ -54,7 +71,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   timeRoom: {
     flex: 1,
@@ -69,26 +86,33 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: '#666',
   },
+  sessionTitle: {
+    fontSize: 11,
+    color: '#888',
+    fontStyle: 'italic',
+    marginBottom: 4,
+  },
   title: {
     fontSize: 13,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 6,
+    fontWeight: '700',
+    color: '#222',
+    marginBottom: 4,
   },
   authors: {
-    fontSize: 11,
-    color: '#666',
-    marginBottom: 6,
+    fontSize: 12,
+    color: '#1a5fd1',
+    marginBottom: 4,
   },
   abstract: {
     fontSize: 11,
-    color: '#999',
-    marginBottom: 8,
+    color: '#666',
     lineHeight: 16,
+    marginBottom: 6,
   },
   footer: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 6,
+    marginTop: 2,
   },
   day: {
     fontSize: 10,
@@ -99,14 +123,17 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     overflow: 'hidden',
   },
-  type: {
+  kindBadge: {
     fontSize: 10,
     color: '#fff',
-    backgroundColor: '#999',
+    backgroundColor: '#555',
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 4,
     overflow: 'hidden',
+  },
+  posterBadge: {
+    backgroundColor: '#2c7a3e',
   },
 });
 

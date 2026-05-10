@@ -1,42 +1,22 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Alert, Linking } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import * as FileSystem from 'expo-file-system';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
+import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
 import * as Calendar from 'expo-calendar';
 
 const ExportButton = ({ sessions }) => {
-  const getDateForDay = (day) => {
-    const dayMap = {
-      'Thursday': '20260514',
-      'Friday': '20260515',
-      'Saturday': '20260516',
-      'Sunday': '20260517',
-      'Monday': '20260518',
-      'Tuesday': '20260519'
-    };
-    return dayMap[day] || '20260515';
-  };
+  const authorsString = (session) =>
+    Array.isArray(session.authors)
+      ? session.authors.join(', ')
+      : (session.authors || '');
 
-  const convertTo24Hour = (timeStr) => {
-    const match = timeStr.match(/(\d{1,2}):(\d{2})\s*(am|pm)/i);
-    if (!match) return '1000';
-    
-    let hours = parseInt(match[1]);
-    const minutes = match[2];
-    const period = match[3].toLowerCase();
-    
-    if (period === 'pm' && hours !== 12) hours += 12;
-    if (period === 'am' && hours === 12) hours = 0;
-    
-    return `${String(hours).padStart(2, '0')}${minutes}`;
-  };
-
-  const parseTime = (timeStr) => {
-    const times = timeStr.split('-').map(t => t.trim());
-    const startTime = convertTo24Hour(times[0]);
-    const endTime = convertTo24Hour(times[1]);
-    return [startTime, endTime];
+  const getStartEnd = (session) => {
+    const date = (session.date || '').replace(/-/g, '');
+    const start = (session.time || session.session_start || '09:00').replace(':', '');
+    const end = (session.session_end || '').replace(':', '');
+    const endTime = end || String(parseInt(start) + 15).padStart(4, '0');
+    return [`${date}T${start}00`, `${date}T${endTime}00`];
   };
 
   const exportToGoogle = () => {
@@ -46,23 +26,20 @@ const ExportButton = ({ sessions }) => {
     }
 
     try {
-      sessions.slice(0, 1).forEach((session, idx) => {
-        const date = getDateForDay(session.day);
-        const [startTime, endTime] = parseTime(session.time);
-        const startDateTime = `${date}T${startTime}`;
-        const endDateTime = `${date}T${endTime}`;
-        
-        const eventParams = new URLSearchParams({
-          text: `${session.title} - ${session.authors}`,
-          dates: `${startDateTime}/Z${endDateTime}/Z`,
-          location: session.room,
-          details: `Authors: ${session.authors}\n\nAbstract: ${session.abstract}`
-        });
-        
-        const url = `https://calendar.google.com/calendar/r/eventedit?${eventParams.toString()}`;
-        Linking.openURL(url).catch(() => {
-          Alert.alert('Error', 'Could not open Google Calendar');
-        });
+      const session = sessions[0];
+      const authors = authorsString(session);
+      const [startDateTime, endDateTime] = getStartEnd(session);
+
+      const eventParams = new URLSearchParams({
+        text: session.title,
+        dates: `${startDateTime}/${endDateTime}`,
+        location: session.room || '',
+        details: `Authors: ${authors}\n\nAbstract: ${session.abstract || ''}`,
+      });
+
+      const url = `https://calendar.google.com/calendar/r/eventedit?${eventParams.toString()}`;
+      Linking.openURL(url).catch(() => {
+        Alert.alert('Error', 'Could not open Google Calendar');
       });
 
       Alert.alert(
@@ -81,71 +58,47 @@ const ExportButton = ({ sessions }) => {
     }
 
     try {
-      let ical = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//VSS 2026//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:VSS 2026 Schedule
-X-WR-TIMEZONE:America/New_York
-BEGIN:VTIMEZONE
-TZID:America/New_York
-BEGIN:STANDARD
-DTSTART:20261102T020000
-TZOFFSETFROM:-0400
-TZOFFSETTO:-0500
-TZNAME:EST
-END:STANDARD
-BEGIN:DAYLIGHT
-DTSTART:20260308T020000
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0400
-TZNAME:EDT
-END:DAYLIGHT
-END:VTIMEZONE
-`;
-
-      sessions.forEach((session, idx) => {
-        const date = getDateForDay(session.day);
-        const [startTime, endTime] = parseTime(session.time);
-        const startDateTime = `${date}T${startTime}00`;
-        const endDateTime = `${date}T${endTime}00`;
-
-        const sanitizedTitle = session.title.replace(/[\n\r]/g, ' ').substring(0, 100);
-        const sanitizedAuthors = session.authors.replace(/[\n\r]/g, ' ').substring(0, 200);
-        const sanitizedAbstract = session.abstract.replace(/[\n\r]/g, ' ').substring(0, 500);
-        const sanitizedRoom = session.room.replace(/[\n\r]/g, ' ').substring(0, 100);
-
-        ical += `BEGIN:VEVENT
-UID:vss-${idx}-${Date.now()}@vss2026.com
-DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
-DTSTART;TZID=America/New_York:${startDateTime}
-DTEND;TZID=America/New_York:${endDateTime}
-SUMMARY:${sanitizedTitle}
-DESCRIPTION:Authors: ${sanitizedAuthors}\\n\\nAbstract: ${sanitizedAbstract}
-LOCATION:${sanitizedRoom}
-END:VEVENT
-`;
-      });
-
-      ical += `END:VCALENDAR`;
-
-      const fileName = 'vss-2026-schedule.ics';
-      const filePath = `${FileSystem.DocumentDirectoryPath}/${fileName}`;
-      
-      await FileSystem.writeAsStringAsync(filePath, ical, {
-        encoding: FileSystem.EncodingType.UTF8,
-      });
-
-      const isAvailable = await Sharing.isAvailableAsync();
-      if (isAvailable) {
-        await Sharing.shareAsync(filePath, {
-          mimeType: 'text/calendar',
-          dialogTitle: 'Export VSS 2026 Schedule',
-        });
-      } else {
-        Alert.alert('Success', 'iCal file created. Check your Downloads folder.');
+      const { status } = await Calendar.requestCalendarPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permission Denied', 'Please allow calendar access in Settings to export events.');
+        return;
       }
+
+      const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+      const defaultCal = calendars.find(c => c.allowsModifications && c.source?.name === 'iCloud')
+        || calendars.find(c => c.allowsModifications && c.source?.name === 'Default')
+        || calendars.find(c => c.allowsModifications);
+
+      if (!defaultCal) {
+        Alert.alert('Error', 'No writable calendar found on this device.');
+        return;
+      }
+
+      let created = 0;
+      for (const session of sessions) {
+        const authors = authorsString(session);
+        const date = session.date || '2026-05-15';
+        const startTime = session.time || session.session_start || '09:00';
+        const endTime = session.session_end || '';
+
+        const [startH, startM] = startTime.split(':').map(Number);
+        const [endH, endM] = endTime ? endTime.split(':').map(Number) : [startH, startM + 15];
+
+        const startDate = new Date(`${date}T${String(startH).padStart(2,'0')}:${String(startM).padStart(2,'0')}:00`);
+        const endDate = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00`);
+
+        await Calendar.createEventAsync(defaultCal.id, {
+          title: session.title,
+          startDate,
+          endDate,
+          location: session.room || '',
+          notes: `Authors: ${authors}\n\nSession: ${session.session_title || ''}\n\nAbstract: ${session.abstract || ''}`,
+          timeZone: 'America/New_York',
+        });
+        created++;
+      }
+
+      Alert.alert('Success', `${created} event${created !== 1 ? 's' : ''} added to Apple Calendar.`);
     } catch (error) {
       Alert.alert('Error', 'Failed to export to Apple Calendar: ' + error.message);
     }

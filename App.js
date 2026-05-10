@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ActivityIndicator, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
 import SearchScreen from './src/screens/SearchScreen';
 import ScheduleScreen from './src/screens/ScheduleScreen';
@@ -59,21 +59,24 @@ export default function App() {
               name="Search"
               component={SearchScreen}
               options={{
-                title: '🔍 Search Presentations',
+                title: 'Search Presentations',
+                tabBarLabel: 'Search',
               }}
             />
             <Tab.Screen
               name="Schedule"
               component={ScheduleScreen}
               options={{
-                title: '📌 My Schedule',
+                title: 'My Schedule',
+                tabBarLabel: 'Schedule',
               }}
             />
             <Tab.Screen
               name="Settings"
               component={SettingsScreen}
               options={{
-                title: '⚙️ Settings',
+                title: 'Settings',
+                tabBarLabel: 'Settings',
               }}
             />
           </Tab.Navigator>

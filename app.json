@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "VSS 2026 Scheduler",
+    "slug": "vss-2026-scheduler",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "sdkVersion": "54.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#667eea"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e87a1137-1944-44de-af8c-989ba6bb299a"
+      }
+    },
+    "owner": "markwgreenlee",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e87a1137-1944-44de-af8c-989ba6bb299a"
+    }
+  }
+}
