@@ -235,14 +235,14 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 **How to use:**
 1. Type search term in text box
 2. Results show matching presentations
-3. Tap a presentation card to select it
-4. Blue checkmark indicates selection
-5. Selected count shows at bottom
+3. **Tap a card** to open the full detail view — title, authors, affiliations, and complete abstract
+4. Tap **"Add to Schedule"** inside the detail view to save it
+5. Blue checkmark on the card indicates it is already saved
 
 **Search across:**
 - Presentation title
 - Author names
-- Topic/keywords
+- Affiliations
 - Abstract text
 - Room location
 
@@ -255,8 +255,8 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 - Quick remove button
 
 **Actions:**
-- Tap presentation to view details
-- Remove button to unselect
+- **Tap a card** to open the full detail view — read the abstract, then remove if needed
+- Remove button (✕) on each card to unselect directly
 - "Clear Schedule" to remove all
 
 **Export Options:**
