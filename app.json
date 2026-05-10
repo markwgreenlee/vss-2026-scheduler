@@ -24,7 +24,7 @@
     },
     "owner": "markwgreenlee",
     "runtimeVersion": {
-      "policy": "appVersion"
+      "policy": "sdkVersion"
     },
     "updates": {
       "url": "https://u.expo.dev/e87a1137-1944-44de-af8c-989ba6bb299a"
