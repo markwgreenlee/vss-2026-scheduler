@@ -279,6 +279,13 @@ Then follow Expo's instructions to submit to App Store. See [Expo iOS Distributi
 
 ### Exporting to Google Calendar
 
+> **Important — Suppress Google Calendar Alarms:**
+> Google Calendar automatically adds a default reminder (usually 30 minutes) to every new event. During a conference this will cause your phone to alert repeatedly throughout the day. Before or after exporting, we recommend turning off the default reminder in Google Calendar:
+> - Open the Google Calendar app → tap the **☰ Menu** → **Settings** → **Events from Gmail** (or **General** → **Notifications**) → set **Default notifications** to **None**.
+> - Alternatively, delete the reminder manually from each event after saving it.
+> 
+> **Note:** Apple Calendar export does not have this problem — the app suppresses alarms automatically.
+
 #### iOS Instructions
 
 1. **In App:**

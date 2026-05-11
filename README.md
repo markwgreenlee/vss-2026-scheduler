@@ -21,7 +21,8 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 - Filter by day (Fri–Tue) and type (Talk / Poster / Symposium)
 - **Tap any card** to read the full abstract, authors, and session details in a pop-up sheet
 - Build a personal schedule — add/remove directly from the detail sheet
-- Export to **Google Calendar** (opens in browser) or **Apple Calendar** (adds events directly)
+- Export to **Google Calendar** (opens in browser) or **Apple Calendar** (adds events directly, no alarms set)
+- **Google Calendar users:** disable default reminders in Google Calendar settings to avoid repeated alerts during the conference
 - Persistent schedule — survives app restarts
 - Works offline after first load
 
