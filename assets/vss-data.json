@@ -1690,11 +1690,7 @@
     "talk_number": 6,
     "time": "09:30",
     "title": "PROBING THE GRANULARITY OF HUMAN-MACHINE ALIGNMENT",
-    "authors": [
-      "we derived category boundaries directly from visual features",
-      "avoiding external semantic hierarchies. Using recursive PCA on pre-trained AlexNet and ViT representations",
-      "we generated hierarchical label sets ranging from  to  coarse categories while keeping the training images constant."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We then trained networks from scratch on these coarse tasks and evaluated their representations against the Natural Scenes Dataset (fMRI) and the THINGS database (behavioral similarity). We found that fine-grained supervision is not necessary for brain-like representations. Strikingly, models trained to make only broad distinctions (e.g., just a handful of coarse categories) achieved the highest alignment with human behavioral similarity judgments, significantly outperforming standard 1000-class models. For neural alignment, models trained on intermediate granularity (32\u201364 categories) matched or surpassed fine-grained models in the early visual cortex and maintained comparable performance in the ventral stream. Additionally, coarse-trained models demonstrated superior stability when tested on out-of-distribution synthetic stimuli, suggesting that their alignment with human vision is more robust than conventional networks. Control analyses confirm these representations are structurally distinct from low-dimensional projections of fine-grained models. These findings suggest that networks trained on broader categorical distinctions are better at capturing the most cognitively salient organizing principles of human vision.",
     "day": "Sunday",
@@ -3161,14 +3157,8 @@
     "title": "THE FACTORS THAT DETERMINE TRIAL-BY-TRIAL MEMORY BEHAVIOR ACROSS 6 MILLION TRIALS",
     "authors": [
       "made by",
-      "participants on a continuous recognition memory task with",
-      "object images. I examined how  different factors commonly discussed in the memory field (e.g.",
       "memorability",
-      "image context and distinctiveness",
-      "previous trial performance",
-      "repetition lag",
-      "trial number",
-      "etc) are predictive of trialwise memory performance. These factors combined explained over half the variance in memory behavior (.%)."
+      "repetition lag"
     ],
     "affiliations": "",
     "abstract": "The participant and the image\u2019s memorability were the most impactful determinants of memory, with little variance captured by contextual factors, like the experimental distinctiveness of an image. The impact of memorability remained strong even when modeling memorability as predictions from a neural network (ResMem) independent from the experimental context, suggesting this is truly a stimulus-specific effect, rather than something about the stimulus set. Next, I ran 1000 mini-experiments within the data, testing whether the influence of these factors changes when looking at more homogenous or heterogeneous participants or contexts. More diverse participants resulted in less of an impact of context but an unchanged impact of memorability. More diverse images also did not change the impact of memorability on memory performance. Finally, I tested the factors that contribute to false alarms, and discovered that these are influenced by a wider variety of factors (intrinsic false alarmability, but also contextual and participant factors). In sum, this work demonstrates that surprisingly a lot of memory is predetermined and context-independent. I advocate for more models integrating stimulus, participant, and contextual factors in conjunction. W.A.B. was supported by the Alfred P. Sloan Foundation and the National Science Foundation under CAREER Grant No. 244171",
@@ -3609,12 +3599,7 @@
     "time": "11:00",
     "title": "SEQUENTIAL EVIDENCE ACCUMULATION ADAPTS TO CHANGING LEVELS OF EVIDENCE RELIABILITY",
     "authors": [
-      "our previous study did not test whether participants adapt their strategy when evidence reliability changes. Given the brain\u2019s ability to actively control the accumulation process",
-      "we considered two competing hypotheses: () the system increases encoding precision when evidence is reliable and reduces it when evidence is less reliable",
-      "or () the opposite",
-      "the system increases encoding precision to compensate for low-quality evidence and lowers it when reliability is high. To test these hypotheses",
-      "we conducted a visual estimation task where participants inferred the angular position of an unknown source from  sequentially presented",
-      "normally distributed stimulus samples."
+      "or () the opposite"
     ],
     "affiliations": "",
     "abstract": "We manipulated sampling noise across three levels. The testing phase included 9 blocks across 3 visits in a balanced Latin square design, with trial-by-trial feedback and a performance-dependent bonus. Noise levels were not disclosed in each block. Results showed that participants' estimation performance decreased as sampling noise increased. Fits with our normative resource-rational model showed that encoding precision scaled with sampling noise, supporting our first hypothesis that the brain actively adjusts encoding precision to match external sensory reliability. Circular regression analysis further revealed that the variance of normalized temporal weights decreased as noise increased, reflecting shifts in temporal weighting strategies (e.g., from recency to uniform/primacy). Changes in trade-off parameters also showed greater tolerance for effort costs under higher noise, partly offsetting the reduced encoding precision. Together, these findings demonstrate that evidence accumulation is governed by a performance-effort trade-off strategy that adapts sensory encoding precision to the reliability of the evidence. This work was supported by the NSF CRCNS grant IIS-1912232 to A.A.S",
@@ -5291,13 +5276,7 @@
     "talk_number": null,
     "time": "",
     "title": "DOES EMOTIONAL SALIENCE ALTER TEMPORAL PROCESSING IN PERI-HAND SPACE? ANKIT MAURYA1, TONY THOMAS1;",
-    "authors": [
-      "stimuli in PHS. Participants completed standard temporal bisection task (N=)",
-      "that used a short ( ms) & long ( ms) as the standard duration. Participants had to judge whether the duration ranging from  ms to  ms (in steps of  ms) were closer to \u2018Short\u2019 or \u2018Long\u2019",
-      "in two hand conditions. First condition required participants to place their hands on the sides of a computer monitor",
-      "making the stimuli appear in peri-hand space (Near-hand). Second condition required the hands to be placed on the lap",
-      "making the stimuli appear outside of peri-hand space (Far-hand)."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The stimuli were high arousal (positive and negative) and low arousal (neutral) images. Participant\u2019s responses were compared between \u2018Near-hand\u2019 and \u2018Far-hand\u2019 conditions. Results showed lower Point of Subjective Equality (PSE) for high arousal stimuli (M = 486, SD = 55.41) compared to low arousal stimuli (M=508, SD=60.11), [t (33) = -3.53, p = 0.001] for the near-hand condition. No such PSE differences were obtained in the far-hand condition, [p = .08]. The findings imply temporal dilation for highly arousing emotional stimuli in PHS and not the space beyond, perhaps to allow for in-depth and detailed cognitive evaluation of emotional salience. The temporal dilation seems to be driven by early anticipatory mechanisms associated with PHS. Further, emotional salience seems to have spatial characteristics; arousing stimuli get prioritized in PHS and not the space beyond, thus providing allowance for better planning and execution of defensive actions in PHS.",
     "day": "Friday",
@@ -6124,12 +6103,7 @@
     "talk_number": null,
     "time": "",
     "title": "POST-PERCEPTUAL DECISION DETERMINES THE DIRECTION OF SERIAL DEPENDENCE IN VISUAL PERCEPTION",
-    "authors": [
-      "perceptual sensitivity over time to detect differences in stimuli encountered at different time points (i.e.",
-      "repulsive serial dependence). Here",
-      "we investigated how the visual system balances these competing demands in the context of motion perception. In two experiments",
-      "participants viewed a brief random-dot kinematogram with varying levels of motion coherence and reproduced the perceived motion direction using a computer mouse."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We found that direction reports exhibited an attractive serial bias when the motion stimulus was noisier (i.e., lower coherence), and that this attractive bias decreased and eventually reversed into a repulsive bias as the motion stimulus became less noisy (i.e., higher coherence). To understand how these opposing biases emerged, we examined the temporal dynamics underlying the bias effects by analyzing mouse trajectories. We found that, for both attractive and repulsive biases, mouse reports began with a strong repulsive bias away from the prior stimulus, reflecting adaptation to the prior stimulus (or decision), and that this initial repulsion was substantially decreased over the course of the response. These results show that both the repulsive and attractive serial biases are driven by post-perceptual correction mechanism that reduces the strong repulsive bias driven by adaptation, with the direction of the serial bias effect determined by the quality of the stimulus information. Together, our findings suggest that the visual system optimizes perceptual behavior under stimulus uncertainty by balancing stability and sensitivity through a single quantitative decision mechanism, rather than through qualitatively distinct multiple mechanisms proposed by prevailing models of serial dependence.",
     "day": "Saturday",
@@ -7220,20 +7194,9 @@
     "time": "",
     "title": "WHY DO HUMANS UNDERSTAND PICTURES?",
     "authors": [
-      "understand certain real-world phenomena---refraction",
       "reflection",
-      "cast shadows---as simultaneously surface phenomena but also images of an underlying cause explains why we can see pictures as depictions and not just markings. Second",
-      "the fact that viewers can understand real-world scenes with unfamiliar combinations of objects explains our ability to understand many different styles of depiction. For example",
-      "we can understand black-and-white photos of people because",
-      "in real- world vision",
-      "we could recognize a familiar person who had been painted gray. Third",
-      "our robustness to visual defects and other difficult viewing conditions explains our ability to understand styles of pictorial textures",
-      "like paint strokes. Extensions of these basic ideas can explain depiction in many different visual styles",
-      "including photographic tone reproduction",
-      "line drawings",
       "silhouettes",
       "cartoons",
-      "painterly styles",
       "and more."
     ],
     "affiliations": "",
@@ -7828,12 +7791,8 @@
     "time": "",
     "title": "COMPUTATIONAL MODELING OF THE PERCEIVED FACIAL TYPICALITY AND ATTRACTIVENESS OF DISTINCT FACE POPULATIONS",
     "authors": [
-      "face population (ideal face). This study extends this prior research by modeling the mental representation of young adult Caucasian",
       "African American",
-      "and East Asian female faces. Human judgments of typicality",
-      "attractiveness",
-      "and pairwise similarity were gathered for  faces from each face group. Perceived typicality and attractiveness judgments were then predicted using four computational models expressed within a perceptual embedding space (\u201cface space\u201d) derived from the similarity ratings via multidimensional scaling: the Ideal Dimension Model (IDM)",
-      "in which typicality and attractiveness reflect the similarity of a face to the ideal face of a face population"
+      "attractiveness"
     ],
     "affiliations": "the Generalized Context Model (GCM), in which typicality and attractiveness reflect the similarity of a face to other faces encoded in memory; the Central Prototype Model (CPM), in which typicality and attractiveness reflect the similarity of a face to the central tendency of a population of faces; and the Varying Abstraction Model (VAM), in which typicality and attractiveness reflect the similarity of a face to clusters of related faces (\u201csubprototypes\u201d) within a face population.",
     "abstract": "Face typicality for all three face groups was best explained by the IDM as quantified by Bayesian metrics of model generalizability. The attractiveness of the Caucasian and African American faces was also best explained by the IDM, whereas the VAM best explained East Asian facial attractiveness. These findings suggest that facial typicality is mentally represented by humans via an ideal format; however, facial attractiveness may be mentally represented using different formats depending on the face population. This work was partially supported by NIH grant #HD021332.",
@@ -7873,7 +7832,6 @@
     "time": "",
     "title": "MAPPING THE REPRESENTATIONAL GEOMETRY OF SUBJECTIVE FACE IDENTITY DISCRIMINATION WITH A GENERATIVE FOUNDATION MODEL",
     "authors": [
-      "Veronica bossio botero",
       "Nikolaus Kriegeskorte"
     ],
     "affiliations": "1Columbia University, Zuckerman Institute, 2Columbia University, Zuckerman Institute",
@@ -8215,8 +8173,7 @@
     "time": "",
     "title": "LEARNING THE AFFORDANCE LANDSCAPE FOR VISUALLY GUIDED STEERING",
     "authors": [
-      "Together",
-      "these factors define the affordance landscape"
+      "Together"
     ],
     "affiliations": "that is, the space of possible actions. By learning the affordance landscape, actors can adapt behavior to task demands while maintaining stable control within their limits.",
     "abstract": "The aim of this study was to extend existing information-based strategies of visual control to model how an agent might learn the affordance landscape for a basic locomotor task: steering to a goal. The model agent\u2019s translational and rotational accelerations are regulated by a simple error-nulling control strategy based on visual information about goal-heading angle, rotation rate, and speed. The control strategy has parameters that the agent can tune to alter trajectory shape and enact different solutions. The agent\u2019s movements are also influenced by motor noise and subject to action limits that shape the stability and controllability of individual solutions. Importantly, the controllability of the current solution is specified by the time evolution of the control strategy output (acceleration), which converges to zero only when the agent is following a stable, controllable trajectory. This information allows the agent to gradually learn a function from currently available visual information and control- strategy parameters to the controllability of individual solutions; in effect, the affordance landscape. Model simulations capture key aspects of human steering behavior that simpler models cannot, including the ability to adapt to changes in action capabilities and motor noise and to coordinate steering and speed control. NSF 2218220",
@@ -11902,16 +11859,7 @@
     "talk_number": null,
     "time": "",
     "title": "INVESTIGATING ACTIVE SUPPRESSION OF HIGH- CALORIE FOOD STIMULI IN INDIVIDUALS WITH ANOREXIC TENDENCIES",
-    "authors": [
-      "that salient distractors are actively suppressed below baseline",
-      "this project examines whether individuals who scored higher on the Eating Disorder Examination Questionnaire (EDE-Q) actively suppress attention to high-calorie food cues",
-      "potentially explaining previously mixed findings. Participants completed a dual-task paradigm combining visual search trials with probe trials. On each trial",
-      "six stimuli were presented in a ring. In Block",
-      "replicating the classic signal suppression effect",
-      "participants searched for a predefined target (green diamond) and indicated whether a black dot on the target appeared on the left or the right. Probe trials required recalling letters briefly presented on each stimulus. In Block",
-      "targets varied across trials",
-      "and stimuli were objects."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The critical manipulation in this block was the identity of each object: each trial included one high-calorie food, two low-calorie foods, and three neutral objects. The search target was always a neutral object. The dependent measure was probe recall accuracy, which allowed us to measure the suppression of attention to high-calorie food items below baseline. Data collection is ongoing (current N = 17). Although the current sample is underpowered for definitive statistical inference, preliminary analyses reveal a large linear trend that higher EDE-Q scores predict reduced probe recall accuracy for high-calorie food stimuli relative to neutral stimuli (R\u00b2 = 0.23, p = .054). This pattern suggests that individuals with greater anorexic tendencies exhibit selectively suppressed processing of high-calorie cues. Together, these findings provide preliminary evidence for active attentional suppression of high-calorie food cues as an underlying mechanism explaining previously mixed results.",
     "day": "Sunday",
@@ -12263,12 +12211,7 @@
     "time": "",
     "title": "FACIAL ASYMMETRY DRIVES DISTORTIONS IN PROSOPOMETAMORPHOPSIA: A CASE STUDY",
     "authors": [
-      "Here",
-      "we present a detailed case study of a participant with PMO to investigate whether asymmetry between the left and right halves of the face drives distortions. A.S. is a -year-old woman who has experienced intense",
-      "dynamic distortions affecting facial feature shape and position since . In Experiment",
-      "A.S. rated distortion intensity (scale: -) of  faces. Ratings for symmetric faces (mean) were significantly lower than ratings for natural faces (mean) (p < .)",
-      "indicating that left\u2013right facial asymmetry contributes to distortions. In Experiment",
-      "we further assessed the effect of asymmetry by asking A.S. to rate distortions in naturally asymmetric faces presented with different parts visible."
+      "Here"
     ],
     "affiliations": "",
     "abstract": "The stimuli were either full faces (asymmetry present), top and bottom halves (asymmetry present), left and right halves (asymmetry absent), or isolated facial features. Distortions were strongest for the full faces, present but reduced in intensity for the top halves and pairs of eyes, and mostly absent for the bottom halves, left halves, right halves, and individual features (p < 0.001). In Experiment 3, we contrasted frontal views of faces (asymmetry present) with full profiles (asymmetry absent); A.S. saw distortions to all of the frontal views and no distortions to faces presented in profile. Together, these findings suggest that the visual system calculates the asymmetry between the left and right halves of the face every time a face is viewed, and therefore, some cases of PMO depend critically on facial symmetry. Disrupting left-right symmetry substantially reduces perceived distortions, providing insight into the perceptual mechanisms underlying this condition. Dartmouth College Department of Psychological and Brain Sciences",
@@ -12797,15 +12740,7 @@
     "talk_number": null,
     "time": "",
     "title": "STEREO VISION WITHOUT 3D GEOMETRY: KEEPING STEREO VISION IN RETINAL (VS WORLD) COORDINATES",
-    "authors": [
-      "RELATIVE DISPARITIES: Stereo depth being nearer vs. further than fixation is a fundamentally different visual experience. It is therefore a mistake to eradicate fixation (move from \u2018absolute\u2019 to \u2018relative\u2019 disparities)",
-      "as much of the literature does. Depth from diplopia (Ziegler & Hess",
-      ") is also hard to explain otherwise. . CORRESPONDENCE PROBLEM: The world doesn\u2019t change with fixation",
-      "but our stereo percept does",
-      "leading to manifestly illogical outcomes. Cross-fusing two coins side-by-side leads to a single fused central coin and two monocular flankers. This is hard to justify as a \u2018solution\u2019 to the correspondence problem. Instead",
-      "stereo vision appears to fuse whatever is on the fovea",
-      "and stereo matching (and depth) radiates outwards from that fixed starting point. . DISPARITY SCALING: Linton Stereo Illusion (VSS Demo Night"
-    ],
+    "authors": [],
     "affiliations": "ECVP 2024) demonstrates that perceived stereo depth is not inferred from the underlying 3D geometry. Instead, stereo depth appears to be a linear function of disparity on the retina.",
     "abstract": "We aim at a model that is independent of physical size and distance. Pilot data suggests z = 5.4x, where x is disparity, and z is the x-axis angular size match of the perceived depth. IMPLICATIONS: First, this approach provides a more plausible evolutionary account for stereo vision. Second, it suggests a mechanism consistent with early (V1) processing. Third, it transforms our understanding of visual space, from a fully articulated 3D space, to fixation plus nearer/further than fixation. This research project and related results were made possible by the support of the NOMIS Foundation. NOMIS Foundation \u2018New Theory of Visual Experience\u2019 grant to PL at the Italian Academy for Advanced Studies, Columbia University. Research conducted in Visual Inference Lab, Zuckerman Mind Brain Behavior Institute, Columbia University.",
     "day": "Sunday",
@@ -14006,18 +13941,7 @@
     "talk_number": null,
     "time": "",
     "title": "THE ROLE OF STIMULUS PROPERTIES IN DIRECTED FORGETTING OF NATURAL SCENES",
-    "authors": [
-      "investigated whether stimulus properties like list structure or image representativeness influence intentional forgetting. Firstly",
-      "we implemented mixed and pure study lists using natural scenes to explore the role of stimulus structure. At learning",
-      "participants viewed  natural scene images",
-      "each followed by a remember or a forget cue. In the pure-list condition",
-      "all studied images came from the same category",
-      "whereas in the mixed-list condition",
-      "images were equally selected from five categories. Participants then completed an old-new recognition test with  old and  new images. Successful directed forgetting would result in better recognition of remember-cue items compared to forget-cue items. Results showed that directed forgetting was obtained in the pure list condition but not in the mixed-list condition",
-      "suggesting that intentional forgetting of visual information is more likely to occur when the studied images belong to the same category. Additionally",
-      "within the pure-list condition",
-      "we observed that different image categories exhibit different directed forgetting effects."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We then followed up on whether representativeness of images explain these category-specific directed forgetting. In a second experiment, we used naturalistic scenes with goodness-of-exemplar ratings and manipulated the type of stimuli (good vs. bad exemplars). At learning, participants viewed 30 good and 30 bad exemplars of natural scenes, each followed by a forget or a remember cue. Then, they took an old- new recognition test with 60 old and 60 new images. This design clarifies the role of scene representativeness in directed forgetting, offering new perspectives in mechanisms of forgetting visual information.",
     "day": "Sunday",
@@ -14059,7 +13983,6 @@
     "time": "",
     "title": "LARGER IMAGES ARE BETTER REMEMBERED EVEN WHEN PERCEPTUAL MEASURES ARE NOT AFFECTED BY IMAGE SIZE",
     "authors": [
-      "shaimaa masarwa",
       "Olga Kreichman",
       "Sharon Gilaie-Dotan"
     ],
@@ -17437,14 +17360,10 @@
     "title": "A DEVELOPMENTAL SHIFT IN HUMAN BODY REPRESENTATION: AGE-RELATED DIFFERENCES IN THE BODY INVERSION EFFECT FOR HEADLESS BODIES IN INFANCY",
     "authors": [
       "however",
-      "has shown that the BIE is markedly reduced for headless bodies (Yovel et al.",
       ")",
-      "suggesting that the head is critical for holistic body representation. Developmental studies have reported the BIE in infancy (e.g.",
       "Zieber et al.",
       ")",
-      "and neuroimaging work has demonstrated cortical responses specific to human bodies (Kobayashi et al.",
-      "). Yet",
-      "little is known about how infants represent bodies and the role of the head. The present study examined - to -month- old infants\u2019 ability to discriminate postures of whole and headless bodies presented upright or inverted."
+      "). Yet"
     ],
     "affiliations": "",
     "abstract": "We employed a familiarization/novelty-preference procedure. A pre-test confirmed no spontaneous preference for either posture. Infants were familiarized with a full-color image of a particular posture and then tested for visual preference toward a novel posture as an index of discrimination. In the whole-body condition, infants showed a significant preference for the novel posture in the upright presentation (all ps < .01) but not in the inverted presentation (all ps > .1), demonstrating the BIE. In the headless-body condition, 5- and 6-month-old infants also showed the BIE (p < .05), similar to the whole-body condition. In contrast, 7- and 8-month-old infants did not show the BIE, with no significant discrimination in either orientation (ps > .1). These findings suggest that infants younger than 6 months possess relatively independent holistic representations of bodies and faces, such that removing the head does not disrupt body processing. By 7-8 months, however, infants appear to develop a more integrated, adult-like \u201cwhole body\u201d representation in which the head plays a critical role. This study was supported by Grant-in-Aid for Scientific Research from JSPS (19K14492, 23K25752)",
@@ -19000,11 +18919,7 @@
     "time": "",
     "title": "WHAT LOOKS LIKE HORIZONTAL MOTION TODAY MAY LOOK LIKE VERTICAL MOTION TOMORROW: WITHIN-OBSERVER DIFFERENCES IN VISUAL APPARENT MOTION.",
     "authors": [
-      "frame? Generally",
-      "the visual system prefers to assign correspondence between tokens that are separated by short distances (the nearest neighbor principle). However",
-      "when motion tokens positioned on diagonally opposed corners of a rectangle are alternated with tokens on the other two corners",
-      "horizontal and vertical motion are equally likely to be perceived when the vertical sides of the rectangle are longer than the horizontal sides. Substantial individual differences exist in the magnitude of this bias. Here I investigate whether the magnitude of this bias also varies within observers across different testing occasions. Each of eight observers tested in five identical sessions that were conducted on separate days. In each session",
-      "six independent adaptive trial sequences were conducted to relate the probability of perceiving horizontal motion to the ratio of vertical to horizontal distances between potential motion matches and to determine the equivalence ratio:"
+      "frame? Generally"
     ],
     "affiliations": "",
     "abstract": "The aspect ratio at which horizontal and vertical motion are equally likely to be perceived. While equivalence ratios were highly consistent within individual sessions, they varied substantially not only between observers but also between the sessions of individual observers. This within-observer, between- session variance was comparable in magnitude to the between- observer variance, exceeding the within-session variance of equivalence ratios by approximately half an order of magnitude. The mechanism behind the observed within-observer variance across sessions is speculative at present, but its existence carries important implications for the design, analysis, and interpretation of research into visual apparent motion.",
@@ -20747,13 +20662,7 @@
     "time": "",
     "title": "VISUAL DISTRACTION AND EXPERIENCE-BASED SUPPRESSION IN ADHD",
     "authors": [
-      "Neuroscience",
-      "Tel Aviv University Although \u201ceasily distracted\u201d is a core diagnostic criterion for attention- deficit/hyperactivity disorder (ADHD)",
-      "its underlying mechanisms are poorly understood. The few studies on ADHD that relied on experimental tasks specifically designed to study visual distraction in the general population have reported mixed findings. Here",
-      "we suggest that failure to consider experience-based suppression\u2014that is",
-      "the suppression of irrelevant information following repeated exposure\u2014 may explain these inconsistencies. Accordingly",
-      "we investigated distraction in ADHD while disentangling distraction by novel salient distractors from experience-based suppression of these distractors. Participants searched for a target shape while a salient color distractor was either present or absent",
-      "with the distractor color changing at the beginning of each block."
+      "Neuroscience"
     ],
     "affiliations": "",
     "abstract": "We compared baseline distraction (performance costs on distractor-present vs. distractor-absent trials in the first block halves) and feature-based suppression efficiency (reductions in these costs from the first to the second block halves) in participants with ADHD and matched controls. The results showed that participants with ADHD exhibited greater distraction by novel salient distractors than controls, yet were equally efficient at suppressing these distractors following repeated exposure. This dissociation explains why studies using rare distractors report heightened distractibility in ADHD, whereas studies using frequently repeated distractors do not. Support was provided by the Israel Science Foundation (ISF)",
@@ -20916,14 +20825,8 @@
     "time": "",
     "title": "LONG-RANGE TEMPORAL INTERFERENCE REVEALS DISTINCT FORWARD AND BACKWARD EFFECTS",
     "authors": [
-      "emerging even when items are separated by almost half a second. Here",
-      "we aimed to advance our understanding of the temporal dynamics that give rise to temporal crowding by dissociating the roles of backward and forward interference. Across four experiments",
-      "we used an orientation-estimation task",
-      "in which observers viewed sequences of two or three oriented items separated by relatively long intervals (five SOAs: \u2013ms). In three-item sequences",
-      "the target appeared either first",
       "second",
-      "or third",
-      "depending on the experiment."
+      "or third"
     ],
     "affiliations": "",
     "abstract": "These different target positions introduced different types of interference: primarily backward, both backward and forward, or primarily forward, respectively. In two-item sequences, the target always appeared first, followed by a single distractor, providing a minimal case of backward interference. Mixture-model analyses revealed that temporal crowding was strongest for the second item, with significant SOA effects on target-encoding precision and substitution errors, but not on guessing rate. A similar, though weaker, pattern of effects was found when the target was first, whereas minimal interference was observed when the target was third. In two-item sequences, even a single succeeding distractor was sufficient to elicit interference: precision increased with SOA, and substitution errors decreased. Thus, temporal crowding arises from a combination of strong backward and weaker forward interference, and this long- lasting impairment can emerge even with a single distractor. Surprisingly, we found stronger forward interference in substitution errors, manifested as higher rates of reporting the preceding than succeeding distractor. Moreover, source confusion did not reflect a complete loss of temporal-order information but rather a coarser representation of items\u2019 order.",
@@ -21333,9 +21236,7 @@
     "talk_number": null,
     "time": "",
     "title": "TASK DEMANDS ALTER WHETHER SPATIAL SUPPRESSION OR SUMMATION IS OBSERVED IN BOTH YOUNGER AND OLDER OBSERVERS",
-    "authors": [
-      "yrs) and  older (- yrs) observers."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We used Gabor stimuli (1 cycle/deg) with sizes (2\u03c3 = 0.7 or 5 degrees) and contrasts of 2% or 22.5%. The tasks were: (1) two baseline demand tasks, single- dimension stimuli and left-right motion (replication) or orientation (2) two stimulus check tasks with novel dual-dimension stimuli that varied in both motion direction and orientation, with certain responses to either motion or orientation within each task. (3) A dual-dimension stimulus with uncertain single-responses (motion/orientation) that were post-cued randomly on each trial. That is, the observer responded to either motion or orientation, depending on randomly selected post-stimulus cue (4) a dual-task where both motion and orientation responses were collected in randomized order. Seven duration thresholds were measured using a staircase procedure, with each task repeated twice and counterbalanced across two days. In the baseline and stimulus-check tasks for motion, younger observers showed reduced suppression. Orientation showed summation for both groups. When task demands were increased in the uncertain single- response tasks, dual-task summation was observed in both age groups. There was greater summation for older observers in the uncertain-response dual-task orientation tasks. Consistent with previous work, observers exhibited spatial suppression when discriminating motion direction with response certainty. However, when either response uncertainty (single response) or dual-task was used, both younger and older observers showed spatial summation. Task demands can alter whether spatial suppression and summation are observed even in simple spatial vision tasks with identical stimuli. While we used aged observers, this effect could extend to other special populations. Support: Meta Reality Labs, NECO internal funding, NIH T-35-007149 Action: Pointing, tracking",
     "day": "Tuesday",
@@ -21968,9 +21869,7 @@
     "talk_number": null,
     "time": "",
     "title": "THE TEXT IS ALL IN THEIR HANDS: A NEUROFUNCTIONAL MODEL FOR LIMB-TO-TEXT (VWFA) CORTICAL RECYCLING",
-    "authors": [
-      "substrates. Here I propose that prereading foveal visual expertise for limb movements (likely essential for motor-action expertise development) substantiates a representation sufficient to allow for efficient reading to successfully develop."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The prereading neural limb representation consists of 3 distinct (yet likely connected) components that are activated when we see another person: the hand or whole- body stick figure (HSF/WBSF), its \u201coutfit\u201d (skin, cloths, etc.), and its kinematics. The HSF/WBSF aspect is the only one clearly coded in the VWFA and represents the instantaneous structure/configuration of the limb segments at that given timepoint. Its development is not necessarily dependent on vision (may develop from somatosensory/motor/vestibular inputs). The stick figure is composed of a coarse Gabor-like configuration (mixture of frequencies and sizes corresponding to limb sizes, distances etc.) each representing one segment in the HSF/WBSF. Importantly, the activated HSF/WBSF representation allows viewers to successfully decipher all limb locations overcoming occlusion (by cloths, other body or hand parts). Critically, the representational space these stick figures span are the building blocks of written languages. Specifically, finger segments\u2019 structure and spatial relations allow to create any written letter combination (with sufficient number of hands/limbs). This recycled representation is likely hierarchical in its transition from the physics of vision to the semantics of language, being shaped by top-down language specific statistics and information. Future studies are needed to test the model\u2019s validity and the multiplicity of predictions stemming from it. This study was funded by ISF Individual Research Grants 1462/23 to SGD",
     "day": "Tuesday",
@@ -22608,9 +22507,7 @@
     "talk_number": null,
     "time": "",
     "title": "UNIVERSAL PATTERNS AND INDIVIDUAL DIFFERENCES IN VISUAL MEMORABILITY",
-    "authors": [
-      "factors or also stable individual differences remains unresolved."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We examined this question using a continuous recognition paradigm with faces from the 10k U.S. Adult Faces Database, while assessing participants\u2019 individual differences in response criteria during memory- based decisions. Across two samples (n = 146, U.S.; n = 240, China), participants viewed the same set of 160 critical faces that repeated only after longer delays ranging from 30s up to 40min, intermixed with filler images and vigilance repeats within 2s to 30s. In both samples, participants correctly responded to the same subset of repeated faces even under randomized test orders. This consistency was strongly predicted by established memorability scores, confirming a robust stimulus-driven component. However, participants\u2019 correct detection of repetition systematically varied based on their response criteria. Individuals with more liberal response criteria, such as those with lower self-confidence and high psychosis traits, showed inflated rates of correct repetition detection. Their apparent \u201cbetter memory\u201d may reflect decisional bias rather than superior mnemonic encoding or higher stimulus memorability. These findings demonstrate that cross- observer consistency in visual recognition arises from the joint influence of stimulus-driven memorability and individual differences in response criteria. Conventional memorability estimates based on correct repetition detection rate (i.e., hit rate) is not solely a property of the images, but also a function of who is making the recognition decision. Together, these results underscore the need to account for individual differences in observer traits when interpreting \u201cuniversal\u201d patterns of visual recognition, and highlight that computer vision models trained exclusively on population-level hit rate to predict visual memorability may inherit systematic biases if individual differences are ignored.",
     "day": "Tuesday",
@@ -23063,22 +22960,9 @@
     "time": "",
     "title": "GLOBAL SPATIAL STRUCTURE DIFFERENTIALLY RESHAPES LOCAL CHROMATIC REPRESENTATIONS ACROSS EARLY AND LATE VISUAL WORKING MEMORY MAINTENANCE",
     "authors": [
-      "memory for features defined in independent dimensions across hierarchical levels",
-      "or whether such effects unfold dynamically as maintenance progresses. To test this",
-      "participants performed a whole- display color change detection task in which local chromatic elements were enclosed within parametrically varied boundary shapes (ellipse",
       "octagon",
       "hexagon",
-      "pentagon",
-      "rectangle) and probed at short ( ms) and longer ( ms) retention intervals. Results reveal a systematic temporal dissociation in boundary geometry effects. At  ms",
-      "cardinal-rich geometries produced the highest discriminability (d\u2032 \u2248 .\u2013.)",
-      "whereas smooth contours yielded lower sensitivity (ellipse d\u2032 \u2248 .). At  ms",
-      "this pattern reversed: ellipses produced the highest sensitivity (d\u2032 \u2248 .)",
-      "while cardinal-rich shapes declined by \u2013%. Performance change scaled monotonically with cardinal density (Spearman \u03c1 = \u2212.) and interior angle magnitude (r = \u2212.)",
-      "indicating a systematic geometric gradient. Crossover effects emerged selectively under higher memory load. Boundary detection accuracy was largely independent of chromatic memory (r = \u2212.)",
-      "ruling out resource competition and spatial indexing accounts. One possibility is that boundary shapes provide a relational spatial scaffold within which chromatic elements are encoded referentially across multiple anchor points. Cardinal-rich structures may facilitate early encoding via preferential neural tuning before degrading from compensatory repulsion drift over time",
-      "which introduces higher variance into chromatic-spatial representational space which reduces discriminability. Smooth",
-      "drift-resistant contours may preserve chromatic encoding integrity as encoding transitions toward relational formats at longer delays. extend hierarchical feature-bundle and conjunctive coding models",
-      "suggesting that cross-dimensional structural influences in VWM reflect geometry-dependent organization of mnemonic representations rather than fixed capacity constraints."
+      "pentagon"
     ],
     "affiliations": "",
     "abstract": "",
@@ -24429,26 +24313,7 @@
     "time": "",
     "title": "ATTENTIONAL CAPTURE BY AN ABRUPT ONSET IMPAIRS TARGET PERCEPTION UNDER SERIAL SEARCH, BUT NOT UNDER PARALLEL SEARCH",
     "authors": [
-      "stages",
-      "and whether this depends on search mode. Each participant performed one of two visual search tasks: an orientation search (a tilted line among vertical lines)",
-      "which tends to proceed in a parallel manner",
-      "and a T/L search (a rotated T among rotated Ls with offset junctions)",
-      "which requires serial shifting of attention among the search stimuli. In both tasks",
-      "the search display was briefly presented ( ms)",
-      "straining the perceptual processing of search stimuli. Importantly",
-      "in half of all trials",
-      "a green outlined square was presented at a non-target location prior to the search display",
-      "while in the other half",
-      "no such onset distractor was presented. Under this perceptually challenging condition",
-      "changes in response accuracy and speed were measured as indicators of perceptual and non-perceptual modulations",
-      "respectively. As results",
-      "In the parallel search task",
-      "the presentation of an abrupt onset significantly increased RT (p < .)",
-      "but did not affect accuracy (p = .)",
-      "indicating post-perceptual interference. By contrast",
-      "in the serial search task",
-      "the abrupt onset significantly reduced accuracy (in baseline around %) and increased RT (p < .)",
-      "indicating disruption at the perceptual stage. These findings demonstrate that the locus of attentional capture by abrupt onsets depends on task demands"
+      "stages"
     ],
     "affiliations": "interference is confined to response-level processes during parallel search, but extends to perceptual encoding during serial search.",
     "abstract": "This task-dependent dissociation helps reconcile mixed results in the literature and underscores the importance of search mode in shaping the impact of exogenous attention. This research was supported by the National Research Foundation grant (NRF) funded by the Korea government (No. NRF- 2024S1A5A2A01019821)",
@@ -24833,11 +24698,7 @@
     "talk_number": null,
     "time": "",
     "title": "SPATIAL GRADIENTS OF REWARD AND THREAT INTERACT TO GUIDE HUMAN FORAGING PATTERNS EBRU ECEM TAVACIOGLU1",
-    "authors": [
-      "given spatially varying rewards and threats having a different spatial layout. Here",
-      "we examined how distributed value and aversive sound jointly shaped attentional allocation and harvesting behavior during continuous visual foraging. Participants completed a grid-based foraging paradigm in which reward magnitude (\u2013 points) and auditory threat level (\u2013 intensity) followed orthogonal gradients across a \u00d7 display. In a baseline block",
-      "rewards were uniform and no sound was presented"
-    ],
+    "authors": [],
     "affiliations": "in a gradient block, both reward and sound values were spatially structured. Participants freely harvested targets across multiple patches. Click-level behavior was extracted from all cell responses and aggregated into 5\u00d75 spatial bins reflecting reward and sound levels. Relative to the baseline block, the gradient block led to higher click rate, more hits and false alarms (FA), reduced time per patch, and decreased positive predictive value (PPV) for each click.",
     "abstract": "Critically, spatial heatmaps revealed that these effects were not uniformly distributed. Performance deteriorated most notably in the high-value regions, which showed a marked increase in FAs and a drop in PPV, whereas behavior in low-value/low-sound regions remained comparatively stable. These results visualize how distributed value and threat can jointly shape harvesting decisions, influencing both overall click behavior and the spatial distribution of hits and errors. Since behavioral adjustments were not uniform across the grid, we can reject the hypothesis that threat simply reduces overall performance. Together, these findings demonstrate that aversive sound impairs the efficient exploitation of high-value areas, reducing the efficiency of harvesting.",
     "day": "Tuesday",
@@ -25041,11 +24902,7 @@
     "talk_number": null,
     "time": "",
     "title": "SYNTHETIC SCENE GENERATION FOR EVALUATING VISUAL FEATURE CONTRIBUTIONS TO SEGMENTATION DECISIONS",
-    "authors": [
-      "relatively understudied. One reason is the lack of suitable datasets: natural images are difficult to annotate manually and offer limited experimental control over the availability of visual cues. This challenge is well suited to synthetic data generation using physically based rendering",
-      "which can produce fully customizable D scenes while preserving key aspects of visual realism through physically accurate light transport. Here",
-      "we present a Blender-based rendering pipeline for quantifying how different visual features contribute to segmentation decisions."
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The pipeline draws inspiration from two main paradigms: (1) digital embryos (complex 3D geometric shapes based on simulations of embryonic development), and (2) dead leaves (scenes created by sequentially layering shapes to reproduce key statistical properties of natural images). Together, the resulting scenes are ideal for studying segmentation processes, as they include complex 3D geometrical shapes, while approximating natural scenes through the presence of depth cues and partial occlusions. A central advantage of our approach over existing rendering pipelines is precise control over the availability of visual cues. By independently manipulating features such as material, lighting, geometry, and motion, experimenters can generate scenes that are matched in their overall configuration but differ only in whether one or more cues are informative for a segmentation decision. Furthermore, the scalable and automated nature of the pipeline can generate large, varied datasets with pixel- accurate ground-truth segmentation masks, making it an ideal testbed for training and testing neural network models. Overall, this approach combines the benefits of controlled psychophysics-style stimulus design and large-scale computer vision frameworks, offering a new method for studying and comparing mid-level visual processing in biological and artificial systems. Funded by the European Union (ERC, SEGMENT, 101086774). Views and opinions expressed are however, those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.",
     "day": "Tuesday",
