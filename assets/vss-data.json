@@ -23048,12 +23048,10 @@
     "time": "",
     "title": "GLOBAL SPATIAL STRUCTURE DIFFERENTIALLY RESHAPES LOCAL CHROMATIC REPRESENTATIONS ACROSS EARLY AND LATE VISUAL WORKING MEMORY MAINTENANCE",
     "authors": [
-      "octagon",
-      "hexagon",
-      "pentagon"
+      "Craig Tomlin"
     ],
-    "affiliations": "",
-    "abstract": "",
+    "affiliations": "1Rollins College, Winter Park, FL",
+    "abstract": "Visual working memory (VWM) is a capacity-limited system for retaining visual information over brief intervals, yet its representational format and organizational principles remain debated. To the investigator's knowledge, no known work has directly examined whether geometric boundary structure systematically modulates memory for features defined in independent dimensions across hierarchical levels, or whether such effects unfold dynamically as maintenance progresses. To test this, participants performed a whole- display color change detection task in which local chromatic elements were enclosed within parametrically varied boundary shapes (ellipse, octagon, hexagon, pentagon, rectangle) and probed at short (500 ms) and longer (1500 ms) retention intervals. Results reveal a systematic temporal dissociation in boundary geometry effects. At 500 ms, cardinal-rich geometries produced the highest discriminability (d\\u2032 \\u2248 1.93\\u20131.98), whereas smooth contours yielded lower sensitivity (ellipse d\\u2032 \\u2248 0.90). At 1500 ms, this pattern reversed: ellipses produced the highest sensitivity (d\\u2032 \\u2248 2.06), while cardinal-rich shapes declined by 32\\u201342%. Performance change scaled monotonically with cardinal density (Spearman \\u03c1 = \\u2212.90) and interior angle magnitude (r = \\u2212.98), indicating a systematic geometric gradient. Crossover effects emerged selectively under higher memory load. Boundary detection accuracy was largely independent of chromatic memory (r = \\u2212.16), ruling out resource competition and spatial indexing accounts. One possibility is that boundary shapes provide a relational spatial scaffold within which chromatic elements are encoded referentially across multiple anchor points. Cardinal-rich structures may facilitate early encoding via preferential neural tuning before degrading from compensatory repulsion drift over time, which introduces higher variance into chromatic-spatial representational space which reduces discriminability. Smooth, drift-resistant contours may preserve chromatic encoding integrity as encoding transitions toward relational formats at longer delays. extend hierarchical feature-bundle and conjunctive coding models, suggesting that cross-dimensional structural influences in VWM reflect geometry-dependent organization of mnemonic representations rather than fixed capacity constraints.",
     "day": "Tuesday",
     "date": "2026-05-19",
     "room": "BANYAN BREEZEWAY",
