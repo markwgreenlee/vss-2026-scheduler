@@ -275,7 +275,7 @@
     "kind": "talk",
     "talk_number": 1,
     "time": "08:15",
-    "title": "THE PHYSIOLOGICAL CORRELATES OF CONSCIOUS AND UNCONSCIOUS VISUAL AND AUDITORY PROCESSING: AN MEG AND EYE-TRACKING STUDY Plyfaa Suwanamalik-Murphy1 (plysuwana@gmail.com), Sharif",
+    "title": "THE PHYSIOLOGICAL CORRELATES OF CONSCIOUS AND UNCONSCIOUS VISUAL AND AUDITORY PROCESSING: AN MEG AND EYE-TRACKING STUDY",
     "authors": [
       "Kronemer",
       "Victoria Gobo",
@@ -1252,7 +1252,7 @@
     "kind": "talk",
     "talk_number": 6,
     "time": "18:30",
-    "title": "HOW GAZE BEHAVIOR EXPLAINS GENDER DIFFERENCES IN SPATIAL LEARNING IN MIXED REALITY NAVIGATION Yu Zhao1 (yzhao20@kennesaw.edu), Holly Gagnon, Jeanine",
+    "title": "HOW GAZE BEHAVIOR EXPLAINS GENDER DIFFERENCES IN SPATIAL LEARNING IN MIXED REALITY NAVIGATION",
     "authors": [
       "Stefanucci",
       "Sarah Creem-Regehr",
@@ -1555,7 +1555,7 @@
     "kind": "talk",
     "talk_number": 6,
     "time": "09:30",
-    "title": "THE BRAIN MECHANISMS OF ATTENTIONAL LAPSES DURING GOAL COMPETITION: AN EEG STUDY Matthieu Chidharom1 (matthieuchidharom@gmail.com), Monica",
+    "title": "THE BRAIN MECHANISMS OF ATTENTIONAL LAPSES DURING GOAL COMPETITION: AN EEG STUDY",
     "authors": [
       "Rosenberg",
       "Edward Vogel"
@@ -1689,7 +1689,7 @@
     "kind": "talk",
     "talk_number": 6,
     "time": "09:30",
-    "title": "PROBING THE GRANULARITY OF HUMAN-MACHINE ALIGNMENT Yash Mehta1 (ymehta3@jhu.edu), Raj Gauthaman, Michael Bonner; 1Johns Hopkins University Deep neural networks trained on fine-grained object classification (e.g., ImageNet 1000-way) are currently the leading models of the primate ventral visual stream. However, it remains unclear whether dense semantic supervision is a prerequisite for brain-model alignment, or if coarser categorical distinctions suffice. To address this,",
+    "title": "PROBING THE GRANULARITY OF HUMAN-MACHINE ALIGNMENT",
     "authors": [
       "we derived category boundaries directly from visual features",
       "avoiding external semantic hierarchies. Using recursive PCA on pre-trained AlexNet and ViT representations",
@@ -2136,7 +2136,7 @@
     "kind": "talk",
     "talk_number": 7,
     "time": "16:00",
-    "title": "A MULTIVARIATE APPROACH TO UNDERSTANDING THE EMERGENCE OF THE VISUAL WORD FORM AREA Kelly J. Hiersche1 (hiersche.1@buckeyemail.osu.edu), Lauren A.",
+    "title": "A MULTIVARIATE APPROACH TO UNDERSTANDING THE EMERGENCE OF THE VISUAL WORD FORM AREA",
     "authors": [
       "Rydel",
       "Zeynep M. Saygin"
@@ -2179,7 +2179,7 @@
     "kind": "talk",
     "talk_number": 2,
     "time": "14:45",
-    "title": "FAMILIARITY AND TRAIT EMPATHY MODULATE PRIMARY SOMATOSENSORY RESPONSES TO VICARIOUS THREAT Naama Zur1 (nrz9@georgetown.edu), Minwoo",
+    "title": "FAMILIARITY AND TRAIT EMPATHY MODULATE PRIMARY SOMATOSENSORY RESPONSES TO VICARIOUS THREAT",
     "authors": [
       "Lee",
       "Maria Czarnecka",
@@ -2202,7 +2202,7 @@
     "kind": "talk",
     "talk_number": 3,
     "time": "15:00",
-    "title": "THE STS RESPONDS PREFERENTIALLY TO COMMUNICATIVE SIGNALS Emalie",
+    "title": "THE STS RESPONDS PREFERENTIALLY TO COMMUNICATIVE SIGNALS",
     "authors": [
       "McMahon",
       "David Rahabi",
@@ -2243,7 +2243,7 @@
     "kind": "talk",
     "talk_number": 5,
     "time": "15:30",
-    "title": "DYNAMIC VISUAL RECONSTRUCTION REVEALS DIMENSIONAL REPRESENTATIONS OF FACIAL EXPRESSION PERCEPTION Yong Zhong Liang1 (yongzhong.liang@mail.utoronto.ca), Tyler",
+    "title": "DYNAMIC VISUAL RECONSTRUCTION REVEALS DIMENSIONAL REPRESENTATIONS OF FACIAL EXPRESSION PERCEPTION",
     "authors": [
       "Roberts",
       "Gerald Cupchik",
@@ -2458,7 +2458,7 @@
     "kind": "talk",
     "talk_number": 7,
     "time": "18:45",
-    "title": "THE COMPLEX ROLE OF MIND WANDERING IN IMPLICIT STATISTICAL LEARNING Teod\u00f3ra V\u00e9kony1 (teodora.vekony@pdi.atlanticomedio.es), Bianka",
+    "title": "THE COMPLEX ROLE OF MIND WANDERING IN IMPLICIT STATISTICAL LEARNING",
     "authors": [
       "Brez\u00f3czki",
       "Bence C. Farkas",
@@ -2629,7 +2629,7 @@
     "kind": "talk",
     "talk_number": 7,
     "time": "18:45",
-    "title": "RETINAL CURL AS A DIRECT CONTROL VARIABLE FOR LOCOMOTION: EVIDENCE FROM GAZE-CONTINGENT BIASES Joan Lopez-Moliner1 (j.lopezmoliner@ub.edu), Kontessa Ioanna",
+    "title": "RETINAL CURL AS A DIRECT CONTROL VARIABLE FOR LOCOMOTION: EVIDENCE FROM GAZE-CONTINGENT BIASES",
     "authors": [
       "Zorpala"
     ],
@@ -3074,7 +3074,7 @@
     "kind": "talk",
     "talk_number": 2,
     "time": "11:00",
-    "title": "SEMANTIC UNDERSTANDING, NOT JUST COHERENT OBJECT STRUCTURE, STRENGTHENS VISUAL WORKING MEMORY Yong Hoon Chung1 (yong.hoon.chung.gr@dartmouth.edu), Sam",
+    "title": "SEMANTIC UNDERSTANDING, NOT JUST COHERENT OBJECT STRUCTURE, STRENGTHENS VISUAL WORKING MEMORY",
     "authors": [
       "Jung",
       "Timothy Brady",
@@ -3136,7 +3136,7 @@
     "kind": "talk",
     "talk_number": 5,
     "time": "11:45",
-    "title": "ROBUSTNESS OF PREDICTION BASED FALSE MEMORY Mahveen Salman Mubarak1 (mahveen.mubarak@mail.utoronto.ca),",
+    "title": "ROBUSTNESS OF PREDICTION BASED FALSE MEMORY",
     "authors": [
       "Saba Halabisaz",
       "Olya Bulatova",
@@ -3158,7 +3158,7 @@
     "kind": "talk",
     "talk_number": 6,
     "time": "12:00",
-    "title": "THE FACTORS THAT DETERMINE TRIAL-BY-TRIAL MEMORY BEHAVIOR ACROSS 6 MILLION TRIALS Wilma Bainbridge1 (wilma@uchicago.edu); 1University of Chicago It is well known that many factors influence memory performance, including participant factors (e.g., individual differences, memory capacity), stimulus factors (e.g., memorability, distinctiveness), and contextual factors (e.g., local image context, trial order). However, little work has compared how important each factor is in determining memory. To test this question, I analyzed 6,223,953 memory decisions",
+    "title": "THE FACTORS THAT DETERMINE TRIAL-BY-TRIAL MEMORY BEHAVIOR ACROSS 6 MILLION TRIALS",
     "authors": [
       "made by",
       "participants on a continuous recognition memory task with",
@@ -3205,7 +3205,7 @@
     "kind": "talk",
     "talk_number": 2,
     "time": "08:30",
-    "title": "VISUAL SEARCH FOR REAL-WORLD OBJECTS IS SHAPED BY THE VARIABILITY OF OBJECT-CATEGORY TEMPLATES Susan Ajith1 (susan.ajith@psychiat.med.uni-giessen.de), Daniel",
+    "title": "VISUAL SEARCH FOR REAL-WORLD OBJECTS IS SHAPED BY THE VARIABILITY OF OBJECT-CATEGORY TEMPLATES",
     "authors": [
       "Kaiser",
       "Lu-Chun Yeh"
@@ -3288,7 +3288,7 @@
     "kind": "talk",
     "talk_number": 6,
     "time": "09:30",
-    "title": "TYPO DETECTION AS A WINDOW INTO INTERACTIONS BETWEEN VISUAL SEARCH AND READABILITY Emily Heffernan1 (emily.heffernan@mail.utoronto.ca), Kiran",
+    "title": "TYPO DETECTION AS A WINDOW INTO INTERACTIONS BETWEEN VISUAL SEARCH AND READABILITY",
     "authors": [
       "Panicker",
       "Anna Kosovicheva",
@@ -3607,7 +3607,7 @@
     "kind": "talk",
     "talk_number": 2,
     "time": "11:00",
-    "title": "SEQUENTIAL EVIDENCE ACCUMULATION ADAPTS TO CHANGING LEVELS OF EVIDENCE RELIABILITY Mengting Fang1 (mtfang@sas.upenn.edu), Alan Stocker; 1University of Pennsylvania Perceptual decision making often involves integrating evidence over time. Our prior work showed that this process is governed by a resource-rational principle where the brain actively balances task performance with cognitive effort. For a fixed level of evidence reliability, participants maintained a stable trade-off strategy. However,",
+    "title": "SEQUENTIAL EVIDENCE ACCUMULATION ADAPTS TO CHANGING LEVELS OF EVIDENCE RELIABILITY",
     "authors": [
       "our previous study did not test whether participants adapt their strategy when evidence reliability changes. Given the brain\u2019s ability to actively control the accumulation process",
       "we considered two competing hypotheses: () the system increases encoding precision when evidence is reliable and reduces it when evidence is less reliable",
@@ -3892,7 +3892,7 @@
     "kind": "talk",
     "talk_number": 2,
     "time": "15:00",
-    "title": "HUMAN SCENE VIEWING FIXATION PATTERNS EMERGE FROM OPTIMIZING SCENE COMPREHENSION Miguel P. Eckstein1 (eckstein@psych.ucsb.edu), Shravan",
+    "title": "HUMAN SCENE VIEWING FIXATION PATTERNS EMERGE FROM OPTIMIZING SCENE COMPREHENSION",
     "authors": [
       "Murlidaran"
     ],
@@ -4537,7 +4537,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "VISUO-MOTOR GAIN ADAPTATION FOR VISUAL STABILITY DURING HORIZONTAL HEAD TRANSLATION WITH AND WITHOUT BINOCULAR DISPARITY Nobuyoshi Takase1 (takase.nobuyoshi.og@tut.jp), Hiroaki",
+    "title": "VISUO-MOTOR GAIN ADAPTATION FOR VISUAL STABILITY DURING HORIZONTAL HEAD TRANSLATION WITH AND WITHOUT BINOCULAR DISPARITY",
     "authors": [
       "Shigemasu",
       "Michiteru Kitazaki"
@@ -5290,7 +5290,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "DOES EMOTIONAL SALIENCE ALTER TEMPORAL PROCESSING IN PERI-HAND SPACE? ANKIT MAURYA1, TONY THOMAS1; 1Indian Institute of Technology Roorkee, Roorkee, India Previous studies have shown temporal dilation for emotionally salient stimuli. Also, processing of such stimuli is enhanced in the graspable space of the hands, known as peri-hand space (PHS). However, the spatio-temporal interaction for emotionally salient stimuli in peri-hand space remains unexamined. Therefore, the present study investigated the temporal factors underlying the processing of emotionally salient",
+    "title": "DOES EMOTIONAL SALIENCE ALTER TEMPORAL PROCESSING IN PERI-HAND SPACE? ANKIT MAURYA1, TONY THOMAS1;",
     "authors": [
       "stimuli in PHS. Participants completed standard temporal bisection task (N=)",
       "that used a short ( ms) & long ( ms) as the standard duration. Participants had to judge whether the duration ranging from  ms to  ms (in steps of  ms) were closer to \u2018Short\u2019 or \u2018Long\u2019",
@@ -6000,7 +6000,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "REMEMBERING FOR ACTION: DO ACTION PLANS AMPLIFY MEMORY REACTIVATION? Busenur akbas1 (busenur.akbas@sabanciuniv.edu), Caterina",
+    "title": "REMEMBERING FOR ACTION: DO ACTION PLANS AMPLIFY MEMORY REACTIVATION?",
     "authors": [
       "Trentin",
       "Christian Olivers",
@@ -6084,7 +6084,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "TO SHIELD OR NOT TO SHIELD: EFFECTS OF SALIENCE IN WHOLE-REPORT VISUAL WORKING MEMORY TASKS Martin Constant1 (martin.constant@unige.ch), Dirk",
+    "title": "TO SHIELD OR NOT TO SHIELD: EFFECTS OF SALIENCE IN WHOLE-REPORT VISUAL WORKING MEMORY TASKS",
     "authors": [
       "Kerzel"
     ],
@@ -6123,7 +6123,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "POST-PERCEPTUAL DECISION DETERMINES THE DIRECTION OF SERIAL DEPENDENCE IN VISUAL PERCEPTION Kuo-Wei Chen1 (kchen172@asu.edu), Juhyun Ha, Ling-Jing Liu, Scott Janetsky, Gi-Yeul Bae; 1Arizona State University Achieving perceptual stability over time in the face of noisy visual inputs is a fundamental goal of visual information processing. Studies have proposed that the visual system achieves this goal by biasing perception of a new stimulus toward the past stimulus (i.e., attractive serial dependence). However, the visual system must also maintain",
+    "title": "POST-PERCEPTUAL DECISION DETERMINES THE DIRECTION OF SERIAL DEPENDENCE IN VISUAL PERCEPTION",
     "authors": [
       "perceptual sensitivity over time to detect differences in stimuli encountered at different time points (i.e.",
       "repulsive serial dependence). Here",
@@ -6335,7 +6335,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EYE MOVEMENTS WHITEN TEMPORAL POWER SPECTRA DURING REAL-WORLD ACTIVITIES Samantha A Montoya1",
+    "title": "EYE MOVEMENTS WHITEN TEMPORAL POWER SPECTRA DURING REAL-WORLD ACTIVITIES",
     "authors": [
       "Zachary J Kelly",
       "Sophia Mirabal",
@@ -7067,7 +7067,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EXPOSURE TO COVARYING VISUAL DEPTH CUES ACROSS GAZE DISTANCES PROMOTES GENERALIZED STEREOSCOPIC PROCESSING IN DEEP NEURAL NETWORKS Joonsik Moon1 (moon.joo@northeastern.edu), Peter",
+    "title": "EXPOSURE TO COVARYING VISUAL DEPTH CUES ACROSS GAZE DISTANCES PROMOTES GENERALIZED STEREOSCOPIC PROCESSING IN DEEP NEURAL NETWORKS",
     "authors": [
       "Bex"
     ],
@@ -7218,7 +7218,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "WHY DO HUMANS UNDERSTAND PICTURES? Aaron Hertzmann1 (hertzman@dgp.toronto.edu); 1Adobe Research I outline possible answers to the long-standing question of why pictures work: why can people look at a painting or photograph, and see a depicted subject, rather than just marks on a page or lights on a display? Observers with no prior experience with pictures can understand some kinds of pictures, indicating that picture understanding is not solely a product of experience or culture. I argue that picture perception can be explained as a product of several properties of real-world vision. First, the fact that humans can",
+    "title": "WHY DO HUMANS UNDERSTAND PICTURES?",
     "authors": [
       "understand certain real-world phenomena---refraction",
       "reflection",
@@ -7580,7 +7580,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "DOES THE LINK BETWEEN SPONTANEOUS MICROSACCADES AND EEG ALPHA ACTIVITY DEPEND ON EXTERNAL VISUAL INPUTS THAT MOVE ACROSS THE RETINA WITH EACH MICROSACCADE? Freek van Ede1 (freek.van.ede@vu.nl), Baiwei Liu; 1Vrije Universiteit Amsterdam We have previously reported how spontaneous microsaccades \u2013 made in the absence of any incentive to look anywhere but a central fixation marker \u2013 are associated with the transient lateralisation of posterior 8-12 Hz EEG alpha-band activity according to microsaccade",
+    "title": "DOES THE LINK BETWEEN SPONTANEOUS MICROSACCADES AND EEG ALPHA ACTIVITY DEPEND ON EXTERNAL VISUAL INPUTS THAT MOVE ACROSS THE RETINA WITH EACH MICROSACCADE?",
     "authors": [
       "direction (Liu et al.",
       "Progress in Neurobiology",
@@ -7826,7 +7826,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "COMPUTATIONAL MODELING OF THE PERCEIVED FACIAL TYPICALITY AND ATTRACTIVENESS OF DISTINCT FACE POPULATIONS Logan Trujillo1 (logant@txstate.edu); 1Texas State University Previous computational modeling research investigating the mental representation of faces suggests that the positive relationship consistently observed between the perceived typicality and attractiveness of young adult Caucasian female faces may be best explained by a representational format where faces are encoded in memory with respect to a hypothetically perfect representative of a",
+    "title": "COMPUTATIONAL MODELING OF THE PERCEIVED FACIAL TYPICALITY AND ATTRACTIVENESS OF DISTINCT FACE POPULATIONS",
     "authors": [
       "face population (ideal face). This study extends this prior research by modeling the mental representation of young adult Caucasian",
       "African American",
@@ -7911,7 +7911,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EVIDENCE FOR WINNER-TAKE-ALL DYNAMICS IN LONG-LASTING VISUAL INTEGRATION Marie Holdsworth1 (marie.holdsworth@epfl.ch), Ma\u00eblan Q.",
+    "title": "EVIDENCE FOR WINNER-TAKE-ALL DYNAMICS IN LONG-LASTING VISUAL INTEGRATION",
     "authors": [
       "Men\u00e9trey",
       "Can Oluk",
@@ -8213,7 +8213,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "LEARNING THE AFFORDANCE LANDSCAPE FOR VISUALLY GUIDED STEERING Brett Fajen1 (fajenb@rpi.edu); 1Rensselaer Polytechnic Institute Most visually guided locomotor tasks allow for a range of solutions. When steering through a series of waypoints, for example, an actor might move directly toward the nearest waypoint or take a more indirect path that better anticipates upcoming turns. Individual movement trajectories differ not only in how effectively they satisfy task demands, but also in their stability and controllability given the actor\u2019s movement capabilities (e.g., how quickly they can move, turn).",
+    "title": "LEARNING THE AFFORDANCE LANDSCAPE FOR VISUALLY GUIDED STEERING",
     "authors": [
       "Together",
       "these factors define the affordance landscape"
@@ -8648,7 +8648,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "PEOPLE'S COST FUNCTIONS IN SENSORIMOTOR DECISION-MAKING REVEAL COMPLEX EFFORT COSTS Tobias Fabian Niehues1 (tobias.niehues@tu-darmstadt.de), Dominik",
+    "title": "PEOPLE'S COST FUNCTIONS IN SENSORIMOTOR DECISION-MAKING REVEAL COMPLEX EFFORT COSTS",
     "authors": [
       "Straub",
       "Constantin Rothkopf"
@@ -9012,7 +9012,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "FIXATED BUT FAILED TO SEE: RECOGNITION ERRORS IN VISUAL SEARCH Jonathan Nir1 (jonathan.nir@mail.huji.ac.il), Carmel Ruth Auerbach-",
+    "title": "FIXATED BUT FAILED TO SEE: RECOGNITION ERRORS IN VISUAL SEARCH",
     "authors": [
       "Asch",
       "Leon Yona Deouell"
@@ -9453,7 +9453,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "HERE\u2019S THE T: REPEATED SEARCH TASKS RESULT IN REDUCED SEARCH EFFICIENCY. Katherine Stuart1 (katherine_stuart2@mymail.eku.edu), Steven",
+    "title": "HERE\u2019S THE T: REPEATED SEARCH TASKS RESULT IN REDUCED SEARCH EFFICIENCY.",
     "authors": [
       "Pesina",
       "D. Alexander Varakin"
@@ -9677,7 +9677,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "DYNAMICS OF SPATIAL AND OBJECT-BASED ATTENTION John",
+    "title": "DYNAMICS OF SPATIAL AND OBJECT-BASED ATTENTION",
     "authors": [
       "Gonzalez-Amoretti",
       "Adam Snyder"
@@ -9697,7 +9697,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EFFICACY OF OBJECT-BASED ATTENTIONAL SELECTION AGAINST DISPROPORTIONATELY SALIENT DISTRACTORS ALONG THE VENTRAL VISUAL PATHWAY Lasyapriya Pidaparthi1 (lasyapriya.pidaparthi@vanderbilt.edu), Frank",
+    "title": "EFFICACY OF OBJECT-BASED ATTENTIONAL SELECTION AGAINST DISPROPORTIONATELY SALIENT DISTRACTORS ALONG THE VENTRAL VISUAL PATHWAY",
     "authors": [
       "Tong"
     ],
@@ -10032,7 +10032,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "AN EXPERIMENTAL INVESTIGATION OF HOW STIMULUS SHAPE MODULATES PERCEPTUAL STABILITY IN THE SILHOUETTE ILLUSION Kohei Ronden1 (ronden.kohei.34e@st.kyoto-u.ac.jp), Kiyofumi",
+    "title": "AN EXPERIMENTAL INVESTIGATION OF HOW STIMULUS SHAPE MODULATES PERCEPTUAL STABILITY IN THE SILHOUETTE ILLUSION",
     "authors": [
       "Miyoshi",
       "Shin'ya Nishida"
@@ -10074,7 +10074,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "RECONSTRUCTING 2D IMAGES FROM BRAIN ACTIVITY EVOKED BY RANDOM-DOT STEREOGRAMS Taiga Kurosawa1 (kurosawa.taiga.66y@st.kyoto-u.ac.jp), Shuntaro C",
+    "title": "RECONSTRUCTING 2D IMAGES FROM BRAIN ACTIVITY EVOKED BY RANDOM-DOT STEREOGRAMS",
     "authors": [
       "Aoki",
       "Tanaka Misato",
@@ -10157,7 +10157,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "SEMANTIC RELATIONSHIPS FACILITATE VISUAL WORKING MEMORY FOR OBJECT IDENTITY BUT MIGHT NOT ENHANCE THE DETAILS. NITHIT SINGTOKUM1,2 (nithitsingtokum136@gmail.com), Chaipat",
+    "title": "SEMANTIC RELATIONSHIPS FACILITATE VISUAL WORKING MEMORY FOR OBJECT IDENTITY BUT MIGHT NOT ENHANCE THE DETAILS. NITHIT SINGTOKUM1,2",
     "authors": [
       "Chunharas"
     ],
@@ -10576,7 +10576,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "CONTINUOUS FEATURE-TUNING OF PRIMING BY MASKED AND UNMASKED STIMULI Jo\u00e3o Pedro Parreira",
+    "title": "CONTINUOUS FEATURE-TUNING OF PRIMING BY MASKED AND UNMASKED STIMULI",
     "authors": [
       "Rodrigues",
       "Zefan Zheng",
@@ -10663,7 +10663,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "COLOR-CONCEPT ASSOCIATION FORMATION FOR ABSTRACT CONCEPTS THROUGH HIGHER-ORDER LEARNING Melissa A. Schoenlein1 (mschoenl@highpoint.edu), Melina O.",
+    "title": "COLOR-CONCEPT ASSOCIATION FORMATION FOR ABSTRACT CONCEPTS THROUGH HIGHER-ORDER LEARNING",
     "authors": [
       "Mueller",
       "Karen B. Schloss"
@@ -10766,7 +10766,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "FEEDBACK PROMOTES EFFICIENT-CODING WHILE REGULATING BIAS IN RECURRENT NEURAL NETWORKS Holly",
+    "title": "FEEDBACK PROMOTES EFFICIENT-CODING WHILE REGULATING BIAS IN RECURRENT NEURAL NETWORKS",
     "authors": [
       "Kular",
       "Robert Kim",
@@ -11286,7 +11286,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "NEURAL MARKERS OF PROBABILISTIC PERCEPTION Anton Lukashevich1 (anl22@hi.is), Sabrina",
+    "title": "NEURAL MARKERS OF PROBABILISTIC PERCEPTION",
     "authors": [
       "Hansman-Roth"
     ],
@@ -11373,7 +11373,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "NUMBER DISCRIMINATION IS BETTER WHEN COLOR SUBSETS REFLECT OVERALL DIFFERENCE Ella Beschta Westfall1 (ebescht1@swarthmore.edu), Berenice",
+    "title": "NUMBER DISCRIMINATION IS BETTER WHEN COLOR SUBSETS REFLECT OVERALL DIFFERENCE",
     "authors": [
       "Benitez-Carlos",
       "Frank Durgin"
@@ -11519,7 +11519,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "SCHIZOTYPY MODULATES THE EXTERNAL- INTERNAL NOISE TRADE-OFF IN SYMMETRY-BASED STOCHASTIC RESONANCE Roberta",
+    "title": "SCHIZOTYPY MODULATES THE EXTERNAL- INTERNAL NOISE TRADE-OFF IN SYMMETRY-BASED STOCHASTIC RESONANCE",
     "authors": [
       "Cessa",
       "Martina Passaggi",
@@ -11587,7 +11587,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "INTEGRATION PROCESSES IN SCENE PERCEPTION: AN EEG FREQUENCY-TAGGING STUDY Ahmet Ali Yaman1 (ahmet.yaman@sabanciuniv.edu), Daniel",
+    "title": "INTEGRATION PROCESSES IN SCENE PERCEPTION: AN EEG FREQUENCY-TAGGING STUDY",
     "authors": [
       "Kaiser",
       "Nihan Alp"
@@ -11878,7 +11878,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EVALUATING SPATIO-TEMPORAL FUSION OF EEG AND FMRI WITH IEEG Peter Brotherwood1 (peter.brotherwood@umontreal.ca), Dora",
+    "title": "EVALUATING SPATIO-TEMPORAL FUSION OF EEG AND FMRI WITH IEEG",
     "authors": [
       "Hermes",
       "Jacob S. Prince",
@@ -11901,7 +11901,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "INVESTIGATING ACTIVE SUPPRESSION OF HIGH- CALORIE FOOD STIMULI IN INDIVIDUALS WITH ANOREXIC TENDENCIES Yixuan Yin1 (yixuan.yin@stonybrook.edu), Abe Leite, Gregory J. Zelinsky; 1Stony Brook University Attention bias in anorexia nervosa has yielded contradictory findings, with both avoidance of high-calorie foods (e.g., Horndasch et al., 2020) and heightened attentional capture (e.g., Neimeijer et al., 2017). This inconsistency reflects an unclear underlying cognitive mechanism. Drawing on Gaspelin et al.\u2019s (2015) Signal Suppression Hypothesis,",
+    "title": "INVESTIGATING ACTIVE SUPPRESSION OF HIGH- CALORIE FOOD STIMULI IN INDIVIDUALS WITH ANOREXIC TENDENCIES",
     "authors": [
       "that salient distractors are actively suppressed below baseline",
       "this project examines whether individuals who scored higher on the Eating Disorder Examination Questionnaire (EDE-Q) actively suppress attention to high-calorie food cues",
@@ -12096,7 +12096,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "THE ROLE OF INFORMATION PROCESSING STYLE IN IMAGE MEMORABILITY Haripriya Kemisetti1 (haripriyakemisetti21@gmail.com), Yelda",
+    "title": "THE ROLE OF INFORMATION PROCESSING STYLE IN IMAGE MEMORABILITY",
     "authors": [
       "Semizer"
     ],
@@ -12115,7 +12115,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "IS THAT A FACE?: INTERACTION BETWEEN ECCENTRICITY AND CONTEXT IN FACE PAREIDOLIA Neeranuch Kittikiatkumjorn1 (neeranatk@gmail.com), Waragon",
+    "title": "IS THAT A FACE?: INTERACTION BETWEEN ECCENTRICITY AND CONTEXT IN FACE PAREIDOLIA",
     "authors": [
       "Phusuwan",
       "Payachana Victoria Chareunsouk",
@@ -12242,7 +12242,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "ROLE OF SENSORIMOTOR REPRESENTATIONS IN UNDERSTANDING EMOTIONAL BODY MOVEMENTS BY ONESELF VS. OTHERS Andrea Marie Pua1 (apua88@students.claremontmckenna.edu),",
+    "title": "ROLE OF SENSORIMOTOR REPRESENTATIONS IN UNDERSTANDING EMOTIONAL BODY MOVEMENTS BY ONESELF VS. OTHERS",
     "authors": [
       "Alison Harris"
     ],
@@ -12261,7 +12261,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "FACIAL ASYMMETRY DRIVES DISTORTIONS IN PROSOPOMETAMORPHOPSIA: A CASE STUDY Ellie Rodgers1 (eleanor.m.rodgers.26@dartmouth.edu), Antonio Vitor Reis Goncalves Mello, Brad Duchaine; 1Dartmouth College, 2Dartmouth College, 3Dartmouth College Prosopometamorphopsia (PMO) is a rare neurological condition in which individuals experience perceptual distortions when they view faces. Although these distortions were first documented more than a century ago, the processes underlying them are poorly understood.",
+    "title": "FACIAL ASYMMETRY DRIVES DISTORTIONS IN PROSOPOMETAMORPHOPSIA: A CASE STUDY",
     "authors": [
       "Here",
       "we present a detailed case study of a participant with PMO to investigate whether asymmetry between the left and right halves of the face drives distortions. A.S. is a -year-old woman who has experienced intense",
@@ -12777,7 +12777,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "INTERNAL NOISE AND EFFICIENCY DIFFERENCES UNDERLIE THE STEREOSCOPIC ANISOTROPY Ichasus Llamas-Cornejo1 (illamas@ucm.es), Ignacio Serrano-",
+    "title": "INTERNAL NOISE AND EFFICIENCY DIFFERENCES UNDERLIE THE STEREOSCOPIC ANISOTROPY",
     "authors": [
       "Pedraza"
     ],
@@ -12796,7 +12796,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "STEREO VISION WITHOUT 3D GEOMETRY: KEEPING STEREO VISION IN RETINAL (VS WORLD) COORDINATES Paul Linton1 (paul.linton@columbia.edu); 1Columbia University How we infer 3D geometry from multiple viewpoints has received renewed interest (Tsao & Tsao, 2022; O\u2019Connell et al., 2025; Lee & Watrous et al., 2025). We formalize an alternative (\u2018minimal\u2019) model of stereo vision, where stereo vision isn\u2019t about inferring 3D geometry, but eradicating rivalry relative to fixation (Linton, 2023). On this model, the three common stages of stereo analysis are a mistake: 1.",
+    "title": "STEREO VISION WITHOUT 3D GEOMETRY: KEEPING STEREO VISION IN RETINAL (VS WORLD) COORDINATES",
     "authors": [
       "RELATIVE DISPARITIES: Stereo depth being nearer vs. further than fixation is a fundamentally different visual experience. It is therefore a mistake to eradicate fixation (move from \u2018absolute\u2019 to \u2018relative\u2019 disparities)",
       "as much of the literature does. Depth from diplopia (Ziegler & Hess",
@@ -13275,7 +13275,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "AUTOCORRELATED KDE FOR FIXATION STABILITY: CAPTURING SPATIAL STRUCTURE WHILE ACCOUNTING FOR TEMPORAL DEPENDENCE IN GAZE DATA Jaeseon Song1 (jsong32@central.uh.edu), Kimberly",
+    "title": "AUTOCORRELATED KDE FOR FIXATION STABILITY: CAPTURING SPATIAL STRUCTURE WHILE ACCOUNTING FOR TEMPORAL DEPENDENCE IN GAZE DATA",
     "authors": [
       "Meier"
     ],
@@ -14005,7 +14005,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "THE ROLE OF STIMULUS PROPERTIES IN DIRECTED FORGETTING OF NATURAL SCENES Jia Gu1 (jiag6@illinois.edu), Laurel B. Walther, Huiyu Ding, Curtis Rogers, Lili Sahakyan; 1University of Illinois People regularly make intentional efforts to forget irrelevant or unwanted information. While researchers have consistently observed robust forgetting of verbal information (e.g., words), there has been mixed success in capturing intentional forgetting of visual information (e.g., natural scenes), often observing minimal or unreliable results. To understand intentional forgetting of visual items, this study",
+    "title": "THE ROLE OF STIMULUS PROPERTIES IN DIRECTED FORGETTING OF NATURAL SCENES",
     "authors": [
       "investigated whether stimulus properties like list structure or image representativeness influence intentional forgetting. Firstly",
       "we implemented mixed and pure study lists using natural scenes to explore the role of stimulus structure. At learning",
@@ -14606,7 +14606,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "DENSITY AFTEREFFECTS DEPEND ON RETINAL (AND NOT REAL WORLD) ADAPTER DENSITY Frank Durgin1 (fdurgin1@swarthmore.edu), Alexander",
+    "title": "DENSITY AFTEREFFECTS DEPEND ON RETINAL (AND NOT REAL WORLD) ADAPTER DENSITY",
     "authors": [
       "Huk"
     ],
@@ -14952,7 +14952,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "A START-SITE COST OF MICROSACCADE PREPARATION: INCREASED FOVEAL CROWDING AT THE PREFERRED LOCUS OF FIXATION Krishnamachari Prahalad1 (pkrishn5@ur.rochester.edu), Martina",
+    "title": "A START-SITE COST OF MICROSACCADE PREPARATION: INCREASED FOVEAL CROWDING AT THE PREFERRED LOCUS OF FIXATION",
     "authors": [
       "Poletti"
     ],
@@ -15385,7 +15385,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "A POPULATION CODING APPROACH TO ESTIMATING INTER-OBSERVER CONSISTENCY IN EYE FIXATIONS Matthias K\u00fcmmerer1 (matthias.kuemmerer@bethgelab.org), Matthias",
+    "title": "A POPULATION CODING APPROACH TO ESTIMATING INTER-OBSERVER CONSISTENCY IN EYE FIXATIONS",
     "authors": [
       "Bethge"
     ],
@@ -15532,7 +15532,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "PERSONALIZED EYE TRACKING REVEALS STATE-DEPENDENCE AND VIEW INVARIANCE IN FREELY GAZING REPTILES Mark",
+    "title": "PERSONALIZED EYE TRACKING REVEALS STATE-DEPENDENCE AND VIEW INVARIANCE IN FREELY GAZING REPTILES",
     "authors": [
       "Shein-Idelson",
       "Nimrod Leberstein",
@@ -15851,7 +15851,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "CORRELATIONAL APPROACH TO UNRAVEL DISTINCT MECHANISMS IN VISUAL SEARCH Sandali Liyanagoonawardena1",
+    "title": "CORRELATIONAL APPROACH TO UNRAVEL DISTINCT MECHANISMS IN VISUAL SEARCH",
     "authors": [
       "Werner Schneider",
       "Michael Herzog"
@@ -15996,7 +15996,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "DETERMINISTIC MISS ERRORS IN VISUAL SEARCH ARE DUE TO THE TARGET Johan Hulleman1 (johan.hulleman@manchester.ac.uk), Katerina",
+    "title": "DETERMINISTIC MISS ERRORS IN VISUAL SEARCH ARE DUE TO THE TARGET",
     "authors": [
       "Sergi",
       "Jeremy M. Wolfe"
@@ -16534,7 +16534,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EFFECTS OF FEEDBACK ON INDIVIDUAL DIFFERENCES IN ATTENTIONAL ASYMMETRIES Zainab Haseeb1 (zainab.haseeb@mail.utoronto.ca), Anna",
+    "title": "EFFECTS OF FEEDBACK ON INDIVIDUAL DIFFERENCES IN ATTENTIONAL ASYMMETRIES",
     "authors": [
       "Kosovicheva"
     ],
@@ -17197,7 +17197,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "LEARNING HISTORY MODULATES RECOGNITION BUT PRODUCES LIMITED CHANGES IN FEATURE USE IN AN ALIEN OTHER-RACE EFFECT PARADIGM Ula McCarthy1 (ulamccarthy24@gmail.com), Emily",
+    "title": "LEARNING HISTORY MODULATES RECOGNITION BUT PRODUCES LIMITED CHANGES IN FEATURE USE IN AN ALIEN OTHER-RACE EFFECT PARADIGM",
     "authors": [
       "Martin",
       "Emmanuella Sanchez",
@@ -17434,7 +17434,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "A DEVELOPMENTAL SHIFT IN HUMAN BODY REPRESENTATION: AGE-RELATED DIFFERENCES IN THE BODY INVERSION EFFECT FOR HEADLESS BODIES IN INFANCY Megumi Kobayashi1 (mkobayashi@human.niigata-u.ac.jp); 1Niigata University A specialized mechanism for the visual processing of human bodies is well established. One well-known example is the body inversion effect (BIE), in which discrimination performance is poorer for inverted bodies than for upright bodies (e.g., Reed et al., 2003). Recent work,",
+    "title": "A DEVELOPMENTAL SHIFT IN HUMAN BODY REPRESENTATION: AGE-RELATED DIFFERENCES IN THE BODY INVERSION EFFECT FOR HEADLESS BODIES IN INFANCY",
     "authors": [
       "however",
       "has shown that the BIE is markedly reduced for headless bodies (Yovel et al.",
@@ -17484,7 +17484,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "MULTISENSORY EMBODIMENT MODULATES BODY-CENTERED SPATIAL ATTENTION BEYOND VISUAL CUES Hiroaki Shigemasu1 (shigemasu.hiroaki@kochi-tech.ac.jp), Yuichi",
+    "title": "MULTISENSORY EMBODIMENT MODULATES BODY-CENTERED SPATIAL ATTENTION BEYOND VISUAL CUES",
     "authors": [
       "Takao",
       "Harin Hapuarachchi"
@@ -17546,7 +17546,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "A DIRECT COMPARISON OF POPULATION RECEPTIVE FIELD MAPPING RESULTS ACQUIRED WITH 2D AND 3D ECHO-PLANAR-IMAGING FMRI ACQUISITION Christian Windischberger1",
+    "title": "A DIRECT COMPARISON OF POPULATION RECEPTIVE FIELD MAPPING RESULTS ACQUIRED WITH 2D AND 3D ECHO-PLANAR-IMAGING FMRI ACQUISITION",
     "authors": [
       "Dominik Zuschlag",
       "R\u00fcdiger Stirnberg",
@@ -17611,7 +17611,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "POPULATION RECEPTIVE FIELD (PRF) MAPPING: IS GRID FIT ALL YOU NEED? Siddharth Mittal1 (siddharth.mittal@meduniwien.ac.at), Michael",
+    "title": "POPULATION RECEPTIVE FIELD (PRF) MAPPING: IS GRID FIT ALL YOU NEED?",
     "authors": [
       "Woletz",
       "David Linhardt",
@@ -18072,7 +18072,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "CAN OPTICAL COHERENCE TOMOGRAPHY BE USED TO QUANTIFY FIXATION STABILITY? Rijul Saurabh Soans1 (rijul.soans@berkeley.edu), Susana T.L.",
+    "title": "CAN OPTICAL COHERENCE TOMOGRAPHY BE USED TO QUANTIFY FIXATION STABILITY?",
     "authors": [
       "Chung"
     ],
@@ -18557,7 +18557,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "FOVEAL LOCALIZATION BIAS EXPLAINS THE FLASH-GRAB EFFECT'S DIRECTIONAL ASYMMETRY, BUT NOT THE FLASH-LAG'S Jye Marchant1 (jye.marchant@sydney.edu.au), Jiahan Hui, Alex O.",
+    "title": "FOVEAL LOCALIZATION BIAS EXPLAINS THE FLASH-GRAB EFFECT'S DIRECTIONAL ASYMMETRY, BUT NOT THE FLASH-LAG'S",
     "authors": [
       "Holcombe"
     ],
@@ -18765,7 +18765,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "PERCEPTUAL CONFIDENCE SEEMS BLIND TO PRIOR INFORMATION Akash Raj Gunniya Prakash1 (akashrajgp@utexas.edu), Jongmin",
+    "title": "PERCEPTUAL CONFIDENCE SEEMS BLIND TO PRIOR INFORMATION",
     "authors": [
       "Moon",
       "Robbe L. T. Goris"
@@ -18937,7 +18937,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "VARIATION IN MOTION-IN-DEPTH DIRECTION DISCRIMINATION ACROSS THE VISUAL FIELD WITH ISOLATED BINOCULAR CUES Jovan",
+    "title": "VARIATION IN MOTION-IN-DEPTH DIRECTION DISCRIMINATION ACROSS THE VISUAL FIELD WITH ISOLATED BINOCULAR CUES",
     "authors": [
       "Kemp",
       "Bas Rokers"
@@ -18998,7 +18998,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "WHAT LOOKS LIKE HORIZONTAL MOTION TODAY MAY LOOK LIKE VERTICAL MOTION TOMORROW: WITHIN-OBSERVER DIFFERENCES IN VISUAL APPARENT MOTION. Nicolaas Prins1 (prins.nicolaas@gmail.com); 1University of Mississippi Apparent motion refers to the phenomenon in which motion is perceived between two or more stationary visual tokens that are presented in successive frames. When frames contain multiple tokens, the visual system must solve the motion correspondence problem: Which token in one frame corresponds to which token in the alternate",
+    "title": "WHAT LOOKS LIKE HORIZONTAL MOTION TODAY MAY LOOK LIKE VERTICAL MOTION TOMORROW: WITHIN-OBSERVER DIFFERENCES IN VISUAL APPARENT MOTION.",
     "authors": [
       "frame? Generally",
       "the visual system prefers to assign correspondence between tokens that are separated by short distances (the nearest neighbor principle). However",
@@ -19433,7 +19433,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "FEASIBILITY OF MEASURING GABA+ IN THE VISUAL CORTEX OF CHILDREN TO INVESTIGATE CRITICAL PERIOD NEUROPLASTICITY IN AMBLYOPIA Rebecca Willis1 (rebecca.willis@ndcn.ox.ac.uk), Megan",
+    "title": "FEASIBILITY OF MEASURING GABA+ IN THE VISUAL CORTEX OF CHILDREN TO INVESTIGATE CRITICAL PERIOD NEUROPLASTICITY IN AMBLYOPIA",
     "authors": [
       "Groombridge",
       "Aaron T. Hess",
@@ -20145,7 +20145,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EFFECTS OF VISUAL COMPLEXITY ON WAYFINDING PERFORMANCE IN PEOPLE WITH ULTRA- LOW VISION USING VIRTUAL REALITY Dinesh Venugopal1 (dineshoptometrist16@gmail.com), Batuhan",
+    "title": "EFFECTS OF VISUAL COMPLEXITY ON WAYFINDING PERFORMANCE IN PEOPLE WITH ULTRA- LOW VISION USING VIRTUAL REALITY",
     "authors": [
       "Erkat",
       "Roksana Sadeghi",
@@ -20745,7 +20745,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "VISUAL DISTRACTION AND EXPERIENCE-BASED SUPPRESSION IN ADHD Mor Sasi1 (mor.sasi1992@gmail.com), Tair Vizel, Nitzan Shahar, Dominique Lamy; 1Tel-Aviv University, 2Sagol School of",
+    "title": "VISUAL DISTRACTION AND EXPERIENCE-BASED SUPPRESSION IN ADHD",
     "authors": [
       "Neuroscience",
       "Tel Aviv University Although \u201ceasily distracted\u201d is a core diagnostic criterion for attention- deficit/hyperactivity disorder (ADHD)",
@@ -20914,7 +20914,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "LONG-RANGE TEMPORAL INTERFERENCE REVEALS DISTINCT FORWARD AND BACKWARD EFFECTS Ilanit Hochmitz1 (ilanit57@gmail.com), Yaffa Yeshurun; 1University of Haifa Target identification is impaired when it is preceded and/or succeeded by task-irrelevant items. When such temporal interference occurs at relatively long intervals, it is termed temporal crowding. Temporal crowding has been observed at stimulus-onset-asynchronies (SOAs) that clearly exceed the limits of visual masking (SOA>150ms),",
+    "title": "LONG-RANGE TEMPORAL INTERFERENCE REVEALS DISTINCT FORWARD AND BACKWARD EFFECTS",
     "authors": [
       "emerging even when items are separated by almost half a second. Here",
       "we aimed to advance our understanding of the temporal dynamics that give rise to temporal crowding by dissociating the roles of backward and forward interference. Across four experiments",
@@ -21111,7 +21111,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "WHICH VISUAL FEATURES SHAPE THE REPRESENTATIONAL GEOMETRY FOR PREDICTION? Jiaming Xu1 (jiaming.xu@utexas.edu), Sai Prashanth Raja",
+    "title": "WHICH VISUAL FEATURES SHAPE THE REPRESENTATIONAL GEOMETRY FOR PREDICTION?",
     "authors": [
       "Sundaram",
       "Youjin Oh",
@@ -21332,7 +21332,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "TASK DEMANDS ALTER WHETHER SPATIAL SUPPRESSION OR SUMMATION IS OBSERVED IN BOTH YOUNGER AND OLDER OBSERVERS Christopher Taylor1 (taylorc@neco.edu), Yaffa Kizel; 1New England College of Optometry Spatial suppression and summation differ between young and old observers. We attempted to determine whether they could be altered suppression and summation in a simple task using Gabor stimuli. Duration thresholds were measured for discriminating motion (left/right) and/or orientation (\u00b12\u00b0 from vertical) in 14 younger (19-27",
+    "title": "TASK DEMANDS ALTER WHETHER SPATIAL SUPPRESSION OR SUMMATION IS OBSERVED IN BOTH YOUNGER AND OLDER OBSERVERS",
     "authors": [
       "yrs) and  older (- yrs) observers."
     ],
@@ -21463,7 +21463,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "TASK-DEPENDENT CORTICAL SENSITIVITY TO DEFOCUS BLUR: AN FNIRS STUDY Rajat Agarwala1 (rajat.agarwala@uni-tuebingen.de), Yannick",
+    "title": "TASK-DEPENDENT CORTICAL SENSITIVITY TO DEFOCUS BLUR: AN FNIRS STUDY",
     "authors": [
       "Sauer",
       "Elena Aggius-Vella",
@@ -21967,7 +21967,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "THE TEXT IS ALL IN THEIR HANDS: A NEUROFUNCTIONAL MODEL FOR LIMB-TO-TEXT (VWFA) CORTICAL RECYCLING Sharon Gilaie-Dotan1 (shagido@gmail.com); 1Bar Ilan University In recent years Dehaene, Cohen and colleagues proposed that the VWFA recycled evolutionarily pre-existing neural circuits in ventral visual cortex, likely those with visual preferences for T or Y junctions useful for letter recognition. While additional propositions were put forward, it was recently shown by Nordt and colleagues (2021) that the VWFA is built upon recycled prereading limb-selective neural",
+    "title": "THE TEXT IS ALL IN THEIR HANDS: A NEUROFUNCTIONAL MODEL FOR LIMB-TO-TEXT (VWFA) CORTICAL RECYCLING",
     "authors": [
       "substrates. Here I propose that prereading foveal visual expertise for limb movements (likely essential for motor-action expertise development) substantiates a representation sufficient to allow for efficient reading to successfully develop."
     ],
@@ -22075,7 +22075,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "INVESTIGATING THE ROLE OF VISUAL EXPERIENCE IN THE DEVELOPMENT OF DIFFERENT FUNCTIONS OF THE FERRET\u2019S MOTION PATHWAY Emmanuel",
+    "title": "INVESTIGATING THE ROLE OF VISUAL EXPERIENCE IN THE DEVELOPMENT OF DIFFERENT FUNCTIONS OF THE FERRET\u2019S MOTION PATHWAY",
     "authors": [
       "Osikpa",
       "Kristina Nielsen"
@@ -22182,7 +22182,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "SLOW VISION AS A DEVELOPMENTAL FEATURE: TEMPORAL CONSTRAINTS SHAPE OBJECT CATEGORIZATION IN INFANCY Jean-R\u00e9my HOCHMANN1,2 (jr.hochmann@gmail.com), C\u00e9line",
+    "title": "SLOW VISION AS A DEVELOPMENTAL FEATURE: TEMPORAL CONSTRAINTS SHAPE OBJECT CATEGORIZATION IN INFANCY",
     "authors": [
       "Spriet",
       "Liuba PAPEO"
@@ -22607,7 +22607,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "UNIVERSAL PATTERNS AND INDIVIDUAL DIFFERENCES IN VISUAL MEMORABILITY Harry Green1 (harryg@umd.edu), Chaoxiong Ye, Lijing Guo, Srihitha Akula, Alena Zheng, Heidi Lin, Nandani Sharma, Weizhen Xie; 1Department of Psychology, University of Maryland, College Park, MD, USA, 2Department of Psychology, University of Jyv\u00e4skyl\u00e4, Finland Visual recognition memory shows striking consistency across observers, a pattern often attributed to stimulus memorability \u2013 an intrinsic property of images predicting how likely they can be recognized. Yet, whether this consistency reflects only stimulus-driven",
+    "title": "UNIVERSAL PATTERNS AND INDIVIDUAL DIFFERENCES IN VISUAL MEMORABILITY",
     "authors": [
       "factors or also stable individual differences remains unresolved."
     ],
@@ -22915,7 +22915,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "EYES ON THE FFA: ABILITY-DEPENDENT EFFECTS OF HD-TDCS ON FACE RECOGNITION AND LEFT-EYE INFORMATION USE Daniel Fiset1 (daniel.fiset@uqo.ca), Kim Calv\u00e91, J\u00e9r\u00e9my",
+    "title": "EYES ON THE FFA: ABILITY-DEPENDENT EFFECTS OF HD-TDCS ON FACE RECOGNITION AND LEFT-EYE INFORMATION USE",
     "authors": [
       "Lamontagne",
       "Marie-Claude Desjardins",
@@ -23061,7 +23061,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "GLOBAL SPATIAL STRUCTURE DIFFERENTIALLY RESHAPES LOCAL CHROMATIC REPRESENTATIONS ACROSS EARLY AND LATE VISUAL WORKING MEMORY MAINTENANCE Craig Tomlin1 (ctomlin@rollins.edu); 1Rollins college, Winter Park, FL Visual working memory (VWM) is a capacity-limited system for retaining visual information over brief intervals, yet its representational format and organizational principles remain debated. To the investigator's knowledge, no known work has directly examined whether geometric boundary structure systematically modulates",
+    "title": "GLOBAL SPATIAL STRUCTURE DIFFERENTIALLY RESHAPES LOCAL CHROMATIC REPRESENTATIONS ACROSS EARLY AND LATE VISUAL WORKING MEMORY MAINTENANCE",
     "authors": [
       "memory for features defined in independent dimensions across hierarchical levels",
       "or whether such effects unfold dynamically as maintenance progresses. To test this",
@@ -23183,7 +23183,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "CAN A BATHTUB BE IN THE BEDROOM SCENE?: 2 DIAGNOSTIC OBJECT COMBINING STRATEGY Phutanik Setasartit1 (phutanik@gmail.com), Payachana Victoria",
+    "title": "CAN A BATHTUB BE IN THE BEDROOM SCENE?: 2 DIAGNOSTIC OBJECT COMBINING STRATEGY",
     "authors": [
       "Chareunsouk",
       "Waragon Phusuwan",
@@ -23245,7 +23245,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "STEREOSCOPIC PRESENTATION OF MASKING OCCLUDERS REVEALS THE TIME COURSE REQUIRED FOR PERCEPTUAL COMPLETION OF OBJECTS Hugo Turro-Serrano1 (hugo.c.turro-serrano@vanderbilt.edu),",
+    "title": "STEREOSCOPIC PRESENTATION OF MASKING OCCLUDERS REVEALS THE TIME COURSE REQUIRED FOR PERCEPTUAL COMPLETION OF OBJECTS",
     "authors": [
       "Lasyapriya Pidaparthi",
       "Frank Tong"
@@ -23740,7 +23740,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "RACE AND GENDER ARE SPONTANEOUSLY ENCODED IN VISUAL WORKING MEMORY (VWM) Lauren Williams1 (wlauren00@gmail.com), Xin Yang, Joshua",
+    "title": "RACE AND GENDER ARE SPONTANEOUSLY ENCODED IN VISUAL WORKING MEMORY (VWM)",
     "authors": [
       "Langfus",
       "Yarrow Dunham",
@@ -24028,7 +24028,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "OBJECT AND SCENE RECOGNITION ABILITIES PREDICT THE CONTENT AND QUALITY OF IMAGE DESCRIPTIONS Melina O. Mueller1 (melina.o.mueller@vanderbilt.edu), Ian G.",
+    "title": "OBJECT AND SCENE RECOGNITION ABILITIES PREDICT THE CONTENT AND QUALITY OF IMAGE DESCRIPTIONS",
     "authors": [
       "Dobbins",
       "Isabel Gauthier"
@@ -24427,7 +24427,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "ATTENTIONAL CAPTURE BY AN ABRUPT ONSET IMPAIRS TARGET PERCEPTION UNDER SERIAL SEARCH, BUT NOT UNDER PARALLEL SEARCH Seonbeom Heo (tjsqja1011@gmail.com), Jonga Kwon, Suk Won Han, Sohyun Kim; 1Department of psychology, Chungnam National University Abrupt onsets are known to capture attention automatically, but the processing stage at which they interfere with task performance remains unclear. This study examined whether interference from task- irrelevant abrupt onsets arises at perceptual or post-perceptual",
+    "title": "ATTENTIONAL CAPTURE BY AN ABRUPT ONSET IMPAIRS TARGET PERCEPTION UNDER SERIAL SEARCH, BUT NOT UNDER PARALLEL SEARCH",
     "authors": [
       "stages",
       "and whether this depends on search mode. Each participant performed one of two visual search tasks: an orientation search (a tilted line among vertical lines)",
@@ -24765,7 +24765,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "CONCEPTUAL RELATEDNESS FAILS AS A SEARCH TEMPLATE UNDER HIGH-SPEED PRESENTATION Moussa Kousa1 (mak6934@psu.edu), Brad",
+    "title": "CONCEPTUAL RELATEDNESS FAILS AS A SEARCH TEMPLATE UNDER HIGH-SPEED PRESENTATION",
     "authors": [
       "Wyble"
     ],
@@ -24832,7 +24832,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "SPATIAL GRADIENTS OF REWARD AND THREAT INTERACT TO GUIDE HUMAN FORAGING PATTERNS EBRU ECEM TAVACIOGLU1 (ebrueecem@gmail.com), MATTHIAS GAMER1, JEREMY WOLFE2,3; 1University of W\u00fcrzburg, Germany, 2Brigham and Women's Hospital, 3Harvard Medical School Human foraging in natural environments requires continuously allocating attention across space while weighing potential gains against potential costs. Although visual foraging paradigms have revealed much about how observers guide search across extended scenes, far less is known about how people decide where to forage,",
+    "title": "SPATIAL GRADIENTS OF REWARD AND THREAT INTERACT TO GUIDE HUMAN FORAGING PATTERNS EBRU ECEM TAVACIOGLU1",
     "authors": [
       "given spatially varying rewards and threats having a different spatial layout. Here",
       "we examined how distributed value and aversive sound jointly shaped attentional allocation and harvesting behavior during continuous visual foraging. Participants completed a grid-based foraging paradigm in which reward magnitude (\u2013 points) and auditory threat level (\u2013 intensity) followed orthogonal gradients across a \u00d7 display. In a baseline block",
@@ -25040,7 +25040,7 @@
     "kind": "poster",
     "talk_number": null,
     "time": "",
-    "title": "SYNTHETIC SCENE GENERATION FOR EVALUATING VISUAL FEATURE CONTRIBUTIONS TO SEGMENTATION DECISIONS Joshua M. Martin1 (joshua.martin@tu-darmstadt.de), Thomas S. A. Wallis; 1Centre for Cognitive Science and Institute for Psychology, Technical University of Darmstadt., 2Center for Mind, Brain and Behavior (CMBB), Universities of Marburg, Giessen and Darmstadt. Neural network models have been widely applied to study the processes underlying high-level object recognition; however, mid-level visual processes, such as segmentation and grouping, remain",
+    "title": "SYNTHETIC SCENE GENERATION FOR EVALUATING VISUAL FEATURE CONTRIBUTIONS TO SEGMENTATION DECISIONS",
     "authors": [
       "relatively understudied. One reason is the lack of suitable datasets: natural images are difficult to annotate manually and offer limited experimental control over the availability of visual cues. This challenge is well suited to synthetic data generation using physically based rendering",
       "which can produce fully customizable D scenes while preserving key aspects of visual realism through physically accurate light transport. Here",
