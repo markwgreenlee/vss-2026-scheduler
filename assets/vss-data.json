@@ -8172,9 +8172,7 @@
     "talk_number": null,
     "time": "",
     "title": "LEARNING THE AFFORDANCE LANDSCAPE FOR VISUALLY GUIDED STEERING",
-    "authors": [
-      "Together"
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The aim of this study was to extend existing information-based strategies of visual control to model how an agent might learn the affordance landscape for a basic locomotor task: steering to a goal. The model agent\u2019s translational and rotational accelerations are regulated by a simple error-nulling control strategy based on visual information about goal-heading angle, rotation rate, and speed. The control strategy has parameters that the agent can tune to alter trajectory shape and enact different solutions. The agent\u2019s movements are also influenced by motor noise and subject to action limits that shape the stability and controllability of individual solutions. Importantly, the controllability of the current solution is specified by the time evolution of the control strategy output (acceleration), which converges to zero only when the agent is following a stable, controllable trajectory. This information allows the agent to gradually learn a function from currently available visual information and control- strategy parameters to the controllability of individual solutions; in effect, the affordance landscape. Model simulations capture key aspects of human steering behavior that simpler models cannot, including the ability to adapt to changes in action capabilities and motor noise and to coordinate steering and speed control. NSF 2218220",
     "day": "Saturday",
@@ -12210,9 +12208,7 @@
     "talk_number": null,
     "time": "",
     "title": "FACIAL ASYMMETRY DRIVES DISTORTIONS IN PROSOPOMETAMORPHOPSIA: A CASE STUDY",
-    "authors": [
-      "Here"
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "The stimuli were either full faces (asymmetry present), top and bottom halves (asymmetry present), left and right halves (asymmetry absent), or isolated facial features. Distortions were strongest for the full faces, present but reduced in intensity for the top halves and pairs of eyes, and mostly absent for the bottom halves, left halves, right halves, and individual features (p < 0.001). In Experiment 3, we contrasted frontal views of faces (asymmetry present) with full profiles (asymmetry absent); A.S. saw distortions to all of the frontal views and no distortions to faces presented in profile. Together, these findings suggest that the visual system calculates the asymmetry between the left and right halves of the face every time a face is viewed, and therefore, some cases of PMO depend critically on facial symmetry. Disrupting left-right symmetry substantially reduces perceived distortions, providing insight into the perceptual mechanisms underlying this condition. Dartmouth College Department of Psychological and Brain Sciences",
     "day": "Sunday",
@@ -20661,9 +20657,7 @@
     "talk_number": null,
     "time": "",
     "title": "VISUAL DISTRACTION AND EXPERIENCE-BASED SUPPRESSION IN ADHD",
-    "authors": [
-      "Neuroscience"
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "We compared baseline distraction (performance costs on distractor-present vs. distractor-absent trials in the first block halves) and feature-based suppression efficiency (reductions in these costs from the first to the second block halves) in participants with ADHD and matched controls. The results showed that participants with ADHD exhibited greater distraction by novel salient distractors than controls, yet were equally efficient at suppressing these distractors following repeated exposure. This dissociation explains why studies using rare distractors report heightened distractibility in ADHD, whereas studies using frequently repeated distractors do not. Support was provided by the Israel Science Foundation (ISF)",
     "day": "Tuesday",
@@ -24312,9 +24306,7 @@
     "talk_number": null,
     "time": "",
     "title": "ATTENTIONAL CAPTURE BY AN ABRUPT ONSET IMPAIRS TARGET PERCEPTION UNDER SERIAL SEARCH, BUT NOT UNDER PARALLEL SEARCH",
-    "authors": [
-      "stages"
-    ],
+    "authors": [],
     "affiliations": "",
     "abstract": "This task-dependent dissociation helps reconcile mixed results in the literature and underscores the importance of search mode in shaping the impact of exogenous attention. This research was supported by the National Research Foundation grant (NRF) funded by the Korea government (No. NRF- 2024S1A5A2A01019821)",
     "day": "Tuesday",
