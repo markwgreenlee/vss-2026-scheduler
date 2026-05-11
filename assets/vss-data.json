@@ -4390,9 +4390,9 @@
     "time": "",
     "title": "CONTEXTUAL DISTINCTIVENESS SHAPES THE SELF-PROCESSING ADVANTAGE",
     "authors": [
-      "yueyao liu",
-      "pengmin qin",
-      "hui chen"
+      "Yueyao Liu",
+      "Pengmin Qin",
+      "Hui Chen"
     ],
     "affiliations": "1Zhejiang University, 2South China Normal University, 3Zhejiang University",
     "abstract": "The self-processing advantage (SPA)—prioritized processing of self- relevant stimuli—is widely considered a stable, intrinsic phenomenon. We challenged this view using a novel design that isolates contextual influences on the SPA while holding task structure constant. Across three experiments (N=320), participants searched for a target name among distractor nouns and reported its location. While the name’s identity had to be attended to define the target, it was incidental to the report. A surprise test probed automatic memory for the name. Crucially, we systematically manipulated the relative distinctiveness of the self-stimulus by varying the categorical composition of the target- name pool across experiments. The results showed that the SPA is context-dependent. In the first series of experiments, a robust memory advantage emerged only when the self-stimulus was the most distinctive item relative to the other potential targets. This benefit was self-specific and did not extend to other highly familiar names (e.g., a friend’s name) under comparable distinctiveness conditions. Most critically, when the self-stimulus was embedded in a mixed context that reduced its relative categorical distinctiveness, the SPA was completely eliminated and the processing advantage was instead biased towards contextually novel information. These results provide direct evidence that the SPA is not a fixed attribute of self- representation. Instead, it reflects a flexible, competitive process dynamically shaped by the immediate processing context. We conclude that the self gains cognitive priority only when intrinsic self- relevance aligns with contextual distinctiveness; otherwise, it can be overridden by other salient signals, such as novelty.",
@@ -7570,12 +7570,11 @@
     "time": "",
     "title": "DOES THE LINK BETWEEN SPONTANEOUS MICROSACCADES AND EEG ALPHA ACTIVITY DEPEND ON EXTERNAL VISUAL INPUTS THAT MOVE ACROSS THE RETINA WITH EACH MICROSACCADE?",
     "authors": [
-      "direction (Liu et al.",
-      "Progress in Neurobiology",
-      ")."
+      "Freek van Ede",
+      "Baiwei Liu"
     ],
-    "affiliations": "",
-    "abstract": "We now ask to what extent such a link between spontaneous microsaccades and EEG-alpha activity depends on visual inputs. If the reported link reflects microsaccades directly, it should be observed irrespective of the concurrent presence or absence of visual inputs. In contrast, if the link reflects a secondary ‘visual consequence’ of microsaccades because microsaccades displace visual inputs across the retina, then the reported link should be contingent on the presence of visual inputs. To address this, we recorded spontaneous microsaccades and EEG activity across three fixation conditions: (1) in the absence of any fixation marker or other visual inputs (i.e. after an initial fixation marker disappeared), (2) in the presence of only a central fixation marker, or (3) in the presence of a central fixation marker together with peripheral visual stimuli. Critically, transient alpha lateralisation following microsaccades was observed even in the condition without the fixation marker and the peripheral stimuli. These data argue for an intrinsic link between the direction of spontaneous microsaccades and the spatially corresponding lateralisation of posterior alpha-band activity. This research was supported by an ERC Starting Grant from the European Research Council (MEMTICIPATION, 850636) and an NWO Vidi Grant by the Dutch Research Council (grant number 14721) to F.v.E. Functional Organization of Visual Pathways: Cortical visual processing 2",
+    "affiliations": "1Vrije Universiteit Amsterdam",
+    "abstract": "We have previously reported how spontaneous microsaccades \\u2013 made in the absence of any incentive to look anywhere but a central fixation marker \\u2013 are associated with the transient lateralisation of posterior 8-12 Hz EEG alpha-band activity according to microsaccade direction (Liu et al., Progress in Neurobiology, 2023). We now ask to what extent such a link between spontaneous microsaccades and EEG-alpha activity depends on visual inputs. If the reported link reflects microsaccades directly, it should be observed irrespective of the concurrent presence or absence of visual inputs. In contrast, if the link reflects a secondary ‘visual consequence’ of microsaccades because microsaccades displace visual inputs across the retina, then the reported link should be contingent on the presence of visual inputs. To address this, we recorded spontaneous microsaccades and EEG activity across three fixation conditions: (1) in the absence of any fixation marker or other visual inputs (i.e. after an initial fixation marker disappeared), (2) in the presence of only a central fixation marker, or (3) in the presence of a central fixation marker together with peripheral visual stimuli. Critically, transient alpha lateralisation following microsaccades was observed even in the condition without the fixation marker and the peripheral stimuli. These data argue for an intrinsic link between the direction of spontaneous microsaccades and the spatially corresponding lateralisation of posterior alpha-band activity. This research was supported by an ERC Starting Grant from the European Research Council (MEMTICIPATION, 850636) and an NWO Vidi Grant by the Dutch Research Council (grant number 14721) to F.v.E. Functional Organization of Visual Pathways: Cortical visual processing 2",
     "day": "Saturday",
     "date": "2026-05-16",
     "room": "PAVILION",
@@ -7816,11 +7815,10 @@
     "time": "",
     "title": "COMPUTATIONAL MODELING OF THE PERCEIVED FACIAL TYPICALITY AND ATTRACTIVENESS OF DISTINCT FACE POPULATIONS",
     "authors": [
-      "African American",
-      "attractiveness"
+      "Logan Trujillo"
     ],
-    "affiliations": "",
-    "abstract": "Face typicality for all three face groups was best explained by the IDM as quantified by Bayesian metrics of model generalizability. The attractiveness of the Caucasian and African American faces was also best explained by the IDM, whereas the VAM best explained East Asian facial attractiveness. These findings suggest that facial typicality is mentally represented by humans via an ideal format; however, facial attractiveness may be mentally represented using different formats depending on the face population. This work was partially supported by NIH grant #HD021332.",
+    "affiliations": "1Texas State University",
+    "abstract": "Previous computational modeling research investigating the mental representation of faces suggests that the positive relationship consistently observed between the perceived typicality and attractiveness of young adult Caucasian female faces may be best explained by a representational format where faces are encoded in memory with respect to a hypothetically perfect representative of a face population (ideal face). This study extends this prior research by modeling the mental representation of young adult Caucasian, African American, and East Asian female faces. Human judgments of typicality, attractiveness, and pairwise similarity were gathered for 17 faces from each face group. Perceived typicality and attractiveness judgments were then predicted using four computational models expressed within a perceptual embedding space (\\u201cface space\\u201d) derived from the similarity ratings via multidimensional scaling: the Ideal Dimension Model (IDM), in which typicality and attractiveness reflect the similarity of a face to the ideal face of a face population Face typicality for all three face groups was best explained by the IDM as quantified by Bayesian metrics of model generalizability. The attractiveness of the Caucasian and African American faces was also best explained by the IDM, whereas the VAM best explained East Asian facial attractiveness. These findings suggest that facial typicality is mentally represented by humans via an ideal format; however, facial attractiveness may be mentally represented using different formats depending on the face population. This work was partially supported by NIH grant #HD021332.",
     "day": "Saturday",
     "date": "2026-05-16",
     "room": "PAVILION",
