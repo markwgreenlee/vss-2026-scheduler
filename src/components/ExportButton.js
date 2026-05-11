@@ -98,6 +98,7 @@ const ExportButton = ({ sessions }) => {
           location: session.room || '',
           notes: `Authors: ${authors}\n\nSession: ${session.session_title || ''}\n\nAbstract: ${session.abstract || ''}`,
           timeZone: 'America/New_York',
+          alarms: [],
         });
         created++;
       }
