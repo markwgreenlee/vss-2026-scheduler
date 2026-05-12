@@ -13,9 +13,11 @@ import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 const SessionDetailModal = ({ session, isSelected, onToggle, onClose }) => {
   if (!session) return null;
 
-  const authors = Array.isArray(session.authors)
-    ? session.authors.join(', ')
-    : (session.authors || '');
+  const authorList = Array.isArray(session.authors) ? session.authors : [];
+  const numList = Array.isArray(session.author_numbers) &&
+    session.author_numbers.length === authorList.length
+    ? session.author_numbers
+    : null;
 
   const kindColor = session.kind === 'poster'
     ? '#2c7a3e'
@@ -82,10 +84,20 @@ const SessionDetailModal = ({ session, isSelected, onToggle, onClose }) => {
             ) : null}
           </View>
 
-          {authors ? (
+          {authorList.length > 0 ? (
             <View style={styles.section}>
               <Text style={styles.sectionLabel}>Authors</Text>
-              <Text style={styles.authors}>{authors}</Text>
+              <Text style={styles.authors}>
+                {authorList.map((name, i) => (
+                  <Text key={i}>
+                    {i > 0 ? ', ' : ''}
+                    {name}
+                    {numList && numList[i] ? (
+                      <Text style={styles.superscript}>{numList[i]}</Text>
+                    ) : null}
+                  </Text>
+                ))}
+              </Text>
             </View>
           ) : null}
 
@@ -215,6 +227,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#1a5fd1',
     lineHeight: 20,
+  },
+  superscript: {
+    fontSize: 9,
+    lineHeight: 14,
+    color: '#1a5fd1',
   },
   affiliations: {
     fontSize: 12,
