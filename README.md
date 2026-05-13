@@ -86,8 +86,15 @@ vss-mobile/
 
 ## Version History
 
+**v1.2.0** (2026-05-13)
+- Dataset grown to 1,191 presentations with 150+ data quality corrections (abstracts, authors, affiliations)
+- Author affiliation superscripts now displayed in the detail sheet
+- Calendar export timezone fixed: all events anchor to Eastern Daylight Time (Florida) regardless of where the user is located
+- Data source updated to official VSS 2026 Abstracts PDF; MiYoung Kwon's HTML scheduler credited as inspiration
+- Personal data removed from dataset; beta disclaimer added
+
 **v1.1.0** (2026-05-10)
-- Replaced 190-record dataset with full 1,156 presentations from official VSS HTML scheduler
+- Replaced 190-record dataset with full 1,156 presentations
 - Chip-style day/type filters replacing picker wheels
 - Apple Calendar export now adds events directly (no .ics file)
 - Published via EAS Update — scannable QR code, no dev server needed
