@@ -9,14 +9,60 @@ import {
   ScrollView,
 } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
+import * as Calendar from 'expo-calendar';
 import { DataContext } from '../context/DataContext';
 import SelectedSessionCard from '../components/SelectedSessionCard';
 import ExportButton from '../components/ExportButton';
 import SessionDetailModal from '../components/SessionDetailModal';
 
+const toTitleCase = (str) =>
+  str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+
+const removeFromAppleCalendar = async (session) => {
+  try {
+    const { status } = await Calendar.requestCalendarPermissionsAsync();
+    if (status !== 'granted') return;
+    const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+    const ids = calendars.filter(c => c.allowsModifications).map(c => c.id);
+    if (!ids.length) return;
+    const date = session.date || '2026-05-15';
+    const start = new Date(`${date}T00:00:00-04:00`);
+    const end   = new Date(`${date}T23:59:59-04:00`);
+    const events = await Calendar.getEventsAsync(ids, start, end);
+    const expectedTitle = session.room
+      ? `[${toTitleCase(session.room)}] ${session.title}`
+      : session.title;
+    for (const ev of events.filter(e => e.title === expectedTitle)) {
+      await Calendar.deleteEventAsync(ev.id);
+    }
+  } catch (_) {}
+};
+
 const ScheduleScreen = () => {
   const { selectedSessions, removeSession, toggleSession, clearAll } = useContext(DataContext);
   const [detailSession, setDetailSession] = useState(null);
+
+  const handleRemove = (session) => {
+    Alert.alert(
+      'Remove from Schedule',
+      'Do you also want to remove this event from Apple Calendar?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Keep in Calendar',
+          onPress: () => removeSession(session.id),
+        },
+        {
+          text: 'Remove from Calendar',
+          style: 'destructive',
+          onPress: async () => {
+            await removeFromAppleCalendar(session);
+            removeSession(session.id);
+          },
+        },
+      ]
+    );
+  };
 
   const handleClearAll = () => {
     Alert.alert(
@@ -59,7 +105,7 @@ const ScheduleScreen = () => {
               <TouchableOpacity onPress={() => setDetailSession(item)}>
                 <SelectedSessionCard
                   session={item}
-                  onRemove={() => removeSession(item.id)}
+                  onRemove={() => handleRemove(item)}
                 />
               </TouchableOpacity>
             )}
@@ -83,7 +129,7 @@ const ScheduleScreen = () => {
       <SessionDetailModal
         session={detailSession}
         isSelected={true}
-        onToggle={() => { detailSession && toggleSession(detailSession); setDetailSession(null); }}
+        onToggle={() => { if (detailSession) { handleRemove(detailSession); setDetailSession(null); } }}
         onClose={() => setDetailSession(null)}
       />
     </View>
