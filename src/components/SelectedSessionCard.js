@@ -8,6 +8,9 @@ const SelectedSessionCard = ({ session, onRemove }) => {
       <View style={styles.content}>
         <View>
           <Text style={styles.title} numberOfLines={2}>
+            {session.kind === 'poster'
+              ? <Text style={styles.posterId}>{session.id}{'  '}</Text>
+              : null}
             {session.title}
           </Text>
           <View style={styles.details}>
@@ -53,6 +56,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333',
     marginBottom: 6,
+  },
+  posterId: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#667eea',
   },
   details: {
     gap: 3,

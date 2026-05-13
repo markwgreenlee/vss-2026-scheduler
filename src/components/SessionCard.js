@@ -31,7 +31,12 @@ const SessionCard = ({ session, isSelected }) => {
         <Text style={styles.sessionTitle}>{session.session_title}</Text>
       ) : null}
 
-      <Text style={styles.title} numberOfLines={3}>{session.title}</Text>
+      <Text style={styles.title} numberOfLines={3}>
+        {session.kind === 'poster'
+          ? <Text style={styles.posterId}>{session.id}{'  '}</Text>
+          : null}
+        {session.title}
+      </Text>
 
       {authors ? (
         <Text style={styles.authors} numberOfLines={2}>{authors}</Text>
@@ -101,6 +106,11 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#222',
     marginBottom: 4,
+  },
+  posterId: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#667eea',
   },
   authors: {
     fontSize: 12,

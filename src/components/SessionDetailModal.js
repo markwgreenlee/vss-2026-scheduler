@@ -54,7 +54,12 @@ const SessionDetailModal = ({ session, isSelected, onToggle, onClose }) => {
         </View>
 
         <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
-          <Text style={styles.title}>{session.title}</Text>
+          <Text style={styles.title}>
+            {session.kind === 'poster'
+              ? <Text style={styles.posterId}>{session.id}{'  '}</Text>
+              : null}
+            {session.title}
+          </Text>
 
           {session.session_title ? (
             <Text style={styles.sessionTitle}>{session.session_title}</Text>
@@ -189,6 +194,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
     lineHeight: 24,
     marginBottom: 8,
+  },
+  posterId: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#667eea',
   },
   sessionTitle: {
     fontSize: 13,
