@@ -60,7 +60,7 @@ const SettingsScreen = () => {
             <Text style={styles.dataValue}>St. Petersburg Beach, FL</Text>
           </View>
           <Text style={styles.disclaimer}>
-            Presentation data is sourced from the official VSS 2026 Abstracts PDF published by the Vision Sciences Society. This app was inspired by MiYoung Kwon's HTML conference scheduler.
+            Presentation data is sourced from the official VSS 2026 Abstracts PDF published by the Vision Sciences Society. This app was inspired by MiYong Kwon's HTML conference scheduler.
           </Text>
           <Text style={styles.disclaimer}>
             All data is stored locally on your device. No personal information is sent to external servers.

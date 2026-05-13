@@ -26,7 +26,7 @@ I'd like to share a small tool I put together for VSS 2026: a mobile app that le
 
 I want to be transparent: I am not a software developer. I built this app over two days by working interactively with **Claude Code**, an AI coding assistant made by Anthropic. I described what I wanted, Claude wrote the code, and when things broke (and they did), we debugged together. The conversation went back and forth much like pair programming with a knowledgeable colleague — one who happens to know React Native, Expo, and Apple Calendar APIs.
 
-I know many of us are skeptical about AI tools, and understandably so. But this project is a concrete example of what becomes possible when AI handles the technical implementation and you focus on the problem you actually want to solve. The app pulls from the official VSS 2026 Abstracts PDF, and was inspired by MiYoung Kwon's HTML conference scheduler. Known extraction errors have been corrected, but this is a beta release — if you spot something wrong, feedback is welcome via GitHub or email. I couldn't have built this alone — or at least not in two days.
+I know many of us are skeptical about AI tools, and understandably so. But this project is a concrete example of what becomes possible when AI handles the technical implementation and you focus on the problem you actually want to solve. The app pulls from the official VSS 2026 Abstracts PDF, and was inspired by MiYong Kwon's HTML conference scheduler. Known extraction errors have been corrected, but this is a beta release — if you spot something wrong, feedback is welcome via GitHub or email. I couldn't have built this alone — or at least not in two days.
 
 ---
 

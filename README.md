@@ -98,7 +98,7 @@ vss-mobile/
 
 ## Data Source & Attribution
 
-Presentation data is sourced from the **official VSS 2026 Abstracts PDF** published by the Vision Sciences Society. This app was inspired by [MiYoung Kwon's](https://kwonlab.psych.umn.edu) HTML conference scheduler, which she generously shared with the community.
+Presentation data is sourced from the **official VSS 2026 Abstracts PDF** published by the Vision Sciences Society. This app was inspired by [MiYong Kwon's](https://kwonlab.psych.umn.edu) HTML conference scheduler, which she generously shared with the community.
 
 ## Support
 
