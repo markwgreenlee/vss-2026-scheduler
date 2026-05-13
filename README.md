@@ -86,10 +86,15 @@ vss-mobile/
 
 ## Version History
 
+**v1.3.0** (2026-05-13)
+- Poster number (e.g. 26.401) shown before title in all cards and detail sheet — essential for locating a poster board
+- Removing a session now offers to also delete the matching Apple Calendar event
+- Apple Calendar export detects duplicates before creating events — skip, add anyway, or cancel
+- Calendar export timezone fixed: all events anchor to Eastern Daylight Time (Florida) regardless of where the user is located
+
 **v1.2.0** (2026-05-13)
 - Dataset grown to 1,191 presentations with 150+ data quality corrections (abstracts, authors, affiliations)
 - Author affiliation superscripts now displayed in the detail sheet
-- Calendar export timezone fixed: all events anchor to Eastern Daylight Time (Florida) regardless of where the user is located
 - Data source updated to official VSS 2026 Abstracts PDF; MiYoung Kwon's HTML scheduler credited as inspiration
 - Personal data removed from dataset; beta disclaimer added
 
