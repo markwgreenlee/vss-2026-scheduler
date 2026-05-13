@@ -59,15 +59,16 @@ vss-mobile/
 ├── App.js                          # Entry point, tab navigation
 ├── app.json                        # Expo / EAS configuration
 ├── assets/
-│   └── vss-data.json               # 1,156 presentations
+│   └── vss-data.json               # 1,191 presentations
 ├── src/
 │   ├── screens/
 │   │   ├── SearchScreen.js         # Search & filter
 │   │   ├── ScheduleScreen.js       # My schedule & export
-│   │   └── SettingsScreen.js       # App info
+│   │   └── SettingsScreen.js       # App info & attribution
 │   ├── components/
 │   │   ├── SessionCard.js          # Presentation card
 │   │   ├── SelectedSessionCard.js  # Selected item card
+│   │   ├── SessionDetailModal.js   # Full abstract / detail sheet
 │   │   └── ExportButton.js         # Calendar export buttons
 │   └── context/
 │       └── DataContext.js          # Global state & search logic
