@@ -32,6 +32,7 @@ const ExportButton = ({ sessions }) => {
     const eventParams = new URLSearchParams({
       text: session.room ? `[${toTitleCase(session.room)}] ${session.title}` : session.title,
       dates: `${startDateTime}/${endDateTime}`,
+      ctz: 'America/New_York',
       location: session.room || '',
       details: `Authors: ${authors}\n\nAbstract: ${session.abstract || ''}`,
     });
@@ -89,8 +90,8 @@ const ExportButton = ({ sessions }) => {
         const endTime = session.session_end || '';
         const [startH, startM] = startTime.split(':').map(Number);
         const [endH, endM] = endTime ? endTime.split(':').map(Number) : [startH, startM + 15];
-        const startDate = new Date(`${date}T${String(startH).padStart(2,'0')}:${String(startM).padStart(2,'0')}:00`);
-        const endDate   = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00`);
+        const startDate = new Date(`${date}T${String(startH).padStart(2,'0')}:${String(startM).padStart(2,'0')}:00-04:00`);
+        const endDate   = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00-04:00`);
         await Calendar.createEventAsync(defaultCal.id, {
           title: session.room ? `[${toTitleCase(session.room)}] ${session.title}` : session.title,
           startDate,
