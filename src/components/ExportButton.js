@@ -82,8 +82,45 @@ const ExportButton = ({ sessions }) => {
         Alert.alert('Error', 'No writable calendar found on this device.');
         return;
       }
+
+      // Check for duplicates across all readable calendars
+      const allCalIds = calendars.filter(c => c.allowsModifications).map(c => c.id);
+      const duplicateIds = new Set();
+      for (const session of sessions) {
+        const date = session.date || '2026-05-15';
+        const events = await Calendar.getEventsAsync(
+          allCalIds,
+          new Date(`${date}T00:00:00-04:00`),
+          new Date(`${date}T23:59:59-04:00`)
+        );
+        const expectedTitle = session.room
+          ? `[${toTitleCase(session.room)}] ${session.title}`
+          : session.title;
+        if (events.some(e => e.title === expectedTitle)) duplicateIds.add(session.id);
+      }
+
+      // If duplicates exist, ask what to do
+      let skipDuplicates = false;
+      if (duplicateIds.size > 0) {
+        const n = duplicateIds.size;
+        const choice = await new Promise(resolve =>
+          Alert.alert(
+            'Duplicates Found',
+            `${n} session${n !== 1 ? 's are' : ' is'} already in your Apple Calendar.`,
+            [
+              { text: 'Cancel', style: 'cancel', onPress: () => resolve('cancel') },
+              { text: 'Add All Anyway', onPress: () => resolve('all') },
+              { text: 'Skip Duplicates', onPress: () => resolve('skip') },
+            ]
+          )
+        );
+        if (choice === 'cancel') return;
+        if (choice === 'skip') skipDuplicates = true;
+      }
+
       let created = 0;
       for (const session of sessions) {
+        if (skipDuplicates && duplicateIds.has(session.id)) continue;
         const authors = authorsString(session);
         const date = session.date || '2026-05-15';
         const startTime = session.time || session.session_start || '09:00';
@@ -103,7 +140,11 @@ const ExportButton = ({ sessions }) => {
         });
         created++;
       }
-      Alert.alert('Success', `${created} event${created !== 1 ? 's' : ''} added to Apple Calendar.`);
+      const skipped = skipDuplicates ? duplicateIds.size : 0;
+      const msg = skipped > 0
+        ? `${created} event${created !== 1 ? 's' : ''} added, ${skipped} duplicate${skipped !== 1 ? 's' : ''} skipped.`
+        : `${created} event${created !== 1 ? 's' : ''} added to Apple Calendar.`;
+      Alert.alert('Done', msg);
     } catch (error) {
       Alert.alert('Error', 'Failed to export to Apple Calendar: ' + error.message);
     }
