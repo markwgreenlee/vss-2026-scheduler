@@ -12,6 +12,8 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 **Android:** Install Expo Go → tap **Scan QR Code** → point at the QR code.
 
+> **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
+
 ---
 
 ## Features
