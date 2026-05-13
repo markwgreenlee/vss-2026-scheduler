@@ -88,8 +88,8 @@ vss-mobile/
 
 **v1.3.0** (2026-05-13)
 - Poster number (e.g. 26.401) shown before title in all cards and detail sheet — essential for locating a poster board
-- Removing a session now offers to also delete the matching Apple Calendar event
-- Apple Calendar export detects duplicates before creating events — skip, add anyway, or cancel
+- Removing a presentation now offers to also delete the matching Apple Calendar event
+- Apple Calendar export detects duplicate presentations before creating events — skip, add anyway, or cancel
 - Calendar export timezone fixed: all events anchor to Eastern Daylight Time (Florida) regardless of where the user is located
 
 **v1.2.0** (2026-05-13)
