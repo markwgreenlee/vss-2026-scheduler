@@ -16,7 +16,7 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## Features
 
-- **1,190 presentations** from the official VSS 2026 scheduler
+- **1,191 presentations** from the official VSS 2026 Abstracts PDF
 - Full-text search by title, author, abstract, and affiliation
 - Filter by day (Fri–Tue) and type (Talk / Poster / Symposium)
 - **Tap any card** to read the full abstract, authors, and session details in a pop-up sheet
@@ -93,6 +93,10 @@ vss-mobile/
 - Initial release
 
 ---
+
+## Data Source & Attribution
+
+Presentation data is sourced from the **official VSS 2026 Abstracts PDF** published by the Vision Sciences Society. This app was inspired by [MiYoung Kwon's](https://kwonlab.psych.umn.edu) HTML conference scheduler, which she generously shared with the community.
 
 ## Support
 

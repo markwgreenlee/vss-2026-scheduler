@@ -49,7 +49,7 @@ const SettingsScreen = () => {
         <View style={styles.card}>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Presentations:</Text>
-            <Text style={styles.dataValue}>1,190</Text>
+            <Text style={styles.dataValue}>1,191</Text>
           </View>
           <View style={styles.dataRow}>
             <Text style={styles.dataLabel}>Conference:</Text>
@@ -59,6 +59,9 @@ const SettingsScreen = () => {
             <Text style={styles.dataLabel}>Location:</Text>
             <Text style={styles.dataValue}>St. Petersburg Beach, FL</Text>
           </View>
+          <Text style={styles.disclaimer}>
+            Presentation data is sourced from the official VSS 2026 Abstracts PDF published by the Vision Sciences Society. This app was inspired by MiYoung Kwon's HTML conference scheduler.
+          </Text>
           <Text style={styles.disclaimer}>
             All data is stored locally on your device. No personal information is sent to external servers.
           </Text>
