@@ -4,15 +4,51 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## For Conference Attendees
 
-**No account or setup required.** Install the free Expo Go app and scan the QR code below.
+**No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
 
 **iPhone:** Open the Camera app → point at the QR code → tap the notification → opens in Expo Go automatically.
 
-**Android:** Install Expo Go → tap **Scan QR Code** → point at the QR code.
+**Android:** Install Expo Go → tap the **QR code icon** (bottom right) → point at the QR code.
+
+Works online and offline after the first load.
 
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
+
+---
+
+## Troubleshooting
+
+### Error: "signed-in Expo account does not have access to the account that owns this project"
+
+**What this means:** You're signed into Expo Go with an account that isn't the project owner. Even though you don't need an account for local development, Expo Go checks permissions when you're logged in.
+
+**Fix:**
+1. Sign out of Expo Go on your phone (tap profile icon → Sign out)
+2. Scan the QR code from GitHub again
+
+Once signed out, Expo Go uses a simple connection with no account verification needed.
+
+### App won't start
+
+- Force close the app and wait 10 seconds, then reopen
+- If it still fails, restart your phone
+
+### Calendar times are wrong
+
+Check that automatic timezone is enabled on your phone:
+- **iPhone:** Settings → General → Date & Time → "Set Automatically" ON
+- **Android:** Settings → System → Date & Time → "Automatic date/time" ON
+
+Then close and reopen the Calendar app.
+
+### Can't find presentations
+
+- Try shorter search terms (e.g., "vision" instead of "visual neuroscience")
+- Search by author last name (e.g., "Smith", "Jones")
+- Check that day and type filters are set to "All"
+- Close and reopen the app to verify all 1,191 presentations loaded
 
 ---
 
