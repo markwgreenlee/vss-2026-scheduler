@@ -10,6 +10,9 @@
       "android",
       "web"
     ],
+    "web": {
+      "baseUrl": "/vss-2026-scheduler"
+    },
     "ios": {
       "supportsTablet": true
     },
