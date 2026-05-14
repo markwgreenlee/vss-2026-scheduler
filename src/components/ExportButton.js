@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {
   View, TouchableOpacity, Text, StyleSheet, Alert, Linking,
-  Modal, SafeAreaView,
+  Modal, Platform,
 } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
-import * as Calendar from 'expo-calendar';
+
+const Calendar = Platform.OS !== 'web' ? require('expo-calendar') : null;
 
 const toTitleCase = (str) =>
   str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
@@ -37,9 +38,13 @@ const ExportButton = ({ sessions }) => {
       details: `Authors: ${authors}\n\nAbstract: ${session.abstract || ''}`,
     });
     const url = `https://calendar.google.com/calendar/r/eventedit?${eventParams.toString()}`;
-    Linking.openURL(url).catch(() =>
-      Alert.alert('Error', 'Could not open Google Calendar')
-    );
+    if (Platform.OS === 'web') {
+      window.open(url, '_blank');
+    } else {
+      Linking.openURL(url).catch(() =>
+        Alert.alert('Error', 'Could not open Google Calendar')
+      );
+    }
   };
 
   const exportToGoogle = () => {
@@ -164,10 +169,12 @@ const ExportButton = ({ sessions }) => {
         <Text style={styles.buttonText}>Google Calendar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={[styles.button, styles.appleButton]} onPress={exportToApple}>
-        <Icon name="apple" size={18} color="#fff" />
-        <Text style={styles.buttonText}>Apple Calendar</Text>
-      </TouchableOpacity>
+      {Platform.OS !== 'web' && (
+        <TouchableOpacity style={[styles.button, styles.appleButton]} onPress={exportToApple}>
+          <Icon name="apple" size={18} color="#fff" />
+          <Text style={styles.buttonText}>Apple Calendar</Text>
+        </TouchableOpacity>
+      )}
 
       {/* Persistent modal so Android doesn't lose it when app backgrounds */}
       <Modal
