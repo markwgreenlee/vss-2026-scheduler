@@ -20,15 +20,17 @@ Works online and offline after the first load.
 
 ## Troubleshooting
 
-### Error: "signed-in Expo account does not have access to the account that owns this project"
+**Most users won't need this section.** The app works without any account or setup. If you encounter an issue, try the solutions below.
 
-**What this means:** You're signed into Expo Go with an account that isn't the project owner. Even though you don't need an account for local development, Expo Go checks permissions when you're logged in.
+### Error: "signed-in Expo account does not have access..." (rare)
+
+**When this happens:** Only if you're already signed into Expo Go with a personal Expo account from other projects.
 
 **Fix:**
 1. Sign out of Expo Go on your phone (tap profile icon → Sign out)
 2. Scan the QR code from GitHub again
 
-Once signed out, Expo Go uses a simple connection with no account verification needed.
+**Note:** First-time users won't see this error—Expo Go starts in anonymous mode.
 
 ### App won't start
 
