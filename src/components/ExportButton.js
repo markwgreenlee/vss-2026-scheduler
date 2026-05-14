@@ -20,8 +20,8 @@ const ExportButton = ({ sessions }) => {
   const getStartEnd = (session) => {
     const date = (session.date || '').replace(/-/g, '');
     const start = (session.time || session.session_start || '09:00').replace(':', '');
-    const end = (session.session_end || '').replace(':', '');
-    const endTime = end || String(parseInt(start) + 15).padStart(4, '0');
+    // Each presentation is 15 minutes, not the full session duration
+    const endTime = String(parseInt(start) + 15).padStart(4, '0');
     return [`${date}T${start}00`, `${date}T${endTime}00`];
   };
 
@@ -124,9 +124,14 @@ const ExportButton = ({ sessions }) => {
         const authors = authorsString(session);
         const date = session.date || '2026-05-15';
         const startTime = session.time || session.session_start || '09:00';
-        const endTime = session.session_end || '';
         const [startH, startM] = startTime.split(':').map(Number);
-        const [endH, endM] = endTime ? endTime.split(':').map(Number) : [startH, startM + 15];
+        // Each presentation is 15 minutes, not the full session duration
+        let endH = startH;
+        let endM = startM + 15;
+        if (endM >= 60) {
+          endH += Math.floor(endM / 60);
+          endM = endM % 60;
+        }
         const startDate = new Date(`${date}T${String(startH).padStart(2,'0')}:${String(startM).padStart(2,'0')}:00-04:00`);
         const endDate   = new Date(`${date}T${String(endH).padStart(2,'0')}:${String(endM).padStart(2,'0')}:00-04:00`);
         await Calendar.createEventAsync(defaultCal.id, {
