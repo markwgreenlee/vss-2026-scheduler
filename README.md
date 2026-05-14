@@ -22,15 +22,15 @@ Works online and offline after the first load.
 
 **Most users won't need this section.** The app works without any account or setup. If you encounter an issue, try the solutions below.
 
-### Error: "signed-in Expo account does not have access..." (rare)
+### Error: "HTTP response error 403" or "this project requires authentication" (rare)
 
-**When this happens:** Only if you're already signed into Expo Go with a personal Expo account from other projects.
+These errors (including "signed-in Expo account does not have access...") all have the same cause: you are signed into Expo Go with a personal Expo account from another project.
 
 **Fix:**
-1. Sign out of Expo Go on your phone (tap profile icon → Sign out)
+1. In Expo Go, tap your profile icon → **Sign out**
 2. Scan the QR code from GitHub again
 
-**Note:** First-time users won't see this error—Expo Go starts in anonymous mode.
+**Note:** First-time users won't see this — Expo Go starts in anonymous mode by default.
 
 ### Message: "Using a cached version of the app" (normal behavior)
 
