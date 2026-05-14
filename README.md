@@ -53,6 +53,16 @@ Check that automatic timezone is enabled on your phone:
 
 Then close and reopen the Calendar app.
 
+### Error: "Could not connect to the server" (exp://192.168.x.x)
+
+**What this means:** You have multiple "VSS 2026 Scheduler" entries in Expo Go's "Recently opened" list. One points to the production app (from the QR code), and one points to a cached local development server that is no longer running.
+
+**Fix:**
+1. In Expo Go, tap the **first/top** "VSS 2026 Scheduler" entry (the production version from the QR code)
+2. If you see this error, tap "Go Home" and try the other entry
+
+**To clean up:** You can safely ignore the extra entry, or uninstall and reinstall Expo Go to clear the cache.
+
 ### Can't find presentations
 
 - Try shorter search terms (e.g., "vision" instead of "visual neuroscience")
