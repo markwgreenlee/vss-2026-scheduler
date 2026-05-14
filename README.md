@@ -4,7 +4,7 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## For Conference Attendees
 
-**No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below.
+**No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below. **No need to open it** — just scan the QR code with your phone's camera.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
 
