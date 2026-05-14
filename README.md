@@ -83,7 +83,7 @@ Then close and reopen the Calendar app.
 - Filter by day (Fri–Tue) and type (Talk / Poster / Symposium)
 - **Tap any card** to read the full abstract, authors, and session details in a pop-up sheet
 - Build a personal schedule — add/remove directly from the detail sheet
-- Export to **Google Calendar** (opens in browser) or **Apple Calendar** (adds events directly, no alarms set)
+- Export to **Google Calendar** (opens in browser) or **Apple Calendar** (adds events directly, no alarms set) — each event is 15 minutes (individual presentation duration, not full session)
 - **Google Calendar users:** disable default reminders in Google Calendar settings to avoid repeated alerts during the conference
 - Persistent schedule — survives app restarts
 - Works offline after first load
@@ -165,6 +165,11 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.4.0** (2026-05-14)
+- Calendar export now uses 15-minute presentation duration instead of full session duration — fixes overlap issues when multiple presentations from the same session are added to the calendar
+- Events for talks, posters, and symposia now appear with accurate 15-minute duration across Google Calendar and Apple Calendar
+- Resolves iOS Calendar display issue where overlapping events were difficult to interact with
 
 **v1.3.0** (2026-05-13)
 - Poster number (e.g. 26.401) shown before title in all cards and detail sheet — essential for locating a poster board
