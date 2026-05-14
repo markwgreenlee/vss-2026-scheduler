@@ -4,6 +4,20 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## For Conference Attendees
 
+**Two ways to access the app — choose either:**
+
+### Option 1: Web version (simplest — no installation required)
+
+Open in any phone browser by scanning this QR code:
+
+![VSS 2026 Scheduler Web QR Code](vss-web-qr.png)
+
+Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
+
+Works on any iPhone or Android. No app installation needed. Google Calendar export works; Apple Calendar export is not available in the browser version.
+
+### Option 2: Expo Go app (full features including Apple Calendar)
+
 **No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below. **No need to open it** — just scan the QR code with your phone's camera.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
@@ -167,6 +181,11 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.5.0** (2026-05-15)
+- Web version launched at https://markwgreenlee.github.io/vss-2026-scheduler — works in any phone browser, no installation required
+- Google Calendar export available in web version; Apple Calendar export requires the Expo Go app
+- Deployed via GitHub Pages
 
 **v1.4.0** (2026-05-14)
 - Calendar export for **talks** now uses 15-minute presentation duration instead of full session duration — fixes overlap issues when multiple talks from the same session are added to the calendar
