@@ -32,6 +32,14 @@ Works online and offline after the first load.
 
 **Note:** First-time users won't see this error—Expo Go starts in anonymous mode.
 
+### Message: "Using a cached version of the app" (normal behavior)
+
+**What this means:** When you scan the QR code, Expo Go tries to download the latest version from our servers. If the download is slow or the connection times out, Expo Go automatically uses the version already saved on your phone — this is a safety feature so the app always works.
+
+**You are not looking at an outdated version.** The app and data are current. Each time you open the app, it checks for updates. The message simply means Expo Go couldn't complete the download at that moment and fell back to the cached version, which is fine.
+
+**No action needed** — the app works normally and you have the latest data.
+
 ### App won't start
 
 - Force close the app and wait 10 seconds, then reopen
