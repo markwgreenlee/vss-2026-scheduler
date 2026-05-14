@@ -6,7 +6,7 @@ Dear colleagues,
 
 I'd like to share a small tool I put together for VSS 2026: a mobile app that lets you search all 1,191 presentations — including the full text of all 34 symposium talks — build a personal schedule, and export selected sessions directly to Apple or Google Calendar.
 
-**To use it — no account or setup required:**
+**To use it — no account or setup required. No need to open Expo Go** — just install it, then scan the QR code with your phone's camera.
 
 *iPhone:*
 

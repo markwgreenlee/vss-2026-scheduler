@@ -2,7 +2,7 @@
 
 ## Quickstart for Conference Attendees
 
-**No account or setup needed.** Just install the free Expo Go app and scan this QR code:
+**No account or setup needed.** Just install the free Expo Go app and scan this QR code. **No need to open it** — just scan the QR code with your phone's camera.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
 
