@@ -118,6 +118,26 @@ vss-mobile/
 - AsyncStorage (persistent schedule)
 - EAS Update (OTA publishing via Expo Go)
 
+### Environment Variables
+
+This project follows Expo best practices for environment variable visibility:
+
+**Public variables** (prefixed with `EXPO_PUBLIC_`) are safe to expose in client code:
+```
+EXPO_PUBLIC_APP_NAME=VSS 2026 Schedule Organizer
+EXPO_PUBLIC_VSS_YEAR=2026
+EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
+```
+
+**Secret variables** (no prefix) are kept private and only available on EAS servers:
+- API keys, authentication tokens, and other sensitive data should use secret visibility
+- Not readable locally or in JavaScript code
+
+**For local development:**
+1. Copy or create `.env.local` with public variables
+2. Access via `src/config/environment.js`
+3. Secret env variables can be set in your [Expo Dashboard](https://expo.dev)
+
 ---
 
 ## Version History
