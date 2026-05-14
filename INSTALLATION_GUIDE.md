@@ -16,6 +16,8 @@
 2. Open Expo Go and tap **Scan QR Code**
 3. Point the camera at the QR code — the app loads immediately
 
+**No login needed:** If Expo Go asks you to log in, skip it — just use your phone's camera to scan the QR code directly.
+
 ---
 
 ## Table of Contents
