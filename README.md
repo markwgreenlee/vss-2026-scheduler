@@ -57,11 +57,15 @@ Then close and reopen the Calendar app.
 
 **What this means:** You have multiple "VSS 2026 Scheduler" entries in Expo Go's "Recently opened" list. One points to the production app (from the QR code), and one points to a cached local development server that is no longer running.
 
-**Fix:**
+**Fix — Option 1 (Quick):**
 1. In Expo Go, tap the **first/top** "VSS 2026 Scheduler" entry (the production version from the QR code)
 2. If you see this error, tap "Go Home" and try the other entry
 
-**To clean up:** You can safely ignore the extra entry, or uninstall and reinstall Expo Go to clear the cache.
+**Fix — Option 2 (Clean slate):**
+1. In Expo Go home screen, tap **CLEAR** in the "Recently opened" section
+2. Scan the QR code from GitHub again to start fresh
+
+**To clean up:** You can also uninstall and reinstall Expo Go to clear the cache entirely.
 
 ### Can't find presentations
 
