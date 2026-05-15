@@ -29,6 +29,10 @@ If you want direct Apple Calendar export, you can use the app via Expo Go. As of
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
 
+```
+exp://u.expo.dev/e87a1137-1944-44de-af8c-989ba6bb299a?channel-name=production
+```
+
 **First-time setup (one-time only):**
 1. Install the free **Expo Go** app from the App Store (iPhone) or Google Play Store (Android)
 2. Open Expo Go and tap **Log in**
