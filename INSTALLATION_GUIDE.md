@@ -2,6 +2,29 @@
 
 ## Quickstart for Conference Attendees
 
+**Two ways to use it — choose whichever is easier:**
+
+---
+
+### Option 1: Web version (simplest — no installation required)
+
+Open in any phone browser by scanning this QR code:
+
+![VSS 2026 Scheduler Web QR Code](vss-web-qr.png)
+
+Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
+
+Works on any iPhone or Android. No app, no account, no setup. Google Calendar export works; Apple Calendar export requires Option 2.
+
+**Optional — add to your home screen for quick access:**
+- **iPhone (Safari):** tap the Share button (box with arrow) → **Add to Home Screen**
+- **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
+- **Android (Chrome):** tap the three-dot menu → **Add to Home Screen**
+
+---
+
+### Option 2: Expo Go app (full features including Apple Calendar)
+
 **No account or setup needed.** Just install the free Expo Go app and scan this QR code. **No need to open it** — just scan the QR code with your phone's camera.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
@@ -647,12 +670,12 @@ npm start -- --clear
 
 ## Summary
 
-| Platform | Quick Test | Permanent Install | Requirements |
-|----------|-----------|------------------|--------------|
-| **iOS** | Expo Go | Apple App Store | Free / $99/yr |
-| **Android** | Expo Go | APK File | Free |
+| Platform | Easiest | Full Features | Requirements |
+|----------|---------|---------------|--------------|
+| **iPhone** | Web version (any browser) | Expo Go app | None / None |
+| **Android** | Web version (any browser) | Expo Go app | None / None |
 
-**Recommended:** Use Expo Go for testing, then build APK for conference.
+**Recommended:** Use the web version for instant access. Use Expo Go if you need Apple Calendar export.
 
 ---
 
