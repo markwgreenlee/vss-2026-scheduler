@@ -6,38 +6,18 @@ Dear colleagues,
 
 I'd like to share a small tool I put together for VSS 2026: a mobile app that lets you search all 1,191 presentations — including the full text of all 34 symposium talks — build a personal schedule, and export selected sessions directly to Apple or Google Calendar.
 
-**Two ways to use it — choose whichever is easier:**
-
-**Option 1: Web version (simplest — no installation required)**
+**No installation required — use the web version:**
 
 Open in any phone browser: **https://markwgreenlee.github.io/vss-2026-scheduler**
 
-Or scan the QR code in the attached guide. Works on any iPhone or Android — no app, no account, no setup. Google Calendar export is available; Apple Calendar export requires Option 2.
+Or scan the QR code in the attached guide. Works on any iPhone or Android — no app, no account, no setup. Google Calendar export included.
+
+> **Tip: load the app before arriving at the venue** so it is cached and works even on slow conference WiFi.
 
 *Optional — add to your home screen for quick access:*
 - **iPhone (Safari):** tap the Share button → **Add to Home Screen**
 - **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
 - **Android (Chrome):** tap the three-dot menu → **Add to Home Screen**
-
----
-
-**Option 2: Expo Go app (full features including Apple Calendar)**
-
-**No account or setup required. No need to open Expo Go** — just install it, then scan the QR code with your phone's camera.
-
-*iPhone:*
-
-1. Install the free **Expo Go** app from the App Store
-2. Open the **Camera app** and point it at the QR code in the attached guide
-3. Tap the notification that appears — it opens the app in Expo Go automatically
-
-*Android:*
-
-1. Install the free **Expo Go** app from the Google Play Store
-2. Open Expo Go and tap **Scan QR Code**
-3. Point the camera at the QR code — the app loads immediately
-
-*No login needed:* If Expo Go asks you to log in, skip it — just use your phone's camera to scan the QR code directly.
 
 ---
 
