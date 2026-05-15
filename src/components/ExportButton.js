@@ -190,8 +190,12 @@ const ExportButton = ({ sessions }) => {
             </Text>
             <Text style={styles.modalBody}>
               {isLast
-                ? 'Last session — save it in Google Calendar and you\'re done!'
-                : 'Save this event in Google Calendar, then come back here and tap Next.'}
+                ? Platform.OS === 'web'
+                  ? 'Last session — save it in Google Calendar, then switch back to this tab. You\'re done!'
+                  : 'Last session — save it in Google Calendar and you\'re done!'
+                : Platform.OS === 'web'
+                  ? 'Save this event in Google Calendar, then switch back to this browser tab and tap Next.'
+                  : 'Save this event in Google Calendar, then come back here and tap Next.'}
             </Text>
             <View style={styles.modalButtons}>
               <TouchableOpacity
