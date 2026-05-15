@@ -16,6 +16,8 @@ Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
 
 Works on any iPhone or Android. No app installation needed. Google Calendar export works; Apple Calendar export is not available in the browser version.
 
+> **Tip: load the app before you arrive at the venue.** Open the link at home or on cellular so the app is cached on your phone. It will then continue to work even on slow or unreliable conference WiFi.
+
 **Optional — add to your home screen for quick access:**
 - **iPhone (Safari):** tap the Share button (box with arrow) → **Add to Home Screen**
 - **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
