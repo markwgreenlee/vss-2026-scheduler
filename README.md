@@ -4,9 +4,7 @@ A React Native mobile app for iOS and Android to search and organize your Vision
 
 ## For Conference Attendees
 
-**Two ways to access the app — choose either:**
-
-### Option 1: Web version (simplest — no installation required)
+### Use the web version — no installation required
 
 Open in any phone browser by scanning this QR code:
 
@@ -14,7 +12,7 @@ Open in any phone browser by scanning this QR code:
 
 Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
 
-Works on any iPhone or Android. No app installation needed. Google Calendar export works; Apple Calendar export is not available in the browser version.
+Works on any iPhone or Android. No app, no account, no setup. Google Calendar export works.
 
 > **Tip: load the app before you arrive at the venue.** Open the link at home or on cellular so the app is cached on your phone. It will then continue to work even on slow or unreliable conference WiFi.
 
@@ -25,19 +23,7 @@ Works on any iPhone or Android. No app installation needed. Google Calendar expo
 
 The app will appear as an icon on your home screen and open full-screen without the browser address bar.
 
-### Option 2: Expo Go app (full features including Apple Calendar)
-
-**No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below. **No need to open it** — just scan the QR code with your phone's camera.
-
-![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
-
-**iPhone:** Open the Camera app → point at the QR code → tap the notification → opens in Expo Go automatically.
-
-**Android:** Install Expo Go → tap the **QR code icon** (bottom right) → point at the QR code.
-
-**No login needed:** If Expo Go asks you to log in, skip it — just use your phone's camera to scan the QR code directly.
-
-Works online and offline after the first load.
+> **Note on Expo Go:** As of May 12, 2026, Expo changed its policy so that Expo Go can only load projects owned by the signed-in user. The Expo Go QR code no longer works for general attendees. Please use the web version above.
 
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
 
@@ -45,30 +31,11 @@ Works online and offline after the first load.
 
 ## Troubleshooting
 
-**Most users won't need this section.** The app works without any account or setup. If you encounter an issue, try the solutions below.
+### Web version won't load
 
-### Error: "HTTP response error 403" or "this project requires authentication" (rare)
-
-These errors (including "signed-in Expo account does not have access...") all have the same cause: you are signed into Expo Go with a personal Expo account from another project.
-
-**Fix:**
-1. In Expo Go, tap your profile icon → **Sign out**
-2. Scan the QR code from GitHub again
-
-**Note:** First-time users won't see this — Expo Go starts in anonymous mode by default.
-
-### Message: "Using a cached version of the app" (normal behavior)
-
-**What this means:** When you scan the QR code, Expo Go tries to download the latest version from our servers. If the download is slow or the connection times out, Expo Go automatically uses the version already saved on your phone — this is a safety feature so the app always works.
-
-**You are not looking at an outdated version.** The app and data are current. Each time you open the app, it checks for updates. The message simply means Expo Go couldn't complete the download at that moment and fell back to the cached version, which is fine.
-
-**No action needed** — the app works normally and you have the latest data.
-
-### App won't start
-
-- Force close the app and wait 10 seconds, then reopen
-- If it still fails, restart your phone
+- Make sure you have an internet connection
+- Try refreshing the page
+- If on slow conference WiFi, switch to cellular data for the initial load, then switch back
 
 ### Calendar times are wrong
 
@@ -78,19 +45,12 @@ Check that automatic timezone is enabled on your phone:
 
 Then close and reopen the Calendar app.
 
-### Error: "Could not connect to the server" (exp://192.168.x.x)
+### Can't find presentations
 
-**What this means:** You have multiple "VSS 2026 Scheduler" entries in Expo Go's "Recently opened" list. One points to the production app (from the QR code), and one points to a cached local development server that is no longer running.
-
-**Fix — Option 1 (Quick):**
-1. In Expo Go, tap the **first/top** "VSS 2026 Scheduler" entry (the production version from the QR code)
-2. If you see this error, tap "Go Home" and try the other entry
-
-**Fix — Option 2 (Clean slate):**
-1. In Expo Go home screen, tap **CLEAR** in the "Recently opened" section
-2. Scan the QR code from GitHub again to start fresh
-
-**To clean up:** You can also uninstall and reinstall Expo Go to clear the cache entirely.
+- Try shorter search terms (e.g., "vision" instead of "visual neuroscience")
+- Search by author last name (e.g., "Smith", "Jones")
+- Check that day and type filters are set to "All"
+- Refresh the page to verify all 1,191 presentations loaded
 
 ### Can't find presentations
 
@@ -190,6 +150,11 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.6.0** (2026-05-15)
+- Web version is now the sole recommended distribution method for conference attendees
+- Expo changed its policy on May 12, 2026 so that Expo Go can only load projects owned by the signed-in user — the Expo Go QR code no longer works for general attendees
+- README and all guides updated to reflect web-only distribution
 
 **v1.5.0** (2026-05-15)
 - Web version launched at https://markwgreenlee.github.io/vss-2026-scheduler — works in any phone browser, no installation required
