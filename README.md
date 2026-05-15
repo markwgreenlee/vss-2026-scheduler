@@ -16,6 +16,13 @@ Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
 
 Works on any iPhone or Android. No app installation needed. Google Calendar export works; Apple Calendar export is not available in the browser version.
 
+**Optional — add to your home screen for quick access:**
+- **iPhone (Safari):** tap the Share button (box with arrow) → **Add to Home Screen**
+- **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
+- **Android (Chrome):** tap the three-dot menu → **Add to Home Screen** (or **Install app**)
+
+The app will appear as an icon on your home screen and open full-screen without the browser address bar.
+
 ### Option 2: Expo Go app (full features including Apple Calendar)
 
 **No account or setup required.** Install the free [Expo Go](https://expo.dev/expo-go) app and scan the QR code below. **No need to open it** — just scan the QR code with your phone's camera.
