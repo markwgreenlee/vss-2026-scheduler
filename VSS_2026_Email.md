@@ -19,6 +19,14 @@ Or scan the QR code in the attached guide. Works on any iPhone or Android — no
 - **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
 - **Android (Chrome):** tap the three-dot menu → **Add to Home Screen**
 
+**Alternative — Expo Go app (Apple Calendar support):**
+
+If you already have Expo Go installed, you can still use the app for direct Apple Calendar export:
+- **Not signed into Expo Go:** scan the QR code in the attached guide — it works directly.
+- **Signed into Expo Go:** tap your profile icon → **Sign out**, then scan the QR code.
+
+Note: as of May 12, 2026, Expo Go only loads projects owned by the signed-in user. Signing out returns it to anonymous mode, which works fine.
+
 ---
 
 **How it was built — and why I'm telling you**

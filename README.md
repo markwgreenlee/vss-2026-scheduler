@@ -23,7 +23,16 @@ Works on any iPhone or Android. No app, no account, no setup. Google Calendar ex
 
 The app will appear as an icon on your home screen and open full-screen without the browser address bar.
 
-> **Note on Expo Go:** As of May 12, 2026, Expo changed its policy so that Expo Go can only load projects owned by the signed-in user. The Expo Go QR code no longer works for general attendees. Please use the web version above.
+### Alternative: Expo Go app (Apple Calendar support)
+
+If you already have Expo Go installed and want Apple Calendar export, you can still use the app — with one condition:
+
+![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
+
+- **If you are not signed into Expo Go:** scan the QR code above — it will work directly.
+- **If you are signed into Expo Go:** tap your profile icon → **Sign out**, then scan the QR code.
+
+> **Note:** As of May 12, 2026, Expo changed its policy so that Expo Go only loads projects owned by the signed-in user. Signing out returns Expo Go to anonymous mode, which works fine for this app.
 
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
 
