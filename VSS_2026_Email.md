@@ -21,11 +21,13 @@ Or scan the QR code in the attached guide. Works on any iPhone or Android — no
 
 **Alternative — Expo Go app (Apple Calendar support):**
 
-If you already have Expo Go installed, you can still use the app for direct Apple Calendar export:
-- **Not signed into Expo Go:** scan the QR code in the attached guide — it works directly.
-- **Signed into Expo Go:** tap your profile icon → **Sign out**, then scan the QR code.
+If you want direct Apple Calendar export, you can use the app via Expo Go — but you must be signed into Expo Go with a free Expo account:
 
-Note: as of May 12, 2026, Expo Go only loads projects owned by the signed-in user. Signing out returns it to anonymous mode, which works fine.
+1. Create a free account at https://expo.dev if you don't have one
+2. Sign into Expo Go with your Expo account
+3. Scan the Expo Go QR code in the attached guide — the app opens automatically
+
+Note: as of May 12, 2026, Expo requires a signed-in account to load projects in Expo Go. The web version above requires no account.
 
 ---
 

@@ -25,14 +25,15 @@ The app will appear as an icon on your home screen and open full-screen without 
 
 ### Alternative: Expo Go app (Apple Calendar support)
 
-If you already have Expo Go installed and want Apple Calendar export, you can still use the app — with one condition:
+If you want direct Apple Calendar export, you can use the app via Expo Go — but you must be **signed into Expo Go with a free Expo account**.
 
 ![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
 
-- **If you are not signed into Expo Go:** scan the QR code above — it will work directly.
-- **If you are signed into Expo Go:** tap your profile icon → **Sign out**, then scan the QR code.
+1. Create a free account at **https://expo.dev** if you don't have one
+2. In Expo Go, sign in with your Expo account
+3. Scan the QR code above with your phone's camera — the app opens automatically
 
-> **Note:** As of May 12, 2026, Expo changed its policy so that Expo Go only loads projects owned by the signed-in user. Signing out returns Expo Go to anonymous mode, which works fine for this app.
+> **Note:** As of May 12, 2026, Expo changed its policy so that a signed-in Expo account is required to load projects in Expo Go. The web version above requires no account.
 
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
 
