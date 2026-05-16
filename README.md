@@ -61,13 +61,6 @@ Then close and reopen the Calendar app.
 - Check that day and type filters are set to "All"
 - Refresh the page to verify all 1,191 presentations loaded
 
-### Can't find presentations
-
-- Try shorter search terms (e.g., "vision" instead of "visual neuroscience")
-- Search by author last name (e.g., "Smith", "Jones")
-- Check that day and type filters are set to "All"
-- Close and reopen the app to verify all 1,191 presentations loaded
-
 ---
 
 ## Features
