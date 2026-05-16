@@ -69,9 +69,11 @@ export default function InstallPrompt() {
           <>
             <Text style={styles.title}>Add to Home Screen</Text>
             <Text style={styles.body}>
-              Tap the <Text style={styles.bold}>Share</Text> button (
-              <Text style={styles.bold}>↑</Text>) at the bottom of Safari, then tap{' '}
-              <Text style={styles.bold}>Add to Home Screen</Text>.
+              Open this page in <Text style={styles.bold}>Safari</Text>, tap the{' '}
+              <Text style={styles.bold}>Share</Text> button (
+              <Text style={styles.bold}>↑</Text>) at the bottom, then tap{' '}
+              <Text style={styles.bold}>Add to Home Screen</Text>.{'\n'}
+              <Text style={styles.note}>(Chrome on iPhone does not support this — Safari only)</Text>
             </Text>
           </>
         ) : (
@@ -133,6 +135,11 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: '700',
     color: '#333',
+  },
+  note: {
+    fontSize: 11,
+    color: '#999',
+    fontStyle: 'italic',
   },
   buttons: {
     flexDirection: 'column',
