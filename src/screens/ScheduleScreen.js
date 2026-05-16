@@ -41,6 +41,7 @@ const removeFromAppleCalendar = async (session) => {
 const ScheduleScreen = () => {
   const { selectedSessions, removeSession, toggleSession, clearAll } = useContext(DataContext);
   const [detailSession, setDetailSession] = useState(null);
+  const [confirmingClear, setConfirmingClear] = useState(false);
 
   const handleRemove = (session) => {
     Alert.alert(
@@ -64,19 +65,11 @@ const ScheduleScreen = () => {
     );
   };
 
-  const handleClearAll = () => {
-    Alert.alert(
-      'Clear Schedule',
-      'Are you sure you want to clear all selected sessions?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Clear',
-          onPress: clearAll,
-          style: 'destructive',
-        },
-      ]
-    );
+  const handleClearAll = () => setConfirmingClear(true);
+
+  const confirmClear = () => {
+    clearAll();
+    setConfirmingClear(false);
   };
 
   return (
@@ -116,13 +109,22 @@ const ScheduleScreen = () => {
 
           <View style={styles.exportSection}>
             <ExportButton sessions={selectedSessions} />
-            <TouchableOpacity
-              style={styles.clearButton}
-              onPress={handleClearAll}
-            >
-              <Icon name="delete" size={18} color="#fff" />
-              <Text style={styles.clearText}>Clear Schedule</Text>
-            </TouchableOpacity>
+            {confirmingClear ? (
+              <View style={styles.confirmRow}>
+                <Text style={styles.confirmText}>Remove all sessions?</Text>
+                <TouchableOpacity style={styles.confirmYes} onPress={confirmClear}>
+                  <Text style={styles.confirmYesText}>Yes, clear</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.confirmNo} onPress={() => setConfirmingClear(false)}>
+                  <Text style={styles.confirmNoText}>Cancel</Text>
+                </TouchableOpacity>
+              </View>
+            ) : (
+              <TouchableOpacity style={styles.clearButton} onPress={handleClearAll}>
+                <Icon name="delete" size={18} color="#fff" />
+                <Text style={styles.clearText}>Clear Schedule</Text>
+              </TouchableOpacity>
+            )}
           </View>
         </>
       )}
@@ -203,6 +205,36 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
     fontSize: 14,
+  },
+  confirmRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    padding: 4,
+  },
+  confirmText: {
+    flex: 1,
+    fontSize: 13,
+    color: '#555',
+  },
+  confirmYes: {
+    backgroundColor: '#e53e3e',
+    borderRadius: 6,
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+  },
+  confirmYesText: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  confirmNo: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+  },
+  confirmNoText: {
+    color: '#999',
+    fontSize: 13,
   },
 });
 
