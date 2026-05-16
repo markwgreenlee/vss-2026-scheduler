@@ -162,6 +162,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.7.1** (2026-05-16)
+- Fixed "Clear Schedule" button not working on iOS Safari in standalone PWA mode — iOS suppresses browser confirmation dialogs in installed web apps, so the button silently did nothing; replaced with an inline confirmation that works on all platforms
+
 **v1.7.0** (2026-05-16)
 - Progressive Web App (PWA) support added — the web version now installs to the home screen and works fully offline after first load
 - PWA suggested by Expo support as the recommended path for event-specific apps that don't need deep native API access
