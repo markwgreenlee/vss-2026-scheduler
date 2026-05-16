@@ -174,8 +174,8 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
   },
   chipActive: {
-    backgroundColor: '#1c1c1a',
-    borderColor: '#1c1c1a',
+    backgroundColor: '#dbeafe',
+    borderColor: '#3b82f6',
   },
   chipText: {
     fontSize: 12,
@@ -183,7 +183,8 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   chipTextActive: {
-    color: '#fff',
+    color: '#1d4ed8',
+    fontWeight: '700',
   },
   statsBox: {
     backgroundColor: '#f0f4ff',
