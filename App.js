@@ -1,4 +1,13 @@
 import React, { useState, useEffect } from 'react';
+
+// Register service worker for PWA offline support (web only)
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/vss-2026-scheduler/sw.js', { scope: '/vss-2026-scheduler/' })
+      .catch(() => {});
+  });
+}
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ActivityIndicator, View } from 'react-native';

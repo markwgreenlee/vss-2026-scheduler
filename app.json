@@ -2,7 +2,7 @@
   "expo": {
     "name": "VSS 2026 Scheduler",
     "slug": "vss-2026-scheduler",
-    "version": "1.0.0",
+    "version": "1.7.0",
     "orientation": "portrait",
     "sdkVersion": "54.0.0",
     "platforms": [
@@ -11,7 +11,16 @@
       "web"
     ],
     "web": {
-      "baseUrl": "/vss-2026-scheduler"
+      "baseUrl": "/vss-2026-scheduler",
+      "name": "VSS 2026 Scheduler",
+      "shortName": "VSS 2026",
+      "description": "Search and organize your VSS 2026 conference schedule. 1,191 presentations with full-text search, day/type filters, and calendar export.",
+      "themeColor": "#667eea",
+      "backgroundColor": "#ffffff",
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/vss-2026-scheduler/",
+      "scope": "/vss-2026-scheduler/"
     },
     "ios": {
       "supportsTablet": true

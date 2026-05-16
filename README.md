@@ -16,12 +16,12 @@ Works on any iPhone or Android. No app, no account, no setup. Google Calendar ex
 
 > **Tip: load the app before you arrive at the venue.** Open the link at home or on cellular so the app is cached on your phone. It will then continue to work even on slow or unreliable conference WiFi.
 
-**Optional — add to your home screen for quick access:**
+**Add to your home screen for the best experience:**
 - **iPhone (Safari):** tap the Share button (box with arrow) → **Add to Home Screen**
 - **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
 - **Android (Chrome):** tap the three-dot menu → **Add to Home Screen** (or **Install app**)
 
-The app will appear as an icon on your home screen and open full-screen without the browser address bar.
+The app installs as a Progressive Web App (PWA) — it opens full-screen like a native app and **works offline** after the first load. No App Store required.
 
 ### Alternative: Expo Go app (Apple Calendar support)
 
@@ -169,6 +169,12 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.7.0** (2026-05-16)
+- Progressive Web App (PWA) support added — the web version now installs to the home screen and works fully offline after first load
+- PWA suggested by Expo support as the recommended path for event-specific apps that don't need deep native API access
+- Service worker added for offline caching (stale-while-revalidate strategy)
+- Web app manifest updated with standalone display mode, theme color, and start URL
 
 **v1.6.0** (2026-05-15)
 - Web version is now the sole recommended distribution method for conference attendees
