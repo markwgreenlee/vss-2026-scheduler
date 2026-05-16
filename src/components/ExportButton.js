@@ -4,6 +4,9 @@ import {
   Modal, Platform,
 } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const GOOGLE_EXPORTED_KEY = 'googleExportedIds';
 
 const Calendar = Platform.OS !== 'web' ? require('expo-calendar') : null;
 
@@ -12,6 +15,8 @@ const toTitleCase = (str) =>
 
 const ExportButton = ({ sessions }) => {
   const [googleIndex, setGoogleIndex] = useState(null); // null = modal hidden
+  const [exportQueue, setExportQueue] = useState([]);
+  const [dupWarning, setDupWarning] = useState(null); // { dupeCount, freshCount }
 
   const authorsString = (session) =>
     Array.isArray(session.authors)
@@ -26,8 +31,8 @@ const ExportButton = ({ sessions }) => {
     return [`${date}T${start}00`, `${date}T${endTime}00`];
   };
 
-  const openGoogleSession = (index) => {
-    const session = sessions[index];
+  const openGoogleSession = (queue, index) => {
+    const session = queue[index];
     const authors = authorsString(session);
     const [startDateTime, endDateTime] = getStartEnd(session);
     const eventParams = new URLSearchParams({
@@ -47,23 +52,53 @@ const ExportButton = ({ sessions }) => {
     }
   };
 
-  const exportToGoogle = () => {
-    if (sessions.length === 0) {
-      Alert.alert('No Sessions', 'Please select sessions to export');
-      return;
-    }
-    setGoogleIndex(0);
-    openGoogleSession(0);
+  const markExported = async (sessionId) => {
+    try {
+      const raw = await AsyncStorage.getItem(GOOGLE_EXPORTED_KEY);
+      const ids = raw ? JSON.parse(raw) : [];
+      if (!ids.includes(sessionId)) {
+        await AsyncStorage.setItem(GOOGLE_EXPORTED_KEY, JSON.stringify([...ids, sessionId]));
+      }
+    } catch (_) {}
   };
 
-  const handleGoogleNext = () => {
+  const exportToGoogle = async () => {
+    if (sessions.length === 0) return;
+    try {
+      const raw = await AsyncStorage.getItem(GOOGLE_EXPORTED_KEY);
+      const exportedIds = new Set(raw ? JSON.parse(raw) : []);
+      const dupes = sessions.filter(s => exportedIds.has(s.id));
+      const fresh = sessions.filter(s => !exportedIds.has(s.id));
+      if (dupes.length > 0) {
+        setDupWarning({ dupeCount: dupes.length, freshCount: fresh.length, fresh, all: sessions });
+      } else {
+        setExportQueue(sessions);
+        setGoogleIndex(0);
+        openGoogleSession(sessions, 0);
+      }
+    } catch (_) {
+      setExportQueue(sessions);
+      setGoogleIndex(0);
+      openGoogleSession(sessions, 0);
+    }
+  };
+
+  const startExport = (queue) => {
+    setDupWarning(null);
+    setExportQueue(queue);
+    setGoogleIndex(0);
+    openGoogleSession(queue, 0);
+  };
+
+  const handleGoogleNext = async () => {
+    await markExported(exportQueue[googleIndex].id);
     const next = googleIndex + 1;
-    if (next >= sessions.length) {
+    if (next >= exportQueue.length) {
       setGoogleIndex(null);
-      Alert.alert('All Done', `All ${sessions.length} session${sessions.length !== 1 ? 's' : ''} added to Google Calendar.`);
+      setExportQueue([]);
     } else {
       setGoogleIndex(next);
-      openGoogleSession(next);
+      openGoogleSession(exportQueue, next);
     }
   };
 
@@ -160,7 +195,7 @@ const ExportButton = ({ sessions }) => {
     }
   };
 
-  const isLast = googleIndex !== null && googleIndex === sessions.length - 1;
+  const isLast = googleIndex !== null && googleIndex === exportQueue.length - 1;
 
   return (
     <View style={styles.container}>
@@ -176,6 +211,39 @@ const ExportButton = ({ sessions }) => {
         </TouchableOpacity>
       )}
 
+      {/* Duplicate warning modal */}
+      <Modal
+        visible={dupWarning !== null}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setDupWarning(null)}
+      >
+        <View style={styles.overlay}>
+          <View style={styles.modalBox}>
+            <Text style={styles.modalTitle}>Duplicates Found</Text>
+            <Text style={styles.modalBody}>
+              {dupWarning?.dupeCount} session{dupWarning?.dupeCount !== 1 ? 's have' : ' has'} already been exported to Google Calendar.
+              {dupWarning?.freshCount > 0
+                ? ` ${dupWarning.freshCount} new session${dupWarning.freshCount !== 1 ? 's' : ''} will be added.`
+                : ' There are no new sessions to add.'}
+            </Text>
+            <View style={styles.modalButtons}>
+              <TouchableOpacity style={styles.stopBtn} onPress={() => setDupWarning(null)}>
+                <Text style={styles.stopText}>Cancel</Text>
+              </TouchableOpacity>
+              {dupWarning?.freshCount > 0 && (
+                <TouchableOpacity style={styles.nextBtn} onPress={() => startExport(dupWarning.fresh)}>
+                  <Text style={styles.nextText}>Skip duplicates</Text>
+                </TouchableOpacity>
+              )}
+              <TouchableOpacity style={styles.nextBtn} onPress={() => startExport(dupWarning?.all || [])}>
+                <Text style={styles.nextText}>Export all</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+
       {/* Persistent modal so Android doesn't lose it when app backgrounds */}
       <Modal
         visible={googleIndex !== null}
@@ -186,7 +254,7 @@ const ExportButton = ({ sessions }) => {
         <View style={styles.overlay}>
           <View style={styles.modalBox}>
             <Text style={styles.modalTitle}>
-              Session {googleIndex !== null ? googleIndex + 1 : ''} of {sessions.length}
+              Session {googleIndex !== null ? googleIndex + 1 : ''} of {exportQueue.length}
             </Text>
             <Text style={styles.modalBody}>
               {isLast
