@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Alert,
   ScrollView,
+  Platform,
 } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 import * as Calendar from 'expo-calendar';
@@ -44,6 +45,10 @@ const ScheduleScreen = () => {
   const [confirmingClear, setConfirmingClear] = useState(false);
 
   const handleRemove = (session) => {
+    if (Platform.OS === 'web') {
+      removeSession(session.id);
+      return;
+    }
     Alert.alert(
       'Remove from Schedule',
       'Do you also want to remove this event from Apple Calendar?',
