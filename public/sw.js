@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vss-2026-v1.7.0';
+const CACHE_NAME = 'vss-2026-v1.7.1';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -15,19 +15,19 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Stale-while-revalidate: serve from cache immediately, update in background
+// Network-first: always try network, fall back to cache if offline
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) return;
 
   event.respondWith(
-    caches.open(CACHE_NAME).then((cache) =>
-      cache.match(event.request).then((cached) => {
-        const networkFetch = fetch(event.request).then((response) => {
-          if (response.ok) cache.put(event.request, response.clone());
-          return response;
-        }).catch(() => cached);
-        return cached || networkFetch;
+    fetch(event.request)
+      .then((response) => {
+        if (response.ok) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        }
+        return response;
       })
-    )
+      .catch(() => caches.match(event.request))
   );
 });
