@@ -18,6 +18,7 @@ import SearchScreen from './src/screens/SearchScreen';
 import ScheduleScreen from './src/screens/ScheduleScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import { DataProvider } from './src/context/DataContext';
+import InstallPrompt from './src/components/InstallPrompt';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,6 +43,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <DataProvider>
+        <InstallPrompt />
         <NavigationContainer>
           <Tab.Navigator
             screenOptions={({ route }) => ({
