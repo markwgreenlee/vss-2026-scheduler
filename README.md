@@ -162,6 +162,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.7.3** (2026-05-16)
+- Google Calendar export now tracks exported presentations locally — on re-export, shows a warning with the number of duplicates and options to skip duplicates, export all, or cancel; prevents unintentional duplicate calendar entries when building a schedule stepwise
+
 **v1.7.2** (2026-05-16)
 - Fixed "Remove from Schedule" button not working in PWA mode — on web, the Apple Calendar dialog is unavailable, so the session is now removed immediately without prompting; native iOS/Android behavior unchanged
 

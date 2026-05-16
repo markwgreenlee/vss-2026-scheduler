@@ -2,7 +2,7 @@
   "expo": {
     "name": "VSS 2026 Scheduler",
     "slug": "vss-2026-scheduler",
-    "version": "1.7.2",
+    "version": "1.7.3",
     "icon": "./assets/icon.png",
     "orientation": "portrait",
     "sdkVersion": "54.0.0",
