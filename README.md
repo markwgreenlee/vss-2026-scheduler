@@ -16,12 +16,23 @@ Works on any iPhone or Android. No app, no account, no setup. Google Calendar ex
 
 > **Tip: load the app before you arrive at the venue.** Open the link at home or on cellular so the app is cached on your phone. It will then continue to work even on slow or unreliable conference WiFi.
 
-**Add to your home screen for the best experience:**
-- **iPhone (Safari):** tap the Share button (box with arrow) → **Add to Home Screen**
-- **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
-- **Android (Chrome):** tap the three-dot menu → **Add to Home Screen** (or **Install app**)
+### Save to your home screen for the best experience
 
 The app installs as a Progressive Web App (PWA) — it opens full-screen like a native app and **works offline** after the first load. No App Store required.
+
+> **Note:** Use Safari on iPhone and Chrome on Android. Other browsers may not offer the Add to Home Screen option.
+
+**iPhone (Safari):**
+1. Open the URL in Safari
+2. Tap the Share button (box with arrow pointing up) at the bottom of the screen
+3. Scroll down and tap **Add to Home Screen**
+4. Tap **Add** — the app icon appears on your home screen
+
+**Android (Chrome):**
+1. Open the URL in Chrome
+2. Tap the three-dot menu (⋮) in the top right corner
+3. Tap **Add to Home Screen** (or **Install app**)
+4. Tap **Add** — the app icon appears on your home screen
 
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
 
