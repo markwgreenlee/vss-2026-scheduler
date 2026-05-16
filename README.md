@@ -170,8 +170,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 - Active filter chips (day and session type) now highlight in light blue when selected, making it clear which filters are applied
 - Expo Go removed from all attendee-facing documentation — org-level invites required per user make it impractical for large conferences
 - Step-by-step home screen installation instructions added for iPhone (Safari) and Android (Chrome)
-- Install prompt banner added — appears on first visit and guides users through adding the app to their home screen
+- Install prompt banner added — appears on first visit and guides users through adding the app to their home screen; detects Chrome on iPhone and offers a one-tap "Open in Safari" redirect
 - Original pop-art starburst icon created (Lichtenstein-inspired, blue palette with Ben-Day dots) to avoid VSS logo copyright concerns
+- Safari apple-touch-icon and apple-mobile-web-app-title tags added — home screen icon now shows the VSS 2026 starburst and the name "VSS 2026" instead of a generic placeholder
 - Clarified that PWA home screen installation requires Safari on iPhone — Chrome on iPhone does not support this
 
 **v1.6.0** (2026-05-15)
