@@ -156,8 +156,11 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 **v1.7.0** (2026-05-16)
 - Progressive Web App (PWA) support added — the web version now installs to the home screen and works fully offline after first load
 - PWA suggested by Expo support as the recommended path for event-specific apps that don't need deep native API access
-- Service worker added for offline caching (stale-while-revalidate strategy)
+- Service worker switched to network-first caching — updates are visible on the first reload without clearing the cache
 - Web app manifest updated with standalone display mode, theme color, and start URL
+- Active filter chips (day and session type) now highlight in light blue when selected, making it clear which filters are applied
+- Expo Go removed from all attendee-facing documentation — org-level invites required per user make it impractical for large conferences
+- Step-by-step home screen installation instructions added for iPhone (Safari) and Android (Chrome)
 
 **v1.6.0** (2026-05-15)
 - Web version is now the sole recommended distribution method for conference attendees
