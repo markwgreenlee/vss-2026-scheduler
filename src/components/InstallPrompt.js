@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Platform, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Platform, Image, Linking } from 'react-native';
 
 const DISMISSED_KEY = 'vss_install_dismissed';
+const APP_URL = 'https://markwgreenlee.github.io/vss-2026-scheduler';
 
 const isIOS = () =>
   typeof navigator !== 'undefined' &&
   /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+const isChromeOnIOS = () =>
+  typeof navigator !== 'undefined' &&
+  /CriOS/i.test(navigator.userAgent);
 
 const isInstalled = () =>
   typeof window !== 'undefined' &&
   (window.matchMedia('(display-mode: standalone)').matches ||
     window.navigator.standalone === true);
 
+const openInSafari = () => {
+  window.location.href = `x-safari-${APP_URL}`;
+};
+
 export default function InstallPrompt() {
   const [androidPrompt, setAndroidPrompt] = useState(null);
   const [showBanner, setShowBanner] = useState(false);
   const [showIOSSteps, setShowIOSSteps] = useState(false);
+  const [chromeOnIOS, setChromeOnIOS] = useState(false);
 
   useEffect(() => {
     if (Platform.OS !== 'web') return;
@@ -23,6 +33,7 @@ export default function InstallPrompt() {
     if (typeof localStorage !== 'undefined' && localStorage.getItem(DISMISSED_KEY)) return;
 
     if (isIOS()) {
+      setChromeOnIOS(isChromeOnIOS());
       setShowBanner(true);
       return;
     }
@@ -44,7 +55,11 @@ export default function InstallPrompt() {
       setShowBanner(false);
       localStorage.setItem(DISMISSED_KEY, '1');
     } else if (isIOS()) {
-      setShowIOSSteps(true);
+      if (isChromeOnIOS()) {
+        openInSafari();
+      } else {
+        setShowIOSSteps(true);
+      }
     }
   };
 
@@ -69,11 +84,16 @@ export default function InstallPrompt() {
           <>
             <Text style={styles.title}>Add to Home Screen</Text>
             <Text style={styles.body}>
-              Open this page in <Text style={styles.bold}>Safari</Text>, tap the{' '}
-              <Text style={styles.bold}>Share</Text> button (
-              <Text style={styles.bold}>↑</Text>) at the bottom, then tap{' '}
-              <Text style={styles.bold}>Add to Home Screen</Text>.{'\n'}
-              <Text style={styles.note}>(Chrome on iPhone does not support this — Safari only)</Text>
+              Tap the <Text style={styles.bold}>Share</Text> button (
+              <Text style={styles.bold}>↑</Text>) at the bottom of Safari, then tap{' '}
+              <Text style={styles.bold}>Add to Home Screen</Text>.
+            </Text>
+          </>
+        ) : chromeOnIOS ? (
+          <>
+            <Text style={styles.title}>Add VSS 2026 to your home screen</Text>
+            <Text style={styles.body}>
+              Tap <Text style={styles.bold}>Open in Safari</Text> — Safari is required to install the app.
             </Text>
           </>
         ) : (
@@ -86,7 +106,9 @@ export default function InstallPrompt() {
       <View style={styles.buttons}>
         {!showIOSSteps && (
           <TouchableOpacity style={styles.addBtn} onPress={handleAdd}>
-            <Text style={styles.addBtnText}>Add</Text>
+            <Text style={styles.addBtnText}>
+              {chromeOnIOS ? 'Open in Safari' : 'Add'}
+            </Text>
           </TouchableOpacity>
         )}
         <TouchableOpacity style={styles.dismissBtn} onPress={handleDismiss}>
@@ -135,11 +157,6 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: '700',
     color: '#333',
-  },
-  note: {
-    fontSize: 11,
-    color: '#999',
-    fontStyle: 'italic',
   },
   buttons: {
     flexDirection: 'column',
