@@ -1,6 +1,6 @@
 # VSS 2026 Schedule Organizer
 
-A React Native mobile app for iOS and Android to search and organize your Vision Sciences Society conference schedule, May 15–19, 2026, St. Petersburg Beach, FL.
+A Progressive Web App (PWA) for iOS and Android to search and organize your Vision Sciences Society conference schedule, May 15–19, 2026, St. Petersburg Beach, FL. No installation required — works in any phone browser.
 
 ## For Conference Attendees
 
@@ -102,11 +102,17 @@ eas build --platform ios       # produces .ipa — requires Apple Developer acco
 ### Project Structure
 
 ```
-vss-mobile/
-├── App.js                          # Entry point, tab navigation
-├── app.json                        # Expo / EAS configuration
+vss-2026-scheduler/
+├── App.js                          # Entry point, tab navigation, SW registration
+├── app.json                        # Expo / PWA / EAS configuration
 ├── assets/
+│   ├── icon.png                    # App icon (Lichtenstein-style starburst)
 │   └── vss-data.json               # 1,191 presentations
+├── public/
+│   ├── sw.js                       # Service worker (offline caching)
+│   └── icons/
+│       ├── icon-192.png            # PWA manifest icon
+│       └── icon-512.png            # PWA manifest icon
 ├── src/
 │   ├── screens/
 │   │   ├── SearchScreen.js         # Search & filter
@@ -116,7 +122,8 @@ vss-mobile/
 │   │   ├── SessionCard.js          # Presentation card
 │   │   ├── SelectedSessionCard.js  # Selected item card
 │   │   ├── SessionDetailModal.js   # Full abstract / detail sheet
-│   │   └── ExportButton.js         # Calendar export buttons
+│   │   ├── ExportButton.js         # Calendar export buttons
+│   │   └── InstallPrompt.js        # Home screen install banner
 │   └── context/
 │       └── DataContext.js          # Global state & search logic
 ```
@@ -127,7 +134,8 @@ vss-mobile/
 - Expo SDK 54
 - expo-calendar (direct Apple Calendar event creation)
 - AsyncStorage (persistent schedule)
-- EAS Update (OTA publishing via Expo Go)
+- Progressive Web App (PWA) with service worker for offline support
+- Deployed via GitHub Pages (GitHub Actions)
 
 ### Environment Variables
 
@@ -172,7 +180,7 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 **v1.5.0** (2026-05-15)
 - Web version launched at https://markwgreenlee.github.io/vss-2026-scheduler — works in any phone browser, no installation required
-- Google Calendar export available in web version; Apple Calendar export requires the Expo Go app
+- Google Calendar export available in the web version
 - Deployed via GitHub Pages
 
 **v1.4.0** (2026-05-14)
