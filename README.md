@@ -20,7 +20,7 @@ Works on any iPhone or Android. No app, no account, no setup. Google Calendar ex
 
 The app installs as a Progressive Web App (PWA) — it opens full-screen like a native app and **works offline** after the first load. No App Store required.
 
-> **Note:** Use Safari on iPhone and Chrome on Android. Other browsers may not offer the Add to Home Screen option.
+> **Note:** Use Safari on iPhone and Chrome on Android. Other browsers may not offer the Add to Home Screen option. Chrome on iPhone does **not** support PWA installation — Safari only.
 
 **iPhone (Safari):**
 1. Open the URL in Safari
