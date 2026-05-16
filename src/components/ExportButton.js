@@ -222,10 +222,10 @@ const ExportButton = ({ sessions }) => {
           <View style={styles.modalBox}>
             <Text style={styles.modalTitle}>Duplicates Found</Text>
             <Text style={styles.modalBody}>
-              {dupWarning?.dupeCount} session{dupWarning?.dupeCount !== 1 ? 's have' : ' has'} already been exported to Google Calendar.
+              {dupWarning?.dupeCount} presentation{dupWarning?.dupeCount !== 1 ? 's have' : ' has'} already been exported to Google Calendar.
               {dupWarning?.freshCount > 0
-                ? ` ${dupWarning.freshCount} new session${dupWarning.freshCount !== 1 ? 's' : ''} will be added.`
-                : ' There are no new sessions to add.'}
+                ? ` ${dupWarning.freshCount} new presentation${dupWarning.freshCount !== 1 ? 's' : ''} will be added.`
+                : ' There are no new presentations to add.'}
             </Text>
             <View style={styles.modalButtons}>
               <TouchableOpacity style={styles.stopBtn} onPress={() => setDupWarning(null)}>
@@ -254,16 +254,16 @@ const ExportButton = ({ sessions }) => {
         <View style={styles.overlay}>
           <View style={styles.modalBox}>
             <Text style={styles.modalTitle}>
-              Session {googleIndex !== null ? googleIndex + 1 : ''} of {exportQueue.length}
+              Presentation {googleIndex !== null ? googleIndex + 1 : ''} of {exportQueue.length}
             </Text>
             <Text style={styles.modalBody}>
               {isLast
                 ? Platform.OS === 'web'
-                  ? 'Last session — save it in Google Calendar, then switch back to this tab. You\'re done!'
-                  : 'Last session — save it in Google Calendar and you\'re done!'
+                  ? 'Last presentation — save it in Google Calendar, then switch back to this tab. You\'re done!'
+                  : 'Last presentation — save it in Google Calendar and you\'re done!'
                 : Platform.OS === 'web'
-                  ? 'Save this event in Google Calendar, then switch back to this browser tab and tap Next.'
-                  : 'Save this event in Google Calendar, then come back here and tap Next.'}
+                  ? 'Save this presentation in Google Calendar, then switch back to this browser tab and tap Next.'
+                  : 'Save this presentation in Google Calendar, then come back here and tap Next.'}
             </Text>
             <View style={styles.modalButtons}>
               <TouchableOpacity
