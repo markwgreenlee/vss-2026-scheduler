@@ -162,6 +162,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.7.2** (2026-05-16)
+- Fixed "Remove from Schedule" button not working in PWA mode — on web, the Apple Calendar dialog is unavailable, so the session is now removed immediately without prompting; native iOS/Android behavior unchanged
+
 **v1.7.1** (2026-05-16)
 - Fixed "Clear Schedule" button not working on iOS Safari in standalone PWA mode — iOS suppresses browser confirmation dialogs in installed web apps, so the button silently did nothing; replaced with an inline confirmation that works on all platforms
 
