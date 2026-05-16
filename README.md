@@ -23,27 +23,6 @@ Works on any iPhone or Android. No app, no account, no setup. Google Calendar ex
 
 The app installs as a Progressive Web App (PWA) — it opens full-screen like a native app and **works offline** after the first load. No App Store required.
 
-### Alternative: Expo Go app (Apple Calendar support)
-
-If you want direct Apple Calendar export, you can use the app via Expo Go. As of May 12, 2026, a free Expo account is required.
-
-![VSS 2026 Scheduler QR Code](vss-scheduler-qr.png)
-
-```
-exp://u.expo.dev/e87a1137-1944-44de-af8c-989ba6bb299a?channel-name=production
-```
-
-**First-time setup (one-time only):**
-1. Install the free **Expo Go** app from the App Store (iPhone) or Google Play Store (Android)
-2. Open Expo Go and tap **Log in**
-3. Tap **Sign up** to create a free account — you can use your Google account, Apple account, or any email address
-4. Once signed in, return to your phone's **Camera app** and scan the QR code above
-5. Tap the notification that appears — the app opens in Expo Go automatically
-
-**Returning users:** just scan the QR code — Expo Go remembers your login.
-
-> **Note:** As of May 12, 2026, Expo requires a signed-in account to load projects in Expo Go. Creating an account is free and takes under a minute. The web version above requires no account at all.
-
 > **Beta:** This is a community-built tool. Data is sourced from the official VSS 2026 Abstracts PDF; known extraction errors have been corrected, but some inaccuracies may remain. Feedback and corrections welcome — open a [GitHub issue](https://github.com/markwgreenlee/vss-2026-scheduler/issues) or email markwgreenlee@gmail.com.
 
 ---
