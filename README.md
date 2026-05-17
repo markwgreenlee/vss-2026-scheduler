@@ -80,6 +80,22 @@ Then close and reopen the Calendar app.
 
 ## For Developers
 
+### A Note on the Tech Stack for Non-Developers
+
+This app was built with [Claude Code](https://claude.ai/code) (Anthropic's AI coding assistant) by a vision scientist with no prior mobile app development experience. If you are considering building something similar, here is a brief orientation to the key technologies:
+
+**JavaScript** is the language that runs in web browsers. It handles all logic, data, and interactivity. It is the only language that runs natively in a browser, which is why it was chosen here — the goal was an app that works on any phone without installation.
+
+**React** (developed by Meta) is a JavaScript framework that lets you build user interfaces from reusable *components* — self-contained building blocks like a search bar, a presentation card, or a detail pop-up. Instead of positioning every element manually, you describe what you want and React handles the rendering.
+
+**React Native** extends React beyond the browser so that the same JavaScript codebase renders native UI elements on iOS, Android, and web. A single codebase powers all three platforms.
+
+**Expo** sits on top of React Native and simplifies the development workflow — it handles building, deployment, and access to device features (like the calendar) without requiring separate iOS and Android code.
+
+**Progressive Web App (PWA)** is a set of web standards that allow a browser-based app to be installed on the home screen, run full-screen, and work offline. This is what makes the app feel native without requiring an App Store submission.
+
+This entire app — 1,191 presentations, full-text search, calendar export, offline support, and PWA installation — was developed collaboratively with Claude Code over approximately one week.
+
 ### Quick Start
 
 ```bash
