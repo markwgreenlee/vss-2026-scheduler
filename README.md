@@ -162,6 +162,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.7.5** (2026-05-17)
+- Google Calendar export modal instructions updated for iOS Safari behavior — after saving an event, users are now told to tap X to close the blank tab and return to the app, then tap Next
+
 **v1.7.4** (2026-05-17)
 - Settings screen now shows the correct version number, pulled dynamically from app.json — will always be up to date
 - Added note in Settings confirming users are on the latest standalone web version and that no Expo Go or app download is required
