@@ -259,10 +259,10 @@ const ExportButton = ({ sessions }) => {
             <Text style={styles.modalBody}>
               {isLast
                 ? Platform.OS === 'web'
-                  ? 'Last presentation — save it in Google Calendar, then switch back to this tab. You\'re done!'
+                  ? 'Save this presentation in Google Calendar, then tap X to close that tab and return here. You\'re done!'
                   : 'Last presentation — save it in Google Calendar and you\'re done!'
                 : Platform.OS === 'web'
-                  ? 'Save this presentation in Google Calendar, then switch back to this browser tab and tap Next.'
+                  ? 'Save this presentation in Google Calendar, then tap X to close that tab and return here. Then tap Next.'
                   : 'Save this presentation in Google Calendar, then come back here and tap Next.'}
             </Text>
             <View style={styles.modalButtons}>
