@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
+import Constants from 'expo-constants';
 
 const SettingsScreen = () => {
+  const version = Constants.expoConfig?.version || '1.7.3';
+
   const handleOpenURL = (url) => {
     Linking.openURL(url).catch(() => {});
   };
@@ -13,8 +16,11 @@ const SettingsScreen = () => {
         <Text style={styles.sectionTitle}>About This App</Text>
         <View style={styles.card}>
           <Text style={styles.cardTitle}>VSS 2026 Schedule Organizer</Text>
-          <Text style={styles.cardText}>Version 1.0.0</Text>
-          <Text style={styles.cardText}>May 15-19, 2026</Text>
+          <Text style={styles.cardText}>Version {version}</Text>
+          <Text style={styles.cardText}>May 15–19, 2026</Text>
+          <Text style={styles.versionNote}>
+            You are using the latest standalone web version — no Expo Go or app download required.
+          </Text>
         </View>
       </View>
 
@@ -23,23 +29,23 @@ const SettingsScreen = () => {
         <View style={styles.featureList}>
           <View style={styles.featureItem}>
             <Icon name="magnify" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Search 1,190 presentations</Text>
+            <Text style={styles.featureText}>Full-text search — title, authors, abstract, affiliation</Text>
           </View>
           <View style={styles.featureItem}>
             <Icon name="filter" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Filter by day & session type</Text>
+            <Text style={styles.featureText}>Filter by day & presentation type</Text>
           </View>
           <View style={styles.featureItem}>
-            <Icon name="calendar-check" size={20} color="#667eea" />
+            <Icon name="calendar-plus" size={20} color="#667eea" />
             <Text style={styles.featureText}>Export to Google Calendar</Text>
           </View>
           <View style={styles.featureItem}>
             <Icon name="apple" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Export to Apple Calendar</Text>
+            <Text style={styles.featureText}>Export to Apple Calendar (native app only)</Text>
           </View>
           <View style={styles.featureItem}>
-            <Icon name="calendar-sync" size={20} color="#667eea" />
-            <Text style={styles.featureText}>Direct Apple & Google Calendar export</Text>
+            <Icon name="wifi-off" size={20} color="#667eea" />
+            <Text style={styles.featureText}>Works offline after first load</Text>
           </View>
         </View>
       </View>
@@ -73,9 +79,9 @@ const SettingsScreen = () => {
         <View style={styles.card}>
           <Text style={styles.helpText}>
             • Tap presentations to add them to your schedule{'\n'}
-            • Use search to find by topic, author, or title{'\n'}
-            • Filter by day and session type{'\n'}
-            • Export multiple events to your calendar
+            • Use search to find by topic, author, or abstract keyword{'\n'}
+            • Filter by day and presentation type{'\n'}
+            • Export presentations to your calendar
           </Text>
         </View>
       </View>
@@ -138,6 +144,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#666',
     marginVertical: 2,
+  },
+  versionNote: {
+    fontSize: 11,
+    color: '#4a7c59',
+    fontWeight: '600',
+    marginTop: 8,
+    fontStyle: 'italic',
   },
   featureList: {
     gap: 10,
