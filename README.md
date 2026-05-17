@@ -162,6 +162,12 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.7.4** (2026-05-17)
+- Settings screen now shows the correct version number, pulled dynamically from app.json — will always be up to date
+- Added note in Settings confirming users are on the latest standalone web version and that no Expo Go or app download is required
+- Features list updated to accurately reflect full-text abstract search and offline support; removed duplicate calendar export entries
+- Fixed presentation count to 1,191 throughout Settings screen
+
 **v1.7.3** (2026-05-16)
 - Google Calendar export now tracks exported presentations locally — on re-export, shows a warning with the number of duplicates and options to skip duplicates, export all, or cancel; prevents unintentional duplicate calendar entries when building a schedule stepwise
 
