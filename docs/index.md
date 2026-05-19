@@ -118,6 +118,22 @@ Building a Conference Schedule App with React Native, Expo, and AI
   Developer account, $99/year) removes the Expo Go dependency entirely.
 
   ---
+  9. Distribution Options for Future Conferences
+
+  Three approaches are available, all compatible with the existing codebase:
+
+  **Option A: Progressive Web App (current approach)**
+  No App Store required. Users open a URL in their browser, optionally install to their home screen, and the app works offline after first load. Zero distribution friction, but iOS requires Safari (not Chrome) for installation.
+
+  **Option B: EAS Build — native App Store app**
+  The existing Expo codebase compiles into a real native app distributed through the App Store (iOS) and Google Play (Android). Requires an Apple Developer account ($99/year) and a one-time Google Play fee ($25). Apple review typically takes 1–3 days, so submission must happen well before the conference. This is the most natural upgrade path if a more "official" app experience is needed.
+
+  **Option C: Capacitor**
+  Wraps the existing web export in a native app shell (Ionic's approach). Achieves the same App Store result as Option B but requires more setup from the current codebase.
+
+  For a conference tool with a technical audience, the PWA approach is often sufficient. EAS Build is the recommended next step if App Store presence or push notifications become important.
+
+  ---
   References
   
   - Expo Go loading policy change — May 2026 (https://expo.dev/changelog/expo-go-loading-changes-may-2026)
