@@ -62,6 +62,11 @@ jobs:
           else:
               print('manifest.json not found, skipping')
           PYEOF
+      - name: Build Jekyll docs
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./dist/docs
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
