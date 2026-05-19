@@ -12,6 +12,8 @@ Open in any phone browser by scanning this QR code:
 
 Or go directly to: **https://markwgreenlee.github.io/vss-2026-scheduler**
 
+📖 **Documentation:** https://markwgreenlee.github.io/vss-2026-scheduler/docs/
+
 Works on any iPhone or Android. No app, no account, no setup. Google Calendar export works.
 
 > **Tip: load the app before you arrive at the venue.** Open the link at home or on cellular so the app is cached on your phone. It will then continue to work even on slow or unreliable conference WiFi.
