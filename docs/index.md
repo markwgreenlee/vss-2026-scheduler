@@ -40,25 +40,16 @@ Building a Conference Schedule App with React Native, Expo, and AI
   ---
   4. Architecture
   
-  ┌────────────────────────┬─────────────────────────────────┐
-  │       Component        │           Technology            │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Mobile app             │ React Native 0.76 / React 19    │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Framework              │ Expo SDK 54                     │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Navigation             │ React Navigation (bottom tabs)  │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Persistence            │ AsyncStorage                    │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Calendar (iOS)         │ expo-calendar                   │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Calendar (web/Android) │ Google Calendar URL API         │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ Web export             │ React Native Web + GitHub Pages │
-  ├────────────────────────┼─────────────────────────────────┤
-  │ OTA updates            │ EAS Update                      │
-  └────────────────────────┴─────────────────────────────────┘
+| Component | Technology |
+|---|---|
+| Mobile app | React Native 0.76 / React 19 |
+| Framework | Expo SDK 54 |
+| Navigation | React Navigation (bottom tabs) |
+| Persistence | AsyncStorage |
+| Calendar (iOS) | expo-calendar |
+| Calendar (web/Android) | Google Calendar URL API |
+| Web export | React Native Web + GitHub Pages |
+| OTA updates | EAS Update |
 
   The app uses a single JSON data file bundled with the app — no backend server required. This makes it robust for offline
   use after the first load.
