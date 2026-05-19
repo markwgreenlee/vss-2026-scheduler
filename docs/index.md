@@ -129,8 +129,8 @@ Building a Conference Schedule App with React Native, Expo, and AI
 
   For developers pre-testing a build with a small group before release, Expo recommends using TestFlight, Google Play internal testing, or EAS Build internal distribution — see [Distributing apps for review](https://docs.expo.dev/review/overview/).
 
-  **Option C: Capacitor**
-  Wraps the existing web export in a native app shell (Ionic's approach). Achieves the same App Store result as Option B but requires more setup from the current codebase.
+  **Option C: [Capacitor](https://capacitorjs.com/docs)**
+  Wraps the existing web export in a native app shell ([Ionic](https://ionic.io/sdk)'s approach). Achieves the same App Store result as Option B but requires more setup from the current codebase.
 
   For a conference tool with a technical audience, the PWA approach is often sufficient. EAS Build is the recommended next step if App Store presence or push notifications become important.
 
