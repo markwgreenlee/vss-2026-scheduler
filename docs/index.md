@@ -114,7 +114,7 @@ Building a Conference Schedule App with React Native, Expo, and AI
   ~48 hours by a non-developer. The key is clear problem specification and iterative feedback.
   - Bundle your data. A self-contained JSON file eliminates server dependencies and makes the app work offline — essential
   for conference venues with unreliable WiFi.
-  - Consider standalone builds for future conferences. A standalone Android APK (free Expo account) or iOS app (Apple
+  - Consider standalone builds for future conferences. A standalone Android APK (Expo account) or iOS app (Apple
   Developer account, $99/year) removes the Expo Go dependency entirely.
 
   ---
