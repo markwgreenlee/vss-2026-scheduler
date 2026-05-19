@@ -127,6 +127,8 @@ Building a Conference Schedule App with React Native, Expo, and AI
   **Option B: EAS Build — native App Store app**
   The existing Expo codebase compiles into a real native app distributed through the App Store (iOS) and Google Play (Android). Requires an Apple Developer account ($99/year) and a one-time Google Play fee ($25). Apple review typically takes 1–3 days, so submission must happen well before the conference. This is the most natural upgrade path if a more "official" app experience is needed.
 
+  For developers pre-testing a build with a small group before release, Expo recommends using TestFlight, Google Play internal testing, or EAS Build internal distribution — see [Distributing apps for review](https://docs.expo.dev/review/overview/).
+
   **Option C: Capacitor**
   Wraps the existing web export in a native app shell (Ionic's approach). Achieves the same App Store result as Option B but requires more setup from the current codebase.
 
