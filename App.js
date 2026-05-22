@@ -10,12 +10,13 @@ if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   });
 }
 
-// Plausible Analytics (web only)
+// Umami Analytics (web only)
 if (Platform.OS === 'web' && typeof document !== 'undefined') {
   const script = document.createElement('script');
+  script.async = true;
   script.defer = true;
-  script.setAttribute('data-domain', 'markwgreenlee.github.io');
-  script.src = 'https://plausible.io/js/script.js';
+  script.setAttribute('data-website-id', 'a4aeb321-63b8-4259-a74b-403922d59483');
+  script.src = 'https://cloud.umami.is/script.js';
   document.head.appendChild(script);
 }
 import { NavigationContainer } from '@react-navigation/native';
