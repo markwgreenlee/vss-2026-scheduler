@@ -180,6 +180,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.8.1** (2026-05-22)
+- Added Umami Analytics to the web version — privacy-friendly, cookie-free visitor tracking; no impact on native iOS/Android
+
 **v1.8.0** (2026-05-22)
 - Upgraded to Expo SDK 56, React Native 0.85.3, and React 19.2.3
 - All companion packages updated to SDK 56 compatible versions

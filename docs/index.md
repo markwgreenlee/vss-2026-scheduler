@@ -99,7 +99,9 @@ Building a Conference Schedule App with React Native, Expo, and AI
   3. Update the timezone — calendar events are hardcoded to America/New_York; change to your conference location in
   ExportButton.js
   4. Update the GitHub Pages URL — set web.baseUrl in app.json and update the sed command in the deployment workflow
-  5. Republish via EAS Update — run eas update --branch production
+  5. Update the Umami Analytics website ID — register a new site at https://cloud.umami.is and replace the
+  data-website-id in App.js with the new UUID
+  6. Republish via EAS Update — run eas update --branch production
 
   The data schema is documented in assets/vss-data.json. The minimum required fields are title, authors, date, time, and id.
 
