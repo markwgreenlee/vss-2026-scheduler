@@ -42,8 +42,8 @@ Building a Conference Schedule App with React Native, Expo, and AI
   
 | Component | Technology |
 |---|---|
-| Mobile app | React Native 0.76 / React 19 |
-| Framework | Expo SDK 54 |
+| Mobile app | React Native 0.85 / React 19.2 |
+| Framework | Expo SDK 56 |
 | Navigation | React Navigation (bottom tabs) |
 | Persistence | AsyncStorage |
 | Calendar (iOS) | expo-calendar |
@@ -135,10 +135,32 @@ Building a Conference Schedule App with React Native, Expo, and AI
   For a conference tool with a technical audience, the PWA approach is often sufficient. EAS Build is the recommended next step if App Store presence or push notifications become important.
 
   ---
+  10. Keeping the Codebase Current — SDK Upgrades
+
+  After VSS 2026 ended, the codebase was upgraded from Expo SDK 54 to SDK 56 (v1.8.0, May 2026). This is straightforward
+  for a PWA-only project and worth doing before adapting the app for a new conference.
+
+  Key changes in SDK 56 relevant to this project:
+  - React Native 0.85.3 and React 19.2.3 (performance improvements, faster Hermes startup)
+  - OTA update bundles are ~58% smaller due to bytecode diffing enabled by default
+  - expo-font and react-native-worklets are now explicit peer dependencies (previously implicit)
+  - sdkVersion should be removed from app.json — SDK version is derived from the installed expo package
+
+  Upgrade process:
+  1. Update expo to ~56.0.0 in package.json
+  2. Run npx expo install --fix to align all companion packages
+  3. Run npx expo-doctor to identify any remaining issues
+  4. Install any newly required peer dependencies flagged by expo-doctor
+  5. Run npx expo export -p web to verify the build succeeds
+
+  The upgrade took under an hour and required no code changes — only package version bumps and config fixes.
+
+  ---
   References
   
   - Expo Go loading policy change — May 2026 (https://expo.dev/changelog/expo-go-loading-changes-may-2026)
-  - Expo SDK 54 documentation (https://docs.expo.dev)
+  - Expo SDK 56 documentation (https://docs.expo.dev)
+  - Expo SDK 56 changelog (https://expo.dev/changelog/sdk-56)
   - React Native Web (https://necolas.github.io/react-native-web/)
   - GitHub Pages deployment with GitHub Actions (https://docs.github.com/en/pages)
   - EAS Update documentation (https://docs.expo.dev/eas-update/introduction/)
