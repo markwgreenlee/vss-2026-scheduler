@@ -149,8 +149,8 @@ vss-2026-scheduler/
 
 ### Tech Stack
 
-- React Native 0.76 / React 19
-- Expo SDK 54
+- React Native 0.85 / React 19.2
+- Expo SDK 56
 - expo-calendar (direct Apple Calendar event creation)
 - AsyncStorage (persistent schedule)
 - Progressive Web App (PWA) with service worker for offline support
@@ -179,6 +179,13 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.8.0** (2026-05-22)
+- Upgraded to Expo SDK 56, React Native 0.85.3, and React 19.2.3
+- All companion packages updated to SDK 56 compatible versions
+- Removed hardcoded `sdkVersion` from app.json — SDK version is now derived automatically from the installed Expo package
+- Added `expo-font` and `react-native-worklets` as explicit peer dependencies (required by SDK 56)
+- All 21 expo-doctor checks pass
 
 **v1.7.5** (2026-05-17)
 - Google Calendar export modal instructions updated for iOS Safari behavior — after saving an event, users are now told to tap X to close the blank tab and return to the app, then tap Next
