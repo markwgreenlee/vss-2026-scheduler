@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Platform } from 'react-native';
 
 // Register service worker for PWA offline support (web only)
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
@@ -7,6 +8,15 @@ if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       .register('/vss-2026-scheduler/sw.js', { scope: '/vss-2026-scheduler/' })
       .catch(() => {});
   });
+}
+
+// Plausible Analytics (web only)
+if (Platform.OS === 'web' && typeof document !== 'undefined') {
+  const script = document.createElement('script');
+  script.defer = true;
+  script.setAttribute('data-domain', 'markwgreenlee.github.io');
+  script.src = 'https://plausible.io/js/script.js';
+  document.head.appendChild(script);
 }
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
