@@ -2,10 +2,9 @@
   "expo": {
     "name": "VSS 2026 Scheduler",
     "slug": "vss-2026-scheduler",
-    "version": "1.7.5",
+    "version": "1.8.0",
     "icon": "./assets/icon.png",
     "orientation": "portrait",
-    "sdkVersion": "54.0.0",
     "platforms": [
       "ios",
       "android",
@@ -43,6 +42,9 @@
     },
     "updates": {
       "url": "https://u.expo.dev/e87a1137-1944-44de-af8c-989ba6bb299a"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
