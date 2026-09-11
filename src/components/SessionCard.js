@@ -1,17 +1,21 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
+import { kindName } from '../utils/filters';
 
 const SessionCard = ({ session, isSelected }) => {
   const authors = Array.isArray(session.authors)
     ? session.authors.join(', ')
     : session.authors;
 
-  const timeLabel = session.time
-    ? session.time
-    : session.session_start || '';
+  const baseTime = session.time || session.session_start || '';
+  const timeLabel = baseTime
+    ? (session.time_tbc ? `${baseTime} (TBC)` : baseTime)
+    : '';
 
-  const kindLabel = session.kind === 'poster' ? 'Poster' : session.kind === 'symposium' ? 'Symposium' : 'Talk';
+  // Shared with the filter chips, so a kind this build has never seen reads as
+  // itself rather than being mislabelled 'Talk'.
+  const kindLabel = kindName(session.kind);
 
   return (
     <View style={[styles.card, isSelected && styles.selectedCard]}>
@@ -32,7 +36,7 @@ const SessionCard = ({ session, isSelected }) => {
       ) : null}
 
       <Text style={styles.title} numberOfLines={3}>
-        {session.kind === 'poster'
+        {session.kind === 'poster' && session.talk_number
           ? <Text style={styles.posterId}>{session.id}{'  '}</Text>
           : null}
         {session.title}
@@ -56,6 +60,8 @@ const SessionCard = ({ session, isSelected }) => {
           styles.kindBadge,
           session.kind === 'poster' && styles.posterBadge,
           session.kind === 'symposium' && styles.symposiumBadge,
+          session.kind === 'keynote' && styles.keynoteBadge,
+          session.kind === 'social' && styles.socialBadge,
         ]}>
           {kindLabel}
         </Text>
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
   posterId: {
     fontSize: 13,
     fontWeight: '700',
-    color: '#667eea',
+    color: '#1a5fd1',
   },
   authors: {
     fontSize: 12,
@@ -151,6 +157,12 @@ const styles = StyleSheet.create({
   },
   symposiumBadge: {
     backgroundColor: '#8a3a82',
+  },
+  keynoteBadge: {
+    backgroundColor: '#b8472f',
+  },
+  socialBadge: {
+    backgroundColor: '#d6336c',
   },
 });
 
