@@ -51,8 +51,10 @@ const conference = {
   // at the same hour. Returning a constant groups each hall's posters into one
   // block (the room is part of the block key), rather than one block per topic.
   posterSessionName: () => 'Poster session',
-  // Kinds that are really part of another kind's session block.
-  blockKindAlias: {},
+  // Kinds that are really part of another kind. An aliased kind gets no filter
+  // chip of its own and is matched by its target's chip, and its entries join
+  // the target's session block. Cards keep their own badge.
+  kindAlias: {},
 
   // --- Calendar export -----------------------------------------------------
   icsFileName: 'vss-2026-schedule.ics',
