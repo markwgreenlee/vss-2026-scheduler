@@ -187,7 +187,7 @@ Scan the QR code from the terminal with your phone (same iOS/Android instruction
 
 ### Building a Standalone App
 
-To distribute without requiring Expo Go:
+To build a standalone app:
 
 ```bash
 eas build --platform android   # produces .apk / .aab — requires free Expo account
