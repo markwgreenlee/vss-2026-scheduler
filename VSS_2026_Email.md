@@ -19,16 +19,6 @@ Or scan the QR code in the attached guide. Works on any iPhone or Android — no
 - **iPhone (Chrome):** tap the three-dot menu → **Add to Home Screen**
 - **Android (Chrome):** tap the three-dot menu → **Add to Home Screen**
 
-**Alternative — Expo Go app (Apple Calendar support):**
-
-If you want direct Apple Calendar export, use Expo Go. A free Expo account is required (one-time setup):
-
-1. Install the free **Expo Go** app from the App Store or Google Play Store
-2. Open Expo Go, tap **Log in** → **Sign up** to create a free account (Google, Apple, or email)
-3. Once signed in, scan the Expo Go QR code in the attached guide with your Camera app
-4. Tap the notification — the app opens automatically. Returning users just scan the QR code.
-
-Note: as of May 12, 2026, Expo requires a signed-in account to load projects in Expo Go. The web version above requires no account.
 
 ---
 
@@ -42,7 +32,7 @@ I know many of us are skeptical about AI tools, and understandably so. But this 
 
 **For developers**
 
-If you'd like to build a standalone version (no Expo Go required) or adapt this for a future conference, the full source code is on GitHub:
+If you'd like to build a standalone version or adapt this for a future conference, the full source code is on GitHub:
 
 https://github.com/markwgreenlee/vss-2026-scheduler
 
