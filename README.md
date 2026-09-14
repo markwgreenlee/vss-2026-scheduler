@@ -51,6 +51,28 @@ an alert to a pocketed phone without one.
 
 ## For developers
 
+### Checking the programme data
+
+```bash
+python3 scripts/validate_data.py                # checks assets/vss-data.json
+python3 scripts/validate_data.py candidate.json # check a new export first
+```
+
+This runs in CI before every build, so bad data cannot deploy.
+
+It exists because `room`, `day` and `kind` are **identifiers, not labels**. The live view groups
+sessions by room, the filter chips are built from the set of kinds, and days are ordered by their
+date. A value that differs only in case silently becomes a second room, a second chip or a second
+day — and reading the file will not catch it. That is exactly what happened: seven talks of one
+session recorded `Talk Room 1` where the other 110 entries in that room wrote `TALK ROOM 1`.
+
+Errors (exit 1, stops the deploy): two spellings of one room, day or kind; a day carrying two
+dates; duplicate or missing ids; a time that is not `HH:MM`; a missing date. Warnings (exit 0):
+stray whitespace, empty controlled fields.
+
+Note this repo has **no parser** — `assets/vss-data.json` is not regenerated here, so a new export
+is dropped in by hand. Run the validator on it before committing.
+
 All three schedulers (VSS, ECVP and IMRF) share one codebase. Everything conference-specific
 lives in `src/config/conference.js` — timezone, city name, share tag, presentation-type labels,
 poster grouping, calendar identifiers. The modules under `src/utils/` are byte-identical across the
