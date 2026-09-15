@@ -58,6 +58,7 @@ const conference = {
 
   // --- Calendar export -----------------------------------------------------
   icsFileName: 'vss-2026-schedule.ics',
+  scheduleFileName: 'vss-2026-my-schedule.json',
   icsProductId: '-//VSS 2026 Schedule Organizer//EN',
   // Makes event UIDs stable and unique, so re-importing updates events rather
   // than duplicating them, and two apps' events never collide.
