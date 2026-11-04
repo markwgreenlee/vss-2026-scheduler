@@ -461,6 +461,11 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.16.0** (2026-11-04)
+- **Search can be restricted to one field.** A Field row joins Day and Type: All, Title, Author, Abstract, Affiliation, Session. Searching "Smith" under Author returns the 13 presentations by someone of that name rather than the 25 that also mention Smith College or say "Smith et al." in an abstract; "Harvard" under Affiliation returns the 30 from that institution and none of the three that merely cite it
+- All remains the default and is unchanged — it still searches the board code, title, authors, abstract, session name, affiliation, and the organiser and biography that symposium records carry. Matching is unchanged too: one case-insensitive substring, so a phrase stays a phrase
+- The field list lives in `src/utils/searchFields.js`, shared byte-identically with the ECVP and IMRF builds; one entry defines a chip's label, its placeholder and the text it searches
+
 **v1.15.4** (2026-11-04)
 - Shared-code changes made while porting these screens to the ECVP and IMRF builds, kept identical across all three: item counts no longer name a block's items by the block's own kind (only a symposium's items are counted as talks, so a keynote reads "1 keynote"), a session whose presentations carry no individual time shows each row's position instead of repeating the session start time, a lone topic heading is suppressed where it would repeat the session title, and the brand colour now comes from `conference.accentColor` rather than being hard-coded in each screen
 - No visible change to this build: VSS times every talk, has no keynote or social kind, and keeps the same accent colour
