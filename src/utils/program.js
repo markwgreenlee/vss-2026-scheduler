@@ -10,7 +10,7 @@
 // rooms running and the real choice is between them.
 
 import { toMinutes, fromMinutes, daysBetween, gapInMinutes } from './conferenceTime';
-import { kindLabel } from './filters';
+import { kindLabel, kindName } from './filters';
 import conference from '../config/conference';
 
 // Where the day divides. A block belongs to the last period whose start it is
@@ -33,12 +33,17 @@ const periodFor = (startMinutes) => {
 // ending at 09:45 and the next at 10:45 is an hour.
 const MIN_GAP_MINUTES = 30;
 
-// "6 talks", "192 posters". A symposium's items are talks, so the count is
-// never of the block's own kind — a block of six symposium presentations is
-// six talks, not six symposia.
+// "6 talks", "192 posters", "1 keynote".
+//
+// A symposium is the one kind whose items are not of its own kind: a block of
+// six symposium presentations is six talks, not six symposia. Everything else
+// counts in its own kind, which is what lets a keynote or a social read
+// correctly in the ECVP and IMRF builds without a second rule.
 export const itemCountLabel = (block) => {
-  const noun = kindLabel(block.kind === 'poster' ? 'poster' : 'talk').toLowerCase();
-  return `${block.items.length} ${block.items.length === 1 ? noun.replace(/s$/, '') : noun}`;
+  const kind = block.kind === 'symposium' ? 'talk' : block.kind;
+  const n = block.items.length;
+  const noun = n === 1 ? kindName(kind) : kindLabel(kind);
+  return `${n} ${noun.toLowerCase()}`;
 };
 
 export const dayNumber = (date) =>

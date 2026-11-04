@@ -23,6 +23,8 @@ const conference = {
   // with a partial programme still knows when the meeting runs.
   firstDate: '2026-05-15',
   lastDate: '2026-05-19',
+  // Brand colour, used by every screen rather than hard-coded in each.
+  accentColor: '#667eea',
 
   // --- Venue ---------------------------------------------------------------
   // Keys must match the `room` values in the data exactly — that field is an

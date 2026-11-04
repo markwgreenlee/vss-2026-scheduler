@@ -9,6 +9,7 @@ import { conferenceNow } from '../utils/conferenceTime';
 import { buildBlocks } from '../utils/blocks';
 import { programForDay, withNowLine, itemCountLabel, topicGroups } from '../utils/program';
 import { daysInOrder, kindLabel } from '../utils/filters';
+import conference from '../config/conference';
 
 // The whole day at a glance. Parallel sessions sit next to each other in
 // start-time order, because at 08:15 on Saturday four rooms are running and
@@ -132,7 +133,7 @@ const ProgramScreen = ({ route, navigation }) => {
   if (isLoading || !day) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator size="large" color="#667eea" />
+        <ActivityIndicator size="large" color={conference.accentColor} />
       </View>
     );
   }
@@ -233,9 +234,9 @@ const styles = StyleSheet.create({
     borderColor: '#d8dce6',
     backgroundColor: '#fff',
   },
-  dayChipActive: { borderColor: '#667eea', backgroundColor: '#f0f4ff' },
+  dayChipActive: { borderColor: conference.accentColor, backgroundColor: '#eef2f7' },
   dayChipText: { fontSize: 13, fontWeight: '600', color: '#555' },
-  dayChipTextActive: { color: '#667eea' },
+  dayChipTextActive: { color: conference.accentColor },
   list: { padding: 12, paddingBottom: 28, gap: 8 },
   periodLabel: {
     fontSize: 11,
@@ -259,7 +260,7 @@ const styles = StyleSheet.create({
   cardStarred: { borderLeftColor: '#e8871e' },
   cardPast: { backgroundColor: '#fafafa' },
   cardTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' },
-  cardTime: { fontSize: 14, fontWeight: '700', color: '#1a5fd1' },
+  cardTime: { fontSize: 14, fontWeight: '700', color: conference.accentColor },
   mutedTime: { color: '#9aa3b2' },
   cardCount: { fontSize: 12, color: '#777' },
   cardRoom: {

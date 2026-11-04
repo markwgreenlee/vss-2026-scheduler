@@ -2,7 +2,9 @@ import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 import { topicGroups, itemCountLabel } from '../utils/program';
+import { hasRunningOrder } from '../utils/blocks';
 import { roomLine } from '../utils/venue';
+import conference from '../config/conference';
 import { kindName } from '../utils/filters';
 
 // One session, opened from a Program card: what it is called, when and where
@@ -16,14 +18,23 @@ const SessionScreen = ({ block, onBack, onSelect, selectedIds, markFor }) => {
 
   const groups = topicGroups(block);
   const isPoster = block.kind === 'poster';
-  // Posters have no time of their own, so the left column carries the board
-  // code — which is what actually finds the poster in a hall of eighty.
-  const leftOf = (item) => (isPoster ? item.id : (item.time || item.session_start || ''));
+  // Some programmes time every talk and some only time the session. Where
+  // there is no running order, every row would otherwise show the session's
+  // own start time — the same clock time repeated down the page, which is
+  // worse than no time at all. Those rows carry their position instead.
+  const running = hasRunningOrder(block);
+  const leftOf = (item) => {
+    // Posters have no time of their own, so the left column carries the board
+    // code — which is what actually finds the poster in a hall of eighty.
+    if (isPoster) return item.id;
+    if (running) return item.time || item.session_start || '';
+    return item.talk_number ? `${item.talk_number}.` : '';
+  };
 
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.backRow} onPress={onBack} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
-        <Icon name="arrow-left" size={16} color="#667eea" />
+        <Icon name="arrow-left" size={16} color={conference.accentColor} />
         <Text style={styles.backText}>Program · {block.day}</Text>
       </TouchableOpacity>
 
@@ -40,7 +51,9 @@ const SessionScreen = ({ block, onBack, onSelect, selectedIds, markFor }) => {
 
         {groups.map(group => (
           <View key={group.topic || 'all'} style={styles.group}>
-            {group.topic ? (
+            {/* A single group needs no heading: it would either repeat the
+                session's own title or divide nothing from nothing. */}
+            {group.topic && groups.length > 1 ? (
               <Text style={styles.topic}>{group.topic}</Text>
             ) : null}
 
@@ -75,7 +88,9 @@ const SessionScreen = ({ block, onBack, onSelect, selectedIds, markFor }) => {
         <Text style={styles.footNote}>
           {isPoster
             ? 'Posters are up for the whole session; the code is the board number.'
-            : `Tap a ${kindName(block.items[0].kind).toLowerCase()} to read its abstract.`}
+            : running
+            ? `Tap a ${kindName(block.items[0].kind).toLowerCase()} to read its abstract.`
+            : 'The programme gives no time per presentation; they run in the order shown.'}
         </Text>
       </ScrollView>
     </View>
@@ -94,7 +109,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
   },
-  backText: { fontSize: 13, fontWeight: '600', color: '#667eea' },
+  backText: { fontSize: 13, fontWeight: '600', color: conference.accentColor },
   list: { padding: 12, paddingBottom: 32, gap: 8 },
   headerCard: {
     backgroundColor: '#fff',
@@ -125,10 +140,10 @@ const styles = StyleSheet.create({
   },
   rowStarred: { borderLeftWidth: 4, borderLeftColor: '#e8871e' },
   rowTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  when: { fontSize: 14, fontWeight: '700', color: '#1a5fd1', marginBottom: 4 },
+  when: { fontSize: 14, fontWeight: '700', color: conference.accentColor, marginBottom: 4 },
   star: { fontSize: 13, color: '#e8871e', fontWeight: '700' },
   title: { fontSize: 14, fontWeight: '700', color: '#222', lineHeight: 19 },
-  authors: { fontSize: 13, color: '#1a5fd1', marginTop: 4, lineHeight: 18 },
+  authors: { fontSize: 13, color: conference.accentColor, marginTop: 4, lineHeight: 18 },
   note: { fontSize: 11, color: '#1d4ed8', fontStyle: 'italic', marginTop: 6 },
   footNote: { fontSize: 11, color: '#999', textAlign: 'center', marginTop: 16 },
 });

@@ -461,6 +461,10 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.15.4** (2026-11-04)
+- Shared-code changes made while porting these screens to the ECVP and IMRF builds, kept identical across all three: item counts no longer name a block's items by the block's own kind (only a symposium's items are counted as talks, so a keynote reads "1 keynote"), a session whose presentations carry no individual time shows each row's position instead of repeating the session start time, a lone topic heading is suppressed where it would repeat the session title, and the brand colour now comes from `conference.accentColor` rather than being hard-coded in each screen
+- No visible change to this build: VSS times every talk, has no keynote or social kind, and keeps the same accent colour
+
 **v1.15.3** (2026-11-04)
 - **Icons now render.** Every icon in the deployed web app was drawing as an empty box, and had been since the web version launched: the app is served from `/vss-2026-scheduler/`, but the icon fonts were fetched at runtime from `/assets/...` at the domain root, where they 404. The base path was set as `expo.web.baseUrl` in app.json, which Expo does not read — it reads `expo.experiments.baseUrl` — so nothing but the one bundle URL in `index.html` was ever prefixed, and that only because the deploy patched it with `sed`
 - The deploy now fails rather than publishing an app whose icons cannot load: it checks that no root-absolute URL survives in `index.html` or the bundle, that the icon font is in the export, and that the bundle references the font that was exported. The `sed` step it replaces is gone

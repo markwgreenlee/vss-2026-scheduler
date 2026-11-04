@@ -33,7 +33,7 @@ const monthDay = (date) => {
 
 const NavCard = ({ icon, title, subtitle, onPress }) => (
   <TouchableOpacity style={styles.navCard} onPress={onPress} activeOpacity={0.7}>
-    <Icon name={icon} size={24} color="#667eea" />
+    <Icon name={icon} size={24} color={conference.accentColor} />
     <Text style={styles.navTitle}>{title}</Text>
     <Text style={styles.navSub}>{subtitle}</Text>
   </TouchableOpacity>
@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
   if (isLoading) {
     return (
       <View style={styles.centered}>
-        <ActivityIndicator size="large" color="#667eea" />
+        <ActivityIndicator size="large" color={conference.accentColor} />
       </View>
     );
   }
@@ -94,12 +94,18 @@ const HomeScreen = ({ navigation }) => {
         <Image source={require('../../assets/icon.png')} style={styles.logo} resizeMode="contain" />
         <Text style={styles.welcome}>WELCOME TO</Text>
         <Text style={styles.meeting}>{conference.meetingName}</Text>
-        <Text style={styles.heroLine}>
-          {conference.societyName} · {conference.meetingNumber}
-        </Text>
-        <Text style={styles.heroLine}>
-          {[conference.venueName, conference.cityLong].filter(Boolean).join(', ')}
-        </Text>
+        {/* A build may not know its meeting number or the venue's name; a line
+            with nothing on it should not be drawn at all. */}
+        {[conference.societyName, conference.meetingNumber].filter(Boolean).length ? (
+          <Text style={styles.heroLine}>
+            {[conference.societyName, conference.meetingNumber].filter(Boolean).join(' · ')}
+          </Text>
+        ) : null}
+        {[conference.venueName, conference.cityLong].filter(Boolean).length ? (
+          <Text style={styles.heroLine}>
+            {[conference.venueName, conference.cityLong].filter(Boolean).join(', ')}
+          </Text>
+        ) : null}
         <Text style={styles.heroLine}>{conference.dateRange}</Text>
       </View>
 
@@ -261,15 +267,15 @@ const styles = StyleSheet.create({
   content: { paddingBottom: 28 },
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   hero: {
-    backgroundColor: '#667eea',
+    backgroundColor: conference.accentColor,
     paddingHorizontal: 18,
     paddingTop: 18,
     paddingBottom: 20,
   },
   logo: { width: 54, height: 54, borderRadius: 10, marginBottom: 12 },
-  welcome: { fontSize: 12, fontWeight: '700', color: '#dfe4fb', letterSpacing: 1.2 },
+  welcome: { fontSize: 12, fontWeight: '700', color: '#e9eef5', letterSpacing: 1.2 },
   meeting: { fontSize: 32, fontWeight: '800', color: '#fff', marginTop: 2, marginBottom: 8 },
-  heroLine: { fontSize: 13, color: '#e8ebfd', lineHeight: 19 },
+  heroLine: { fontSize: 13, color: '#eef2f7', lineHeight: 19 },
   todayBar: {
     backgroundColor: '#fff',
     paddingHorizontal: 18,
@@ -302,10 +308,10 @@ const styles = StyleSheet.create({
   },
   statusLive: { borderLeftColor: '#d93025' },
   statusMine: { borderLeftColor: '#e8871e' },
-  statusCountdown: { borderLeftColor: '#667eea' },
+  statusCountdown: { borderLeftColor: conference.accentColor },
   statusLabelRed: { fontSize: 11, fontWeight: '700', color: '#c5221f', letterSpacing: 0.6 },
   statusLabelAmber: { fontSize: 11, fontWeight: '700', color: '#a35b00', letterSpacing: 0.6 },
-  statusLabelBlue: { fontSize: 11, fontWeight: '700', color: '#4759c4', letterSpacing: 0.6 },
+  statusLabelBlue: { fontSize: 11, fontWeight: '700', color: conference.accentColor, letterSpacing: 0.6 },
   statusTitle: { fontSize: 15, fontWeight: '700', color: '#222', marginTop: 4, lineHeight: 20 },
   statusDetail: { fontSize: 12, color: '#666', marginTop: 4 },
   navGrid: {

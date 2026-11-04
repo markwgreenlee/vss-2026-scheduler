@@ -136,9 +136,13 @@ const RoomDirectory = () => {
 
 const VenueScreen = () => (
   <View style={styles.container}>
+    {/* Where the venue has no name in the config, the city carries the header
+        rather than leaving it blank. */}
     <View style={styles.header}>
-      <Text style={styles.headerTitle}>{conference.venueName}</Text>
-      <Text style={styles.headerSub}>{conference.cityLong}</Text>
+      <Text style={styles.headerTitle}>{conference.venueName || conference.cityLong}</Text>
+      {conference.venueName && conference.cityLong ? (
+        <Text style={styles.headerSub}>{conference.cityLong}</Text>
+      ) : null}
     </View>
     {hasFloorPlans() ? <FloorPlans /> : <RoomDirectory />}
   </View>
@@ -171,9 +175,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#d8dce6',
   },
-  floorChipActive: { borderColor: '#667eea', backgroundColor: '#f0f4ff' },
+  floorChipActive: { borderColor: conference.accentColor, backgroundColor: '#eef2f7' },
   floorChipText: { fontSize: 12, fontWeight: '600', color: '#555' },
-  floorChipTextActive: { color: '#667eea' },
+  floorChipTextActive: { color: conference.accentColor },
   planWrap: { alignItems: 'center', justifyContent: 'center' },
   list: { padding: 12, paddingBottom: 28, gap: 10 },
   roomCard: {
