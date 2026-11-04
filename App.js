@@ -2,12 +2,44 @@ import React, { useState, useEffect } from 'react';
 import { Platform } from 'react-native';
 
 // Register service worker for PWA offline support (web only)
+//
+// Registering is not enough to keep a device current. A browser only checks for
+// a new worker when the page navigates, and an installed Home Screen app that
+// is resumed from the app switcher never navigates — so it can keep serving the
+// build it first cached, for the rest of the week, while a new release sits on
+// the server. Asking explicitly whenever the app comes back to the foreground
+// is what closes that gap; UpdatePrompt then offers the reload.
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  let registration = null;
+  let lastCheck = 0;
+  // A resume costs one conditional request at most once a minute, which is
+  // nothing next to being stuck on a stale programme at the venue.
+  const CHECK_INTERVAL_MS = 60000;
+
+  const checkForUpdate = () => {
+    if (!registration) return;
+    const now = Date.now();
+    if (now - lastCheck < CHECK_INTERVAL_MS) return;
+    lastCheck = now;
+    registration.update().catch(() => {});
+  };
+
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('/vss-2026-scheduler/sw.js', { scope: '/vss-2026-scheduler/' })
+      .then((reg) => {
+        registration = reg;
+        lastCheck = Date.now();
+      })
       .catch(() => {});
   });
+
+  if (typeof document !== 'undefined') {
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') checkForUpdate();
+    });
+  }
+  window.addEventListener('focus', checkForUpdate);
 }
 
 // Umami Analytics (web only)

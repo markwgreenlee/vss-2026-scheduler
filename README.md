@@ -461,6 +461,10 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.15.2** (2026-11-04)
+- A new release now reaches a device that is already running the app. A browser only checks for a new service worker when the page navigates, so an installed Home Screen app resumed from the app switcher could keep serving the build it first cached while a newer one sat on the server; the app now asks for an update check whenever it returns to the foreground, at most once a minute
+- When a new worker takes over a page that already had one, everything on screen is still drawn by the build it replaced, so the existing update bar now appears reading "A new version of the app is available" with a Reload button. It is a prompt rather than an automatic reload, which would otherwise interrupt someone mid-abstract. The programme-changed message is unchanged
+
 **v1.15.1** (2026-11-04)
 - Icons reworked to the set the VSS organisers suggested: the programme is a list, the schedule is a star (replacing the calendar tick), the venue is a flag (replacing the map pin), and each Home card now carries the same glyph as its tab — so a starred item reads as starred in the tab bar, on the card and on the session badge
 
