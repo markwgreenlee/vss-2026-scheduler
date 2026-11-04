@@ -461,6 +461,9 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.15.1** (2026-11-04)
+- Icons reworked to the set the VSS organisers suggested: the programme is a list, the schedule is a star (replacing the calendar tick), the venue is a flag (replacing the map pin), and each Home card now carries the same glyph as its tab — so a starred item reads as starred in the tab bar, on the card and on the session badge
+
 **v1.15.0** (2026-11-04)
 - **Home screen** — the app now opens on a front door: meeting name, venue and dates, today's day number, what is happening now with how many of your starred items are in it, your own next starred item with its room, and cards through to Program, My Schedule, Search and Venue Map. Before the meeting opens the status cards are replaced by a countdown and a prompt to build a schedule; after it closes, by a note that the schedule is still exportable
 - **Program screen** — the whole of a chosen day in start-time order, so parallel sessions sit side by side: time range, room, title, item count, a kind badge, an orange edge and `N starred` chip for sessions holding your picks, a red edge and `Happening now` chip for what is running, a red line for where in the day you are, and the hours when nothing is on drawn as gaps

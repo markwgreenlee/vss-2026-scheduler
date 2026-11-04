@@ -218,8 +218,11 @@ const HomeScreen = ({ navigation }) => {
       )}
 
       <View style={styles.navGrid}>
+        {/* Icons follow the set the VSS organisers suggested, and each card
+            carries the same glyph as its tab: list for the programme, star for
+            the schedule, magnifier for search, flag for the venue. */}
         <NavCard
-          icon="format-list-bulleted"
+          icon="menu"
           title="Program"
           subtitle={`Browse all ${new Set(allSessions.map(s => s.date)).size} days`}
           onPress={() => navigation.navigate('Program')}
@@ -239,7 +242,7 @@ const HomeScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Search')}
         />
         <NavCard
-          icon="map-marker-outline"
+          icon="flag-outline"
           title="Venue Map"
           subtitle={hasFloorPlans() ? 'Floor plans' : 'Rooms and halls'}
           onPress={() => navigation.navigate('Venue')}

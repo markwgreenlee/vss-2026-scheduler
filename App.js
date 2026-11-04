@@ -70,10 +70,14 @@ export default function App() {
             screenOptions={({ route }) => ({
               tabBarIcon: ({ color, size }) => {
                 let iconName;
+                // The glyphs the VSS organisers asked for: a list for the
+                // programme and a star for the schedule, so the tab bar uses
+                // the same vocabulary as the cards and the badges — a starred
+                // item is starred everywhere it appears.
                 if (route.name === 'Home') iconName = 'home-outline';
-                else if (route.name === 'Program') iconName = 'format-list-bulleted';
+                else if (route.name === 'Program') iconName = 'menu';
                 else if (route.name === 'Search') iconName = 'magnify';
-                else if (route.name === 'Schedule') iconName = 'calendar-check';
+                else if (route.name === 'Schedule') iconName = 'star-outline';
                 else if (route.name === 'Settings') iconName = 'cog';
                 return <Icon name={iconName} size={size} color={color} />;
               },
