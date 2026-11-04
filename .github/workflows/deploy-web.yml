@@ -33,7 +33,35 @@ jobs:
       - name: Validate programme data
         run: python3 scripts/validate_data.py
       - run: npx expo export -p web
-      - run: sed -i 's|src="/_expo/|src="/vss-2026-scheduler/_expo/|g' dist/index.html
+      # The app is served from /vss-2026-scheduler/, not the domain root, so
+      # every URL the build emits has to carry that prefix. Expo applies it from
+      # experiments.baseUrl in app.json.
+      #
+      # This used to be a sed over index.html, which fixed the one URL that is
+      # visible there — the JS bundle — and left the asset URLs baked into the
+      # bundle itself pointing at the site root. The icon fonts are fetched at
+      # runtime from those, so every one of them 404'd and every icon in the app
+      # rendered as an empty box. A green deploy said nothing about it.
+      - name: Check the base path reached every URL
+        run: |
+          if grep -q 'src="/_expo/' dist/index.html; then
+            echo "index.html still has root-absolute bundle URLs: experiments.baseUrl did not apply"
+            exit 1
+          fi
+          if grep -rq '"/assets/node_modules' dist/_expo/static/js/web/; then
+            echo "bundle fetches assets from the site root; they will 404 under /vss-2026-scheduler/"
+            exit 1
+          fi
+          font=$(ls dist/assets/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.*.ttf 2>/dev/null | head -1)
+          if [ -z "$font" ]; then
+            echo "the icon font is missing from the export"
+            exit 1
+          fi
+          grep -rq "${font#dist/}" dist/_expo/static/js/web/ || {
+            echo "the bundle does not reference the icon font that was exported"
+            exit 1
+          }
+          echo "base path applied; icon font exported and referenced at $font"
       # The worker's cache name carries the app version, so each release gets a
       # fresh cache and the previous one is dropped on activation. Hard-coding
       # it in public/sw.js meant it drifted years out of date.
