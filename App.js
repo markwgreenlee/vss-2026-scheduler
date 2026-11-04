@@ -25,7 +25,9 @@ import { ActivityIndicator, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
-import NowScreen from './src/screens/NowScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import ProgramScreen from './src/screens/ProgramScreen';
+import VenueScreen from './src/screens/VenueScreen';
 import SearchScreen from './src/screens/SearchScreen';
 import ScheduleScreen from './src/screens/ScheduleScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
@@ -64,10 +66,12 @@ export default function App() {
         <UpdatePrompt />
         <NavigationContainer>
           <Tab.Navigator
+            initialRouteName="Home"
             screenOptions={({ route }) => ({
               tabBarIcon: ({ color, size }) => {
                 let iconName;
-                if (route.name === 'Now') iconName = 'clock-outline';
+                if (route.name === 'Home') iconName = 'home-outline';
+                else if (route.name === 'Program') iconName = 'format-list-bulleted';
                 else if (route.name === 'Search') iconName = 'magnify';
                 else if (route.name === 'Schedule') iconName = 'calendar-check';
                 else if (route.name === 'Settings') iconName = 'cog';
@@ -86,11 +90,19 @@ export default function App() {
             })}
           >
             <Tab.Screen
-              name="Now"
-              component={NowScreen}
+              name="Home"
+              component={HomeScreen}
               options={{
-                title: "What's On Now",
-                tabBarLabel: 'Now',
+                headerShown: false,
+                tabBarLabel: 'Home',
+              }}
+            />
+            <Tab.Screen
+              name="Program"
+              component={ProgramScreen}
+              options={{
+                title: 'Program',
+                tabBarLabel: 'Program',
               }}
             />
             <Tab.Screen
@@ -115,6 +127,18 @@ export default function App() {
               options={{
                 title: 'Settings',
                 tabBarLabel: 'Settings',
+              }}
+            />
+            {/* Reached from Home rather than the tab bar, which holds five
+                tabs already. Registering it here is what lets Home navigate
+                to it without adding a second navigator. */}
+            <Tab.Screen
+              name="Venue"
+              component={VenueScreen}
+              options={{
+                title: 'Venue Map',
+                tabBarButton: () => null,
+                tabBarItemStyle: { display: 'none' },
               }}
             />
           </Tab.Navigator>

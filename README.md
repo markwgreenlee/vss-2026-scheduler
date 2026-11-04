@@ -5,7 +5,33 @@ A Progressive Web App (PWA) for iOS and Android to search and organize your Visi
 
 ## What's new in this release
 
-Four features ported from the [ECVP 2026 scheduler](https://github.com/markwgreenlee/ecvp-2026-scheduler),
+### A front door, and the programme by day
+
+The app now opens on a **Home** screen: where the meeting is and when, what is running at this
+moment, your own next starred item with its room, and four ways in — Program, My Schedule, Search
+and Venue Map. Before the meeting opens the two status cards give way to a countdown and a prompt
+to start building a schedule; after it ends, to a note that the schedule is still exportable.
+
+**Program** is the whole day at a glance. Pick a day, and every session on it is listed in start-time
+order with its room and how much is in it, so parallel sessions sit next to each other and the real
+choice between them is visible. An orange edge marks a session holding something you starred, a red
+edge marks what is running, and a red line marks where in the day you are. The hours when nothing is
+on — the two-hour lunch break — are drawn as gaps rather than left as silence.
+
+Tapping a session opens it: name, time, room and item count, then its contents in order. A talk
+session reads as a running order — start time, title and authors per talk — and tapping a talk opens
+the abstract, which is the view the app already had. A poster session has no running order to show,
+because every board in the hall is up for the whole four hours; it is grouped by topic instead, with
+the board code where a talk would have its time.
+
+**Venue Map** lists every room in the programme with what is on there today. Floor plans appear in
+its place once images are added to the app (see *Venue and meeting metadata* below).
+
+The **Now** tab is gone: Home says what is running, and Program says it per session.
+
+### Four features ported from ECVP
+
+Ported from the [ECVP 2026 scheduler](https://github.com/markwgreenlee/ecvp-2026-scheduler),
 which shares this codebase.
 
 ### Your schedule reads as an itinerary
@@ -16,9 +42,10 @@ just that day. Clearing always wipes everything, never a filtered subset.
 
 ### What's on now
 
-A new **Now** tab lists every session running at this moment with its room, the presentation
-currently on, and your own picks starred. Between sessions it counts down to the next one. Times
-are reckoned in St. Pete Beach time (America/New_York), so it stays right even if your phone's clock is on another zone.
+Every session running at this moment is listed with its room and how many of your own picks are in
+it, and between sessions the app counts down to the next one. This arrived as a **Now** tab and now
+lives on Home and in the Program list's `Happening now` badges. Times are reckoned in St. Pete Beach
+time (America/New_York), so it stays right even if your phone's clock is on another zone.
 
 ### Author links
 
@@ -51,6 +78,73 @@ an alert to a pocketed phone without one.
 
 ## For developers
 
+### The day at a glance
+
+`src/utils/program.js` turns the session blocks into the rows the Program screen renders:
+period headers, session rows, gap rows, and the position of the now line. It is built on
+`buildBlocks()` — already the app's one definition of a session — so Home's "happening now",
+Program's `Happening now` badge and a detail card's "rest of this session" link cannot disagree
+about what a session is or when it ends.
+
+Three things in it are decisions rather than mechanics:
+
+1. A gap is only drawn when **nothing at all** is running, which means tracking how far the day is
+   already covered rather than looking at the previous block's end. A four-hour poster session
+   overlaps the talk sessions beside it; comparing consecutive blocks would invent a break between
+   09:45 and 10:45 that the poster hall is sitting right through.
+2. A gap row says `12:30 – 14:30 · no sessions`, not "Lunch". The data carries no breaks, so
+   naming one would be a guess the screen is in no position to make.
+3. The now line sits before the first row that **has not finished**, so a session running at this
+   moment appears below the line rather than above it. Outside the day's programme hours there is
+   no line at all — pinned to the top or the bottom it says nothing.
+
+Item counts never use the block's own kind: a symposium of six presentations is six *talks*, not six
+symposia. `itemCountLabel()` only distinguishes posters from everything else.
+
+`topicGroups()` is why a poster session opens differently from a talk session. Posters have no
+individual time — the whole hall is up for four hours — so a running order would be fiction. What
+the data does carry is a topic per poster and the board code that actually finds it, so the board
+code takes the time column and the topics become sub-headings. Talk blocks return a single unnamed
+group, so one renderer serves both.
+
+Program and its session view are one tab, not a stack: `ProgramScreen` holds the open block in state
+and renders `SessionScreen` in its place. The tab bar stays visible and no navigator dependency is
+added for a single level of depth.
+
+### Venue and meeting metadata
+
+Everything the Home header says — meeting name, society, meeting number, venue, city, dates, and the
+first and last programme dates behind the countdown — lives in `src/config/conference.js`, next to
+the keys that were already there. Next year's build is a config edit rather than a screen edit.
+
+`conference.rooms` maps each `room` value in the data to a readable label and a `location`. The data
+field is an identifier in caps (`TALK ROOM 1`); the label is how it reads in a sentence; `location`
+is the part only the venue knows — ballroom name and floor — and is omitted from the UI while empty,
+which is how it ships. A room missing from the table still renders, just without a location.
+
+**Adding floor plans** is a file drop plus one line. Put the images in `assets/floors/` and list
+them in `conference.floors`:
+
+```js
+floors: [
+  { id: 'level-3', name: 'Level 3', image: require('../../assets/floors/level-3.png') },
+  { id: 'level-8', name: 'Level 8', image: require('../../assets/floors/level-8.png') },
+],
+```
+
+Each entry needs its own `require()`: Metro resolves them at build time and cannot take a path
+assembled at runtime. While the list is empty, the Venue screen shows the room directory built from
+the programme instead, so the screen is never blank and nothing needs editing when the plans arrive.
+
+`conference.announcements` is the amber banner on Home — a moved room, a cancelled session — and is
+empty by default:
+
+```js
+announcements: [
+  { id: 'room-change-1', title: 'Room change', body: 'Attention 2 has moved to Talk Room 2.' },
+],
+```
+
 ### Session views
 
 Tapping the session name in a presentation's detail card opens the rest of that session — every talk
@@ -58,7 +152,7 @@ or poster in it, in order, each tappable through to its own abstract. The name c
 (`Motion Perception  ·  all 6`) so it is clear there is something behind it, and it is only a link
 when the session holds more than the presentation being read.
 
-The grouping is `buildBlocks()`, already built for the Now tab, so this reuses the session
+The grouping is `buildBlocks()`, already built for the live view, so this reuses the session
 definition rather than inventing a second one: a poster session is one block per hall, and a talk
 session's end is derived from its last talk where the data gives no `session_end`.
 
@@ -300,6 +394,7 @@ vss-2026-scheduler/
 ├── app.json                        # Expo / PWA / EAS configuration
 ├── assets/
 │   ├── icon.png                    # App icon (Lichtenstein-style starburst)
+│   ├── floors/                     # Floor-plan images (empty; see conference.floors)
 │   └── vss-data.json               # 1,191 presentations
 ├── public/
 │   ├── sw.js                       # Service worker (offline caching)
@@ -308,6 +403,10 @@ vss-2026-scheduler/
 │       └── icon-512.png            # PWA manifest icon
 ├── src/
 │   ├── screens/
+│   │   ├── HomeScreen.js           # Front door: venue, what's on, four ways in
+│   │   ├── ProgramScreen.js        # The day at a glance; opens a session
+│   │   ├── SessionScreen.js        # One session: header + contents in order
+│   │   ├── VenueScreen.js          # Floor plans, or the room directory
 │   │   ├── SearchScreen.js         # Search & filter
 │   │   ├── ScheduleScreen.js       # My schedule & export
 │   │   └── SettingsScreen.js       # App info & attribution
@@ -315,8 +414,16 @@ vss-2026-scheduler/
 │   │   ├── SessionCard.js          # Presentation card
 │   │   ├── SelectedSessionCard.js  # Selected item card
 │   │   ├── SessionDetailModal.js   # Full abstract / detail sheet
+│   │   ├── PresentationSheet.js    # Author / session list over the card
 │   │   ├── ExportButton.js         # Calendar export buttons
 │   │   └── InstallPrompt.js        # Home screen install banner
+│   ├── config/
+│   │   └── conference.js           # Everything conference-specific
+│   ├── utils/
+│   │   ├── blocks.js               # Presentations grouped into sessions
+│   │   ├── program.js              # A day as period / session / gap rows
+│   │   ├── venue.js                # Room labels, locations, floor plans
+│   │   └── ...                     # Time, filters, marks, sharing, export
 │   └── context/
 │       └── DataContext.js          # Global state & search logic
 ```
@@ -353,6 +460,15 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 ---
 
 ## Version History
+
+**v1.15.0** (2026-11-04)
+- **Home screen** — the app now opens on a front door: meeting name, venue and dates, today's day number, what is happening now with how many of your starred items are in it, your own next starred item with its room, and cards through to Program, My Schedule, Search and Venue Map. Before the meeting opens the status cards are replaced by a countdown and a prompt to build a schedule; after it closes, by a note that the schedule is still exportable
+- **Program screen** — the whole of a chosen day in start-time order, so parallel sessions sit side by side: time range, room, title, item count, a kind badge, an orange edge and `N starred` chip for sessions holding your picks, a red edge and `Happening now` chip for what is running, a red line for where in the day you are, and the hours when nothing is on drawn as gaps
+- **Session view** — tapping a session card opens its name, time, room and item count, then its contents: a talk session as a running order with each talk's start time and authors, a poster session grouped by topic with the board code in place of a time, since every board is up for the whole session. Tapping an entry opens the abstract as before
+- **Venue Map** — every room in the programme with what is on there today; floor-plan images drop into `assets/floors/` and are listed in `conference.floors`, replacing the directory when present
+- Tab bar is now Home · Program · Search · Schedule · Settings; the **Now** tab is gone, its content folded into Home and the Program badges
+- Meeting identity, venue, room locations and Home announcements moved into `src/config/conference.js`, so next year's build is a config edit
+- New `src/utils/program.js` (day rows, now line, poster topic grouping) and `src/utils/venue.js` (room labels and locations), both built on the existing `buildBlocks()` session grouping
 
 **v1.8.1** (2026-05-22)
 - Added Umami Analytics to the web version — privacy-friendly, cookie-free visitor tracking; no impact on native iOS/Android
