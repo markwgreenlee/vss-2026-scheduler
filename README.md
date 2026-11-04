@@ -461,6 +461,10 @@ EXPO_PUBLIC_TOTAL_PRESENTATIONS=1191
 
 ## Version History
 
+**v1.15.3** (2026-11-04)
+- **Icons now render.** Every icon in the deployed web app was drawing as an empty box, and had been since the web version launched: the app is served from `/vss-2026-scheduler/`, but the icon fonts were fetched at runtime from `/assets/...` at the domain root, where they 404. The base path was set as `expo.web.baseUrl` in app.json, which Expo does not read — it reads `expo.experiments.baseUrl` — so nothing but the one bundle URL in `index.html` was ever prefixed, and that only because the deploy patched it with `sed`
+- The deploy now fails rather than publishing an app whose icons cannot load: it checks that no root-absolute URL survives in `index.html` or the bundle, that the icon font is in the export, and that the bundle references the font that was exported. The `sed` step it replaces is gone
+
 **v1.15.2** (2026-11-04)
 - A new release now reaches a device that is already running the app. A browser only checks for a new service worker when the page navigates, so an installed Home Screen app resumed from the app switcher could keep serving the build it first cached while a newer one sat on the server; the app now asks for an update check whenever it returns to the foreground, at most once a minute
 - When a new worker takes over a page that already had one, everything on screen is still drawn by the build it replaced, so the existing update bar now appears reading "A new version of the app is available" with a Reload button. It is a prompt rather than an automatic reload, which would otherwise interrupt someone mid-abstract. The programme-changed message is unchanged

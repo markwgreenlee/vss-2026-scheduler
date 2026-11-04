@@ -2,7 +2,7 @@
   "expo": {
     "name": "VSS 2026 Scheduler",
     "slug": "vss-2026-scheduler",
-    "version": "1.15.2",
+    "version": "1.15.3",
     "icon": "./assets/icon.png",
     "orientation": "portrait",
     "platforms": [
@@ -10,19 +10,6 @@
       "android",
       "web"
     ],
-    "web": {
-      "baseUrl": "/vss-2026-scheduler",
-      "favicon": "./assets/icon.png",
-      "name": "VSS 2026 Scheduler",
-      "shortName": "VSS 2026",
-      "description": "Search and organize your VSS 2026 conference schedule. 1,191 presentations with full-text search, day/type filters, and calendar export.",
-      "themeColor": "#667eea",
-      "backgroundColor": "#ffffff",
-      "display": "standalone",
-      "orientation": "portrait",
-      "startUrl": "/vss-2026-scheduler/",
-      "scope": "/vss-2026-scheduler/"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -45,6 +32,21 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "web": {
+      "favicon": "./assets/icon.png",
+      "name": "VSS 2026 Scheduler",
+      "shortName": "VSS 2026",
+      "description": "Search and organize your VSS 2026 conference schedule. 1,191 presentations with full-text search, day/type filters, and calendar export.",
+      "themeColor": "#667eea",
+      "backgroundColor": "#ffffff",
+      "display": "standalone",
+      "orientation": "portrait",
+      "startUrl": "/vss-2026-scheduler/",
+      "scope": "/vss-2026-scheduler/"
+    },
+    "experiments": {
+      "baseUrl": "/vss-2026-scheduler"
+    }
   }
 }
